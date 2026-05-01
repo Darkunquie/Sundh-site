@@ -1,0 +1,1292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunadh Technologies — Switch From Non-IT to IT, Career-First Training in Hyderabad</title>
+<meta name="description" content="Real-time projects. Industry-certified trainers. 100% placement assistance. Sunadh Technologies — Hyderabad's trusted IT training institute in Ameerpet.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="colors_and_type.css">
+
+<style>
+  /* ============ Reset & base ============ */
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--color-bg); }
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; }
+
+  .container { max-width: 1360px; margin: 0 auto; padding: 0 var(--container-pad); }
+
+  /* ============ Buttons ============ */
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; justify-content: center;
+    font-family: var(--font-body); font-weight: 600; font-size: 16px;
+    padding: 12px 22px; min-height: 48px; border-radius: var(--radius-md);
+    border: 0; cursor: pointer;
+    transition: transform var(--dur-base) var(--ease-standard),
+                box-shadow var(--dur-base) var(--ease-standard),
+                background var(--dur-base) var(--ease-standard),
+                color var(--dur-base) var(--ease-standard);
+  }
+  .btn-primary { background: var(--gradient-brand); color: #fff; box-shadow: var(--shadow-cta); }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 14px 32px rgba(255,107,26,0.42); color: #fff; }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-outline-light { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.45); }
+  .btn-outline-light:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); color: #fff; }
+  .btn-on-gradient { background: #fff; color: var(--color-primary); box-shadow: var(--shadow-lg); }
+  .btn-on-gradient:hover { transform: translateY(-1px); color: var(--color-primary-hover); }
+
+  /* ============ Eyebrow + heading ============ */
+  .eyebrow { font-family: var(--font-body); font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-primary); display: inline-block; margin-bottom: 12px; }
+  .section-header { margin-bottom: 40px; max-width: 720px; }
+  .section-header.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .section-header h2 { margin: 0 0 12px; }
+  .section-header .sub { color: var(--fg2); font-size: 17px; line-height: 1.6; margin: 0; }
+
+  section { padding: 64px 0; }
+  @media (min-width: 1024px) { section { padding: 96px 0; } }
+
+  /* ============ Navbar ============ */
+  :root {
+    --nav-blur: 18px;
+    --nav-saturation: 180%;
+    --nav-tint: 14;        /* % white tint */
+    --nav-curve: 28;       /* px corner radius */
+    --nav-inset: 14;       /* px side margin from viewport */
+    --nav-top: 14;         /* px from top */
+    --nav-glow: 1;         /* on/off */
+  }
+  .nav {
+    position: fixed; inset: 0 0 auto 0; z-index: 50;
+    background: transparent;
+    transition: background var(--dur-base) var(--ease-standard),
+                box-shadow var(--dur-base) var(--ease-standard),
+                backdrop-filter var(--dur-base) var(--ease-standard),
+                padding var(--dur-base) var(--ease-standard);
+  }
+  /* ── Liquid glass mode ── */
+  .nav.glass {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    padding: calc(var(--nav-top) * 1px) calc(var(--nav-inset) * 1px) 0;
+    pointer-events: none;
+  }
+  .nav.glass .nav-inner {
+    pointer-events: auto;
+    position: relative;
+    border-radius: calc(var(--nav-curve) * 1px);
+    padding: 10px 16px 10px 20px;
+    min-height: 64px;
+    background: hsla(0, 0%, 100%, calc(var(--nav-tint) * 0.01));
+    backdrop-filter: blur(calc(var(--nav-blur) * 1px)) saturate(var(--nav-saturation));
+    -webkit-backdrop-filter: blur(calc(var(--nav-blur) * 1px)) saturate(var(--nav-saturation));
+    border: 1px solid hsla(0, 0%, 100%, 0.18);
+    box-shadow:
+      0 1px 0 hsla(0, 0%, 100%, 0.35) inset,
+      0 -1px 0 hsla(0, 0%, 100%, 0.06) inset,
+      0 12px 32px rgba(10,27,46,0.28),
+      0 2px 6px rgba(10,27,46,0.18);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  /* Specular highlight — the wet sheen */
+  .nav.glass .nav-inner::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, hsla(0,0%,100%,0.22) 0%, hsla(0,0%,100%,0.02) 38%, transparent 60%),
+      radial-gradient(120% 80% at 0% 0%, hsla(0,0%,100%,0.18), transparent 50%);
+    pointer-events: none;
+    border-radius: inherit;
+    z-index: 0;
+  }
+  /* Brand glow underbelly */
+  .nav.glass .nav-inner::after {
+    content: "";
+    position: absolute; inset: -40% -10% auto auto; width: 60%; height: 220%;
+    background: radial-gradient(closest-side, rgba(255,107,26,0.45), transparent 70%);
+    filter: blur(30px);
+    opacity: calc(var(--nav-glow) * 0.65);
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity var(--dur-base);
+  }
+  .nav.glass .nav-inner > * { position: relative; z-index: 1; }
+
+  .nav.glass.scrolled .nav-inner {
+    background: hsla(214, 50%, 12%, calc(0.55 + var(--nav-tint) * 0.005));
+    border-color: hsla(0, 0%, 100%, 0.14);
+  }
+
+  .nav.scrolled { background: rgba(10,27,46,0.92); backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgba(255,255,255,0.06); }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 0; min-height: 72px;
+    transition: background var(--dur-base) var(--ease-standard),
+                border-radius var(--dur-base) var(--ease-standard),
+                padding var(--dur-base) var(--ease-standard),
+                min-height var(--dur-base) var(--ease-standard),
+                box-shadow var(--dur-base) var(--ease-standard);
+  }
+  .nav-logo img { height: 42px; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { color: rgba(250,250,247,0.85); font-size: 14px; font-weight: 500; padding: 8px 4px; transition: color 150ms; }
+  .nav-links a.active, .nav-links a:hover { color: var(--color-secondary); }
+  .nav-cta { font-size: 14px; padding: 10px 18px; min-height: 44px; }
+  .nav-toggle { display: none; background: transparent; border: 0; color: #fff; font-size: 24px; padding: 8px; }
+
+  .mobile-menu { display: none; background: var(--color-charcoal); padding: 12px var(--container-pad) 16px; flex-direction: column; gap: 4px; }
+  .mobile-menu a { color: #fff; padding: 12px 0; font-size: 15px; border-bottom: 1px solid var(--color-border-dark); }
+  .mobile-menu.open { display: flex; }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: inline-block; }
+  }
+
+  /* ============ Hero ============ */
+  .hero {
+    background:
+      radial-gradient(70% 55% at 80% 20%, rgba(255,107,26,0.28), transparent 60%),
+      radial-gradient(60% 45% at 75% 30%, rgba(255,182,39,0.18), transparent 65%),
+      linear-gradient(135deg, rgba(10,27,46,0.45) 0%, rgba(14,33,56,0.45) 100%),
+      url('assets/hero-bg.png') center / cover no-repeat;
+    color: #fff;
+    padding: 100px 0 32px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  /* Hero text carousel */
+  .hero-carousel { position: relative; min-height: 3.6em; margin: 14px 0 20px; }
+  .hero-slide {
+    position: absolute; top: 0; left: 0; width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 500ms var(--ease-emphasis), transform 500ms var(--ease-emphasis);
+    pointer-events: none;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
+    color: #fff; margin: 0;
+  }
+  .hero-slide.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+    pointer-events: auto;
+  }
+  .hero-slide .accent {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  /* Logo styling — Option 2: Glass container badge */
+  .nav-logo-img { height: 52px; }
+  .nav-logo {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    padding: 8px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.14);
+  }
+
+  .hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
+  .hero h1 {
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+    font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
+    color: #fff; margin: 14px 0 20px;
+  }
+  .hero h1 .accent {
+    background: var(--gradient-brand); -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero p.lede { font-size: 18px; line-height: 1.65; color: rgba(250,250,247,0.85); max-width: 620px; margin: 0 0 32px; }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero-trust { display: flex; gap: 24px; margin-top: 36px; color: rgba(250,250,247,0.7); font-size: 13px; flex-wrap: wrap; }
+  .hero-trust span::before { content: "★ "; color: var(--color-secondary); }
+  .hero-trust span:not(:first-child)::before { content: ""; }
+
+  .hero-illo-wrap {
+    position: relative; display: flex; justify-content: center; align-items: center;
+    aspect-ratio: 1 / 1; max-width: 460px; margin-left: auto;
+  }
+  /* Glassy frame matching the header — wraps the SVG scene */
+  .hero-illo {
+    width: 100%; height: 100%; border-radius: 28px;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: hsla(0, 0%, 100%, 0.06);
+    border: 1px solid hsla(0, 0%, 100%, 0.18);
+    backdrop-filter: blur(14px) saturate(170%);
+    -webkit-backdrop-filter: blur(14px) saturate(170%);
+    box-shadow:
+      0 1px 0 hsla(0,0%,100%,0.30) inset,
+      0 -1px 0 hsla(0,0%,100%,0.04) inset,
+      0 30px 80px rgba(10,27,46,0.35),
+      0 6px 18px rgba(255,107,26,0.18);
+    display: flex; align-items: center; justify-content: center;
+    padding: 28px;
+  }
+  .hero-illo::before {
+    content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; z-index:0;
+    background:
+      linear-gradient(180deg, hsla(0,0%,100%,0.18) 0%, hsla(0,0%,100%,0.02) 38%, transparent 60%),
+      radial-gradient(120% 80% at 0% 0%, hsla(0,0%,100%,0.16), transparent 50%);
+  }
+  .hero-illo::after {
+    content:""; position:absolute; inset:-30% -10% auto auto; width:70%; height:200%; pointer-events:none; z-index:0;
+    background: radial-gradient(closest-side, rgba(255,107,26,0.45), transparent 70%);
+    filter: blur(34px); opacity:0.7;
+  }
+  .hero-illo svg { width: 100%; height: auto; max-width: 360px; position: relative; z-index: 1; }
+
+  .hero-badge {
+    position: absolute; bottom: -20px; left: -20px;
+    background: #fff; border-radius: 14px; padding: 12px 16px;
+    box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 12px;
+  }
+  .hero-badge .ava {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--gradient-brand); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 14px;
+  }
+  .hero-badge .nm { font-size: 13px; color: var(--color-dark); font-weight: 600; }
+  .hero-badge .mt { font-size: 11px; color: var(--fg2); }
+
+  @media (max-width: 900px) {
+    .hero { padding: 112px 0 64px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-illo-wrap { max-width: 360px; margin: 0 auto; }
+  }
+
+  /* ============ Trust strip ============ */
+  .trust-strip { background: var(--color-charcoal); border-top: 1px solid var(--color-border-dark); border-bottom: 1px solid var(--color-border-dark); }
+  .trust-row { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 10px; color: rgba(250,250,247,0.85); font-size: 14px; font-weight: 500; flex: 1; min-width: 180px; padding: 6px 0; }
+  .trust-item + .trust-item { border-left: 1px solid var(--color-border-dark); padding-left: 24px; }
+  .trust-item::before {
+    content: ""; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--color-primary); flex-shrink: 0;
+  }
+  @media (max-width: 768px) {
+    .trust-item + .trust-item { border-left: 0; padding-left: 0; }
+  }
+
+  /* ============ Course grid ============ */
+  .courses-bg { background: var(--color-bg); }
+  .course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 1024px) { .course-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .course-grid { grid-template-columns: 1fr; } }
+
+  .course-card {
+    background: #fff; border-radius: 16px; padding: 26px; box-shadow: var(--shadow-md);
+    display: flex; flex-direction: column; gap: 12px;
+    transition: transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard);
+    color: inherit;
+  }
+  .course-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+  .course-icon-circle {
+    width: 100%; height: 160px; border-radius: 12px;
+    overflow: hidden; position: relative;
+    margin-bottom: 8px;
+  }
+  .course-icon-circle img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 400ms var(--ease-standard);
+  }
+  .course-card:hover .course-icon-circle img { transform: scale(1.08); }
+  .course-icon-circle::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(18,20,18,0.7) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .course-card h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--color-dark); margin: 0; }
+  .course-pitch { color: var(--fg2); font-size: 15px; line-height: 1.55; margin: 0; flex: 1; }
+  .course-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+  .pill { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 13px; padding: 6px 12px; border-radius: 9999px; background: rgba(255,107,26,0.12); color: #C94B07; }
+  .more-link { color: var(--color-primary); font-weight: 600; font-size: 14px; transition: gap 150ms; }
+  .course-card:hover .more-link { color: var(--color-primary-hover); }
+
+  /* ============ Why Sunadh ============ */
+  .why-bg { background: #fff; }
+  .feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  @media (max-width: 900px) { .feat-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .feat-grid { grid-template-columns: 1fr; } }
+  .feat-card { background: var(--color-bg); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+  .feat-card img { width: 56px; height: 56px; }
+  .feat-card h3 { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--color-dark); margin: 0; }
+  .feat-card p { color: var(--fg2); font-size: 14px; line-height: 1.55; margin: 0; }
+
+  /* ============ Placements ============ */
+  .placements-bg { background: var(--color-bg); }
+  .stat-band { background: var(--color-dark); border-radius: 24px; padding: 48px 32px; margin-bottom: 56px; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 768px) { .stat-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .stat { text-align: center; color: #fff; }
+  .stat .num {
+    font-family: var(--font-display); font-size: clamp(40px, 5vw, 56px);
+    font-weight: 800; letter-spacing: -0.02em; line-height: 1;
+    background: var(--gradient-brand); -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .stat .lbl { margin-top: 10px; color: rgba(250,250,247,0.78); font-size: 14px; font-weight: 500; }
+
+  /* Hiring partners marquee */
+  .partners-wrap {
+    position: relative; overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .partners-track { display: flex; gap: 16px; width: max-content; animation: marquee 40s linear infinite; }
+  .partners-track:hover { animation-play-state: paused; }
+  .partner-tile {
+    flex-shrink: 0; min-width: 180px; height: 80px;
+    display: flex; align-items: center; justify-content: center; padding: 0 28px;
+    background: #fff; border: 1px solid var(--color-border); border-radius: 12px;
+    font-family: var(--font-display); font-weight: 700; font-size: 18px;
+    letter-spacing: -0.01em; color: #6B7280;
+    filter: grayscale(1);
+    transition: color 200ms var(--ease-standard), border-color 200ms var(--ease-standard);
+  }
+  .partner-tile:hover { color: var(--color-dark); border-color: var(--color-primary); }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) { .partners-track { animation: none; } }
+
+  .partners-disclaimer { text-align: center; font-size: 12px; color: var(--fg3); margin-top: 16px; }
+
+  /* ============ Testimonials ============ */
+  .test-bg { background: #fff; }
+  .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 900px) { .test-grid { grid-template-columns: 1fr; } }
+  .test-card {
+    background: var(--color-bg); border-radius: 16px; padding: 26px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .test-stars { color: var(--color-secondary); letter-spacing: 2px; font-size: 14px; }
+  .test-quote { font-family: var(--font-display); font-size: 16px; line-height: 1.6; color: var(--color-dark); font-weight: 500; margin: 0; flex: 1; }
+  .test-who { display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--color-border); }
+  .test-ava { width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-brand); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; }
+  .test-name { font-weight: 600; color: var(--color-dark); font-size: 14px; }
+  .test-meta { font-size: 12px; color: var(--fg2); }
+
+  /* ============ News strip ============ */
+  .news-bg { background: var(--color-bg); }
+  .news-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 900px) { .news-list { grid-template-columns: 1fr; } }
+  .news-item {
+    background: #fff; border-radius: 16px; padding: 24px;
+    display: flex; flex-direction: column; gap: 12px;
+    box-shadow: var(--shadow-sm); border: 1px solid var(--color-border);
+    transition: transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard), border-color var(--dur-base) var(--ease-standard);
+    color: inherit;
+  }
+  .news-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: rgba(255,107,26,0.4); }
+  .date-pill { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 9999px; background: var(--color-dark); color: #fff; align-self: flex-start; letter-spacing: 0.04em; }
+  .news-item h3 { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--color-dark); margin: 0; line-height: 1.35; }
+  .news-item .more-link { margin-top: auto; }
+
+  /* ============ Final CTA banner ============ */
+  .final-cta-section { padding: 72px 0; background: var(--color-bg); }
+  .final-cta {
+    background: var(--gradient-brand); border-radius: 28px;
+    padding: 56px 40px; color: #fff; text-align: center;
+    box-shadow: 0 30px 80px rgba(255,107,26,0.32);
+    max-width: 960px; margin: 0 auto;
+  }
+  .final-cta h2 { color: #fff; margin: 0 0 12px; font-size: clamp(28px, 3.6vw, 40px); font-weight: 800; letter-spacing: -0.01em; }
+  .final-cta p { margin: 0 0 28px; font-size: 17px; opacity: 0.95; max-width: 540px; margin-left: auto; margin-right: auto; }
+
+  /* ============ Footer ============ */
+  footer { background: var(--color-dark); color: rgba(250,250,247,0.75); padding: 64px 0 0; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px; padding-bottom: 48px; }
+  @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  @media (max-width: 540px) { .foot-grid { grid-template-columns: 1fr; } }
+  .foot-logo img { height: 48px; margin-bottom: 16px; }
+  .foot-about { font-size: 14px; line-height: 1.65; color: rgba(250,250,247,0.7); max-width: 280px; margin-bottom: 16px; }
+  .foot-wa { display: inline-flex; align-items: center; gap: 8px; color: #25D366; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 9999px; background: rgba(37,211,102,0.12); border: 1px solid rgba(37,211,102,0.32); }
+  .foot-wa img { width: 18px; height: 18px; }
+  .foot-col h4 { font-family: var(--font-display); font-weight: 600; color: #fff; font-size: 14px; margin: 0 0 16px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .foot-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .foot-col a { color: rgba(250,250,247,0.7); font-size: 14px; transition: color 150ms; }
+  .foot-col a:hover { color: var(--color-secondary); }
+  .foot-contact-line { font-size: 14px; color: rgba(250,250,247,0.7); }
+  .foot-social { display: flex; gap: 10px; margin-top: 14px; }
+  .foot-social a {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center;
+    color: rgba(250,250,247,0.8); font-size: 14px; font-weight: 700; font-family: var(--font-display);
+    transition: background 150ms;
+  }
+  .foot-social a:hover { background: var(--gradient-brand); color: #fff; }
+  .foot-bottom {
+    border-top: 1px solid var(--color-border-dark);
+    padding: 20px 0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    font-size: 13px; color: rgba(250,250,247,0.55);
+  }
+  .foot-bottom a { color: inherit; }
+  .foot-bottom a:hover { color: var(--color-secondary); }
+
+  /* ============ WhatsApp float ============ */
+  .wa-float {
+    position: fixed; right: 20px; bottom: 20px; z-index: 60;
+    width: 60px; height: 60px; border-radius: 9999px;
+    background: #25D366;
+    box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform var(--dur-base) var(--ease-standard);
+  }
+  .wa-float::before {
+    content: ""; position: absolute; inset: 0; border-radius: 9999px;
+    box-shadow: 0 0 0 0 rgba(37,211,102,0.5);
+    animation: wa-pulse 2.4s var(--ease-standard) infinite;
+  }
+  .wa-float:hover { transform: translateY(-2px); }
+  .wa-float img { width: 32px; height: 32px; position: relative; z-index: 1; }
+  @keyframes wa-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.45); }
+    70%  { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  }
+  @media (prefers-reduced-motion: reduce) { .wa-float::before { animation: none; } }
+
+  /* ============ Dark Theme Overrides ============ */
+  body { background: #121412; color: #e2e3e0; }
+
+  /* Section backgrounds */
+  .courses-bg, .placements-bg, .news-bg, .final-cta-section { background: #121412; }
+  .why-bg, .test-bg { background: #0d1117; }
+
+  /* Cards: glass */
+  .course-card, .news-item {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(16px); box-shadow: none;
+  }
+  .course-card:hover, .news-item:hover {
+    box-shadow: 0 12px 40px rgba(255,107,26,0.1);
+    border-color: rgba(255,107,26,0.35);
+  }
+  .course-card h3, .news-item h3 { color: #e2e3e0; }
+  .course-pitch { color: #9ca3af; }
+  .course-foot .pill { background: rgba(255,107,26,0.12); color: #FF6B1A; }
+
+  /* Why Sunadh */
+  .feat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; }
+  .feat-card h3 { color: #e2e3e0; }
+  .feat-card p { color: #9ca3af; }
+
+  /* Section heads */
+  .section-head h2, h2 { color: #e2e3e0; }
+  .section-head p { color: #9ca3af; }
+  .eyebrow { color: var(--color-secondary); }
+
+  /* Partners */
+  .partner-tile {
+    background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.08);
+    color: #6b7280; filter: none;
+  }
+  .partner-tile:hover { color: #e2e3e0; border-color: rgba(255,107,26,0.4); }
+  .partners-disclaimer { color: #6b7280; }
+
+  /* Testimonials */
+  .test-card {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+  }
+  .test-quote { color: #e2e3e0; }
+  .test-who { border-color: rgba(255,255,255,0.06); }
+  .test-name { color: #e2e3e0; }
+  .test-meta { color: #6b7280; }
+
+  /* Enquiry section */
+  .enquiry-bg, #enquiry { background: #0d1117; }
+  .enquiry-card, .form-card {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(16px);
+  }
+  .enquiry-card h2, .form-card h2 { color: #e2e3e0; }
+  input, select, textarea {
+    background: rgba(255,255,255,0.05) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    color: #e2e3e0 !important;
+  }
+  input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.3) !important; }
+  input:focus, select:focus, textarea:focus {
+    border-color: #FF6B1A !important;
+    box-shadow: 0 0 0 3px rgba(255,107,26,0.15) !important;
+  }
+  label { color: #b4bcc6; }
+
+  /* News */
+  .news-item h3 { color: #e2e3e0; }
+
+  /* Trust bar */
+  .trust-bar { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); }
+  .trust-item { color: #9ca3af; border-color: rgba(255,255,255,0.08); }
+  .trust-item strong { color: #e2e3e0; }
+
+  /* Floating placement card in hero */
+  .hero-float, .hero-card-float {
+    background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+  }
+
+  /* CTA banner glass border */
+  .final-cta { border: 1px solid rgba(255,255,255,0.15); }
+
+  /* Footer darker */
+  footer { background: #0d0f0d; }
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo" aria-label="Sunadh Technologies — home">
+      <img src="assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img">
+    </a>
+    <nav class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="placements.html">Placements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="#enquiry" class="btn btn-primary nav-cta">Book Free Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="about.html">About</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="placements.html">Placements</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow" style="color: var(--color-secondary)">Hyderabad · Ameerpet</span>
+      <div class="hero-carousel" id="heroCarousel">
+        <h1 class="hero-slide active">Switch From Non-IT to IT — <span class="accent">Career-First Training</span> in Hyderabad.</h1>
+        <h1 class="hero-slide">Land Your First Tech Job — <span class="accent">We'll Get You There</span> in 16 Weeks.</h1>
+        <h1 class="hero-slide">10,000+ Students Placed — <span class="accent">Real Projects, Real Jobs</span> in Hyderabad.</h1>
+        <h1 class="hero-slide">From Zero Coding to Job-Ready — <span class="accent">Industry-Certified Trainers</span> Guide You.</h1>
+        <h1 class="hero-slide">Your Career Sunrise Starts Here — <span class="accent">100% Placement Assistance</span> Guaranteed.</h1>
+      </div>
+      <p class="lede">Real-time projects. Industry-certified trainers. 100% placement assistance. Built for working professionals and fresh graduates ready to land their first IT role.</p>
+      <div class="hero-ctas">
+        <a href="#enquiry" class="btn btn-primary">Book Free Demo →</a>
+        <a href="#courses" class="btn btn-outline-light">Browse Courses</a>
+      </div>
+      <div class="hero-trust">
+        <span>4.7 / 5 on JustDial</span>
+        <span>10,000+ trained</span>
+        <span>500+ hiring partners</span>
+      </div>
+    </div>
+
+    <div class="hero-illo-wrap">
+      <div class="hero-illo" id="heroIllo">
+        <!-- Scene SVG injected by JS based on `heroScene` tweak. Default fallback below. -->
+        <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" id="heroSvg">
+          <defs>
+            <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFB627"/>
+              <stop offset="100%" stop-color="#FF6B1A"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Background sun glow -->
+          <circle cx="270" cy="80" r="42" fill="url(#g1)" opacity="0.85"/>
+          <g stroke="url(#g1)" stroke-width="3" stroke-linecap="round" opacity="0.7">
+            <line x1="270" y1="22" x2="270" y2="34"/>
+            <line x1="316" y1="40" x2="308" y2="48"/>
+            <line x1="332" y1="80" x2="320" y2="80"/>
+            <line x1="316" y1="120" x2="308" y2="112"/>
+            <line x1="224" y1="40" x2="232" y2="48"/>
+            <line x1="208" y1="80" x2="220" y2="80"/>
+          </g>
+
+          <!-- Laptop -->
+          <rect x="70" y="200" width="220" height="130" rx="10" fill="#0E2138" stroke="rgba(255,182,39,0.35)" stroke-width="1.5"/>
+          <rect x="82" y="212" width="196" height="106" rx="4" fill="#0A1B2E"/>
+          <rect x="56" y="328" width="248" height="10" rx="5" fill="#142640"/>
+
+          <!-- Chart bars -->
+          <rect x="98" y="280" width="14" height="28" rx="2" fill="url(#g1)" opacity="0.95"/>
+          <rect x="118" y="262" width="14" height="46" rx="2" fill="url(#g1)" opacity="0.85"/>
+          <rect x="138" y="248" width="14" height="60" rx="2" fill="url(#g1)"/>
+          <rect x="158" y="236" width="14" height="72" rx="2" fill="#FFB627"/>
+
+          <!-- Trend line -->
+          <polyline points="98,272 118,256 138,242 158,228 188,212" fill="none" stroke="#FFB627" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="188" cy="212" r="4" fill="#FFB627"/>
+
+          <!-- Code lines panel -->
+          <rect x="194" y="226" width="76" height="6" rx="3" fill="rgba(250,250,247,0.5)"/>
+          <rect x="194" y="240" width="56" height="6" rx="3" fill="rgba(255,107,26,0.7)"/>
+          <rect x="194" y="254" width="68" height="6" rx="3" fill="rgba(250,250,247,0.35)"/>
+          <rect x="194" y="268" width="44" height="6" rx="3" fill="rgba(255,182,39,0.7)"/>
+          <rect x="194" y="282" width="60" height="6" rx="3" fill="rgba(250,250,247,0.35)"/>
+
+          <!-- Person silhouette -->
+          <circle cx="180" cy="142" r="28" fill="#FAFAF7"/>
+          <path d="M120,210 C120,176 148,158 180,158 C212,158 240,176 240,210 L240,210 L120,210 Z" fill="#FAFAF7"/>
+          <path d="M156,180 L172,196 L204,180 L204,210 L156,210 Z" fill="url(#g1)"/>
+
+          <!-- Floating chips -->
+          <g>
+            <rect x="40" y="120" width="74" height="26" rx="13" fill="#FAFAF7"/>
+            <text x="77" y="138" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#0A1B2E" text-anchor="middle">Python</text>
+          </g>
+          <g>
+            <rect x="270" y="180" width="74" height="26" rx="13" fill="url(#g1)"/>
+            <text x="307" y="198" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#fff" text-anchor="middle">Tableau</text>
+          </g>
+          <g>
+            <rect x="22" y="240" width="64" height="26" rx="13" fill="#0E2138" stroke="rgba(255,182,39,0.4)"/>
+            <text x="54" y="258" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#FFB627" text-anchor="middle">Gen AI</text>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-badge" aria-hidden="true">
+        <div class="ava">PS</div>
+        <div>
+          <div class="nm">Priya placed in IT services</div>
+          <div class="mt">Tableau · 5.5 LPA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST STRIP ================= -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-row">
+      <div class="trust-item">10,000+ Trained</div>
+      <div class="trust-item">Ameerpet Branch</div>
+      <div class="trust-item">100% Placement Assistance</div>
+      <div class="trust-item">Industry-Certified Trainers</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= COURSES ================= -->
+<section id="courses" class="courses-bg">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Our Courses</span>
+      <h2>Courses Built for Real Jobs</h2>
+      <p class="sub">Six career-first tracks, each project-led and taught by trainers who ship in production. Pick yours and we'll get you placed.</p>
+    </div>
+
+    <div class="course-grid">
+      <a href="courses/tableau.html" class="course-card">
+        <div class="course-icon-circle"><img src="assets/course-tableau-hero.png" alt="Tableau"></div>
+        <h3>Tableau</h3>
+        <p class="course-pitch">Turn raw data into board-ready dashboards.</p>
+        <div class="course-foot"><span class="pill">10 weeks · Online + Offline</span><span class="more-link">Learn More →</span></div>
+      </a>
+      <a href="courses/cybersecurity.html" class="course-card">
+        <div class="course-icon-circle"><img src="assets/course-cybersecurity-hero.png" alt="Cybersecurity"></div>
+        <h3>Cybersecurity</h3>
+        <p class="course-pitch">Defend networks. Land high-paying SOC roles.</p>
+        <div class="course-foot"><span class="pill">16 weeks · Online + Offline</span><span class="more-link">Learn More →</span></div>
+      </a>
+      <a href="courses/azure-data-engineer.html" class="course-card">
+        <div class="course-icon-circle"><img src="assets/course-azure-hero.png" alt="Azure Data Engineer"></div>
+        <h3>Azure Data Engineer</h3>
+        <p class="course-pitch">Build pipelines on Microsoft's cloud — DP-203 ready.</p>
+        <div class="course-foot"><span class="pill">14 weeks · Online + Offline</span><span class="more-link">Learn More →</span></div>
+      </a>
+      <a href="courses/data-science.html" class="course-card">
+        <div class="course-icon-circle"><img src="assets/course-datascience-hero.png" alt="Data Science"></div>
+        <h3>Data Science</h3>
+        <p class="course-pitch">Python + ML + statistics, taught project-first.</p>
+        <div class="course-foot"><span class="pill">20 weeks · Online + Offline</span><span class="more-link">Learn More →</span></div>
+      </a>
+      <a href="courses/gen-ai.html" class="course-card">
+        <div class="course-icon-circle"><img src="assets/course-genai-hero.png" alt="Gen AI"></div>
+        <h3>Gen AI / Agentic AI</h3>
+        <p class="course-pitch">Build with LLMs and agents — most in-demand of 2026.</p>
+        <div class="course-foot"><span class="pill">12 weeks · Online + Offline</span><span class="more-link">Learn More →</span></div>
+      </a>
+      <a href="courses/python.html" class="course-card">
+        <div class="course-icon-circle"><img src="assets/course-python-hero.png" alt="Python"></div>
+        <h3>Python</h3>
+        <p class="course-pitch">From zero to job-ready developer — the gateway language.</p>
+        <div class="course-foot"><span class="pill">12 weeks · Online + Offline</span><span class="more-link">Learn More →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY SUNADH ================= -->
+<section id="about" class="why-bg">
+  <div class="container">
+    <div class="section-header center">
+      <span class="eyebrow">Why Sunadh</span>
+      <h2>You learn. We get you placed.</h2>
+      <p class="sub">Every course is project-first, taught by trainers who ship in production — not slide-readers.</p>
+    </div>
+
+    <div class="feat-grid">
+      <div class="feat-card">
+        <img src="assets/feature-projects.svg" alt="">
+        <h3>Real-time Projects</h3>
+        <p>Build, demo, and defend production-style work — not just slides.</p>
+      </div>
+      <div class="feat-card">
+        <img src="assets/feature-placement.svg" alt="">
+        <h3>Placement Support</h3>
+        <p>Mock interviews, resume help, and intros to 500+ hiring partners.</p>
+      </div>
+      <div class="feat-card">
+        <img src="assets/feature-flexible.svg" alt="">
+        <h3>Flexible Batches</h3>
+        <p>Weekend & weekday. Online or classroom. Switch any time.</p>
+      </div>
+      <div class="feat-card">
+        <img src="assets/feature-demo.svg" alt="">
+        <h3>Free Demo Class</h3>
+        <p>Sit in. Decide if it's the right fit. No fee, no pressure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLACEMENTS ================= -->
+<section id="placements" class="placements-bg">
+  <div class="container">
+    <div class="section-header center">
+      <span class="eyebrow">Placements</span>
+      <h2>Where Our Students Land</h2>
+      <p class="sub">A snapshot of the outcomes our learners have earned across India's top IT employers.</p>
+    </div>
+
+    <div class="stat-band">
+      <div class="stat-grid">
+        <div class="stat"><div class="num">10,000+</div><div class="lbl">Placed</div></div>
+        <div class="stat"><div class="num">500+</div><div class="lbl">Hiring partners</div></div>
+        <div class="stat"><div class="num">6 LPA</div><div class="lbl">Avg. package</div></div>
+      </div>
+    </div>
+
+    <div class="partners-wrap" aria-label="Hiring partners">
+      <div class="partners-track">
+        <div class="partner-tile">TCS</div>
+        <div class="partner-tile">Infosys</div>
+        <div class="partner-tile">Wipro</div>
+        <div class="partner-tile">Accenture</div>
+        <div class="partner-tile">Deloitte</div>
+        <div class="partner-tile">Cognizant</div>
+        <div class="partner-tile">HCL</div>
+        <div class="partner-tile">Capgemini</div>
+        <div class="partner-tile">IBM</div>
+        <div class="partner-tile">Tech Mahindra</div>
+        <!-- Duplicate for seamless loop -->
+        <div class="partner-tile">TCS</div>
+        <div class="partner-tile">Infosys</div>
+        <div class="partner-tile">Wipro</div>
+        <div class="partner-tile">Accenture</div>
+        <div class="partner-tile">Deloitte</div>
+        <div class="partner-tile">Cognizant</div>
+        <div class="partner-tile">HCL</div>
+        <div class="partner-tile">Capgemini</div>
+        <div class="partner-tile">IBM</div>
+        <div class="partner-tile">Tech Mahindra</div>
+      </div>
+    </div>
+    <p class="partners-disclaimer">Logo placeholders shown — real partner logos will be displayed once permissions are confirmed.</p>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="test-bg">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Student Stories</span>
+      <h2>Hear from learners who switched.</h2>
+      <p class="sub">Three recent placements out of thousands — names, courses, and packages preserved as the learners shared them.</p>
+    </div>
+
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-stars">★ ★ ★ ★ ★</div>
+        <p class="test-quote">"Switched from a non-IT background and felt completely supported through every module. The project-first approach made interviews much easier to crack."</p>
+        <div class="test-who">
+          <div class="test-ava">PS</div>
+          <div>
+            <div class="test-name">Priya S.</div>
+            <div class="test-meta">Tableau · 5.5 LPA at TCS</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★ ★ ★ ★ ★</div>
+        <p class="test-quote">"Fresh out of college with zero IT exposure. The placement team set up real interviews and the trainers prepped me end-to-end. Got placed in my third attempt."</p>
+        <div class="test-who">
+          <div class="test-ava">RR</div>
+          <div>
+            <div class="test-name">Rohan R.</div>
+            <div class="test-meta">Azure Data Engineer · 6.2 LPA at Wipro</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★ ★ ★ ★ ★</div>
+        <p class="test-quote">"The Gen AI module was the highlight — we built a working agent in week eight, not just slides. That portfolio piece is what got me the offer."</p>
+        <div class="test-who">
+          <div class="test-ava">AV</div>
+          <div>
+            <div class="test-name">Anjali V.</div>
+            <div class="test-meta">Gen AI / Agentic AI · 7.0 LPA at Cognizant</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEWS ================= -->
+<section id="news" class="news-bg">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">News & Events</span>
+      <h2>Latest Updates</h2>
+      <p class="sub">Batch starts, free workshops, and placement drives — straight from both Ameerpet branches.</p>
+    </div>
+
+    <div class="news-list">
+      <a href="#" class="news-item">
+        <span class="date-pill">15 MAY 2026</span>
+        <h3>New Gen AI / Agentic AI batch starts at Ameerpet on 1 June</h3>
+        <span class="more-link">Read more →</span>
+      </a>
+      <a href="#" class="news-item">
+        <span class="date-pill">02 MAY 2026</span>
+        <h3>Free Tableau dashboard workshop — Saturday 7pm, both branches</h3>
+        <span class="more-link">Read more →</span>
+      </a>
+      <a href="#" class="news-item">
+        <span class="date-pill">28 APR 2026</span>
+        <h3>Placement drive: 12 hiring partners on campus through May</h3>
+        <span class="more-link">Read more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<div class="final-cta-section" id="enquiry">
+  <div class="container">
+    <div class="final-cta">
+      <h2>Ready to switch careers?</h2>
+      <p>Book a free demo today and see how Sunadh changes your trajectory.</p>
+      <a href="#enquiry" class="btn btn-on-gradient">Book Free Demo →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="assets/logo-primary-dark.svg" alt="Sunadh Technologies"></div>
+        <p class="foot-about">Real-time training. Real placements. Hyderabad's trusted name in IT training, in the heart of Ameerpet.</p>
+        <a class="foot-wa" href="https://wa.me/919848131318"><img src="assets/icon-whatsapp.svg" alt="">Chat on WhatsApp</a>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#enquiry">Admissions</a></li>
+          <li><a href="#placements">Placements</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="courses/tableau.html">Tableau</a></li>
+          <li><a href="courses/cybersecurity.html">Cybersecurity</a></li>
+          <li><a href="courses/azure-data-engineer.html">Azure Data Engineer</a></li>
+          <li><a href="courses/data-science.html">Data Science</a></li>
+          <li><a href="courses/gen-ai.html">Gen AI / Agentic AI</a></li>
+          <li><a href="courses/python.html">Python</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <div class="foot-contact-line">Aditi Arcade, Mytrivanam, SAP Street,<br>Ameerpet, Hyderabad – 500016</div>
+        <div class="foot-contact-line" style="margin-top:10px"><a href="tel:+919848131318">+91 98481 31318</a></div>
+        <div class="foot-contact-line"><a href="mailto:hello@sunadhtechnologies.in">hello@sunadhtechnologies.in</a></div>
+        <div class="foot-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Sunadh Technologies. All rights reserved.</div>
+      <div style="display:flex;gap:18px"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a class="wa-float" href="https://wa.me/919848131318" target="_blank" rel="noopener" aria-label="Chat with Sunadh on WhatsApp">
+  <img src="assets/icon-whatsapp.svg" alt="">
+</a>
+
+<script>
+  // Sticky-nav scroll color shift
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 24) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile menu
+  const tog = document.getElementById('navToggle');
+  const menu = document.getElementById('mobileMenu');
+  tog.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    tog.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    tog.setAttribute('aria-expanded', 'false');
+  }));
+
+  /* ============ Tweaks ============ */
+  const TWEAKS = /*EDITMODE-BEGIN*/{
+    "headerStyle": "glass",
+    "blur": 18,
+    "saturation": 180,
+    "tint": 14,
+    "curve": 28,
+    "inset": 14,
+    "topGap": 14,
+    "brandGlow": true,
+    "heroScene": "classroom"
+  }/*EDITMODE-END*/;
+
+  const state = { ...TWEAKS };
+
+  /* ============ Hero scene presets (declared before applyTweaks) ============ */
+  const SCENES = {
+    classroom: {
+      label: 'Classroom',
+      svg: `<defs><linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFB627"/><stop offset="100%" stop-color="#FF6B1A"/></linearGradient></defs>
+        <circle cx="290" cy="64" r="32" fill="url(#sg)" opacity="0.9"/>
+        <g stroke="url(#sg)" stroke-width="2.5" stroke-linecap="round" opacity="0.7"><line x1="290" y1="18" x2="290" y2="28"/><line x1="330" y1="34" x2="324" y2="40"/><line x1="244" y1="34" x2="250" y2="40"/></g>
+        <rect x="50" y="78" width="260" height="120" rx="6" fill="#FAFAF7" stroke="rgba(255,182,39,0.4)" stroke-width="1.5"/>
+        <rect x="46" y="196" width="268" height="6" rx="3" fill="#142640"/>
+        <polyline points="72,170 102,150 132,158 162,128 192,134 222,108 252,112 282,90" fill="none" stroke="url(#sg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#0E2138" opacity="0.55"><circle cx="72" cy="170" r="3"/><circle cx="132" cy="158" r="3"/><circle cx="192" cy="134" r="3"/><circle cx="252" cy="112" r="3"/></g>
+        <text x="72" y="108" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#0A1B2E">Tableau · Career Path</text>
+        <rect x="72" y="118" width="64" height="4" rx="2" fill="rgba(255,107,26,0.7)"/>
+        <g fill="#FAFAF7"><rect x="60" y="240" width="60" height="40" rx="6"/><rect x="150" y="240" width="60" height="40" rx="6"/><rect x="240" y="240" width="60" height="40" rx="6"/></g>
+        <g fill="#FAFAF7"><circle cx="90" cy="232" r="14"/><circle cx="180" cy="232" r="14"/><circle cx="270" cy="232" r="14"/></g>
+        <g fill="url(#sg)" opacity="0.85"><path d="M76,260 C76,248 84,242 90,242 C96,242 104,248 104,260 Z"/><path d="M166,260 C166,248 174,242 180,242 C186,242 194,248 194,260 Z"/><path d="M256,260 C256,248 264,242 270,242 C276,242 284,248 284,260 Z"/></g>
+        <g fill="#0E2138"><rect x="70" y="266" width="40" height="14" rx="2"/><rect x="160" y="266" width="40" height="14" rx="2"/><rect x="250" y="266" width="40" height="14" rx="2"/></g>
+        <rect x="30" y="296" width="300" height="20" rx="4" fill="rgba(255,182,39,0.18)"/>
+        <g><rect x="22" y="120" width="64" height="24" rx="12" fill="#FAFAF7"/><text x="54" y="137" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#0A1B2E" text-anchor="middle">Hands-On</text></g>
+        <g><rect x="280" y="220" width="60" height="24" rx="12" fill="url(#sg)"/><text x="310" y="237" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#fff" text-anchor="middle">Live Batch</text></g>`
+    },
+    code: {
+      label: 'Code & Dashboard',
+      svg: `<defs><linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFB627"/><stop offset="100%" stop-color="#FF6B1A"/></linearGradient></defs>
+        <circle cx="270" cy="64" r="34" fill="url(#sg)" opacity="0.85"/>
+        <rect x="34" y="80" width="292" height="220" rx="14" fill="#0E2138" stroke="rgba(255,182,39,0.3)"/>
+        <rect x="34" y="80" width="292" height="28" rx="14" fill="#142640"/>
+        <circle cx="50" cy="94" r="4" fill="#FF6B1A"/><circle cx="64" cy="94" r="4" fill="#FFB627"/><circle cx="78" cy="94" r="4" fill="#22C55E"/>
+        <rect x="100" y="86" width="180" height="16" rx="8" fill="rgba(250,250,247,0.08)"/>
+        <g><rect x="50" y="124" width="36" height="6" rx="3" fill="rgba(255,107,26,0.85)"/><rect x="92" y="124" width="62" height="6" rx="3" fill="rgba(250,250,247,0.55)"/><rect x="50" y="142" width="22" height="6" rx="3" fill="rgba(255,182,39,0.8)"/><rect x="78" y="142" width="78" height="6" rx="3" fill="rgba(250,250,247,0.4)"/><rect x="50" y="160" width="48" height="6" rx="3" fill="rgba(255,107,26,0.65)"/><rect x="104" y="160" width="50" height="6" rx="3" fill="rgba(250,250,247,0.55)"/><rect x="50" y="178" width="34" height="6" rx="3" fill="rgba(255,182,39,0.8)"/><rect x="90" y="178" width="62" height="6" rx="3" fill="rgba(250,250,247,0.4)"/><rect x="50" y="196" width="40" height="6" rx="3" fill="rgba(255,107,26,0.85)"/><rect x="96" y="196" width="58" height="6" rx="3" fill="rgba(250,250,247,0.55)"/><rect x="50" y="214" width="80" height="6" rx="3" fill="rgba(250,250,247,0.3)"/><rect x="50" y="232" width="60" height="6" rx="3" fill="rgba(255,182,39,0.7)"/><rect x="50" y="250" width="48" height="6" rx="3" fill="rgba(250,250,247,0.4)"/><rect x="50" y="268" width="74" height="6" rx="3" fill="rgba(255,107,26,0.7)"/></g>
+        <line x1="180" y1="120" x2="180" y2="280" stroke="rgba(255,182,39,0.18)" stroke-width="1"/>
+        <rect x="194" y="124" width="120" height="68" rx="6" fill="rgba(255,255,255,0.04)"/>
+        <polyline points="200,182 218,168 236,172 254,150 272,156 290,134 308,138" fill="none" stroke="url(#sg)" stroke-width="2.5" stroke-linecap="round"/>
+        <g fill="url(#sg)"><circle cx="218" cy="168" r="3"/><circle cx="254" cy="150" r="3"/><circle cx="290" cy="134" r="3"/></g>
+        <rect x="200" y="136" width="40" height="4" rx="2" fill="rgba(250,250,247,0.5)"/>
+        <g><rect x="200" y="244" width="14" height="34" rx="2" fill="url(#sg)" opacity="0.85"/><rect x="220" y="232" width="14" height="46" rx="2" fill="url(#sg)"/><rect x="240" y="220" width="14" height="58" rx="2" fill="#FFB627"/><rect x="260" y="206" width="14" height="72" rx="2" fill="url(#sg)"/><rect x="280" y="216" width="14" height="62" rx="2" fill="url(#sg)" opacity="0.85"/><rect x="300" y="200" width="14" height="78" rx="2" fill="#FFB627"/></g>
+        <rect x="200" y="206" width="40" height="4" rx="2" fill="rgba(250,250,247,0.45)"/>
+        <g><rect x="22" y="304" width="64" height="24" rx="12" fill="#FAFAF7"/><text x="54" y="320" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#0A1B2E" text-anchor="middle">Python</text></g>
+        <g><rect x="270" y="304" width="68" height="24" rx="12" fill="url(#sg)"/><text x="304" y="320" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#fff" text-anchor="middle">Real Data</text></g>`
+    },
+    switch: {
+      label: 'Career Switch',
+      svg: `<defs><linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFB627"/><stop offset="100%" stop-color="#FF6B1A"/></linearGradient></defs>
+        <path d="M30,260 C90,260 90,160 180,160 C270,160 270,80 330,80" fill="none" stroke="url(#sg)" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="30" cy="260" r="22" fill="#0E2138" stroke="rgba(255,182,39,0.5)" stroke-width="2"/>
+        <text x="30" y="265" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#FAFAF7" text-anchor="middle">01</text>
+        <text x="30" y="298" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#FAFAF7" text-anchor="middle">Non-IT</text>
+        <circle cx="130" cy="200" r="22" fill="#FAFAF7"/>
+        <text x="130" y="205" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#0A1B2E" text-anchor="middle">02</text>
+        <text x="130" y="238" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#FAFAF7" text-anchor="middle">Learn</text>
+        <circle cx="230" cy="140" r="22" fill="#FAFAF7"/>
+        <text x="230" y="145" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#0A1B2E" text-anchor="middle">03</text>
+        <text x="230" y="178" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#FAFAF7" text-anchor="middle">Project</text>
+        <circle cx="330" cy="80" r="26" fill="url(#sg)"/>
+        <text x="330" y="85" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">04</text>
+        <text x="330" y="120" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#FFB627" text-anchor="middle">Hired ★</text>
+        <g><rect x="220" y="30" width="92" height="32" rx="16" fill="#FAFAF7"/><text x="266" y="51" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#0A1B2E" text-anchor="middle">₹5.5 LPA</text></g>
+        <g fill="#FFB627" opacity="0.8"><circle cx="80" cy="232" r="2"/><circle cx="180" cy="178" r="2"/><circle cx="280" cy="110" r="2"/></g>
+        <rect x="40" y="312" width="280" height="2" rx="1" fill="rgba(255,182,39,0.3)"/>
+        <text x="180" y="334" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#FAFAF7" text-anchor="middle" opacity="0.85">Your career switch in 4 steps</text>`
+    },
+    skyline: {
+      label: 'Hyderabad Skyline',
+      svg: `<defs><linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFB627"/><stop offset="100%" stop-color="#FF6B1A"/></linearGradient><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFB627" stop-opacity="0.35"/><stop offset="100%" stop-color="#FF6B1A" stop-opacity="0.05"/></linearGradient></defs>
+        <rect x="20" y="40" width="320" height="220" rx="12" fill="url(#sky)"/>
+        <circle cx="180" cy="120" r="44" fill="url(#sg)" opacity="0.95"/>
+        <g fill="#0E2138">
+          <rect x="156" y="160" width="48" height="74"/><rect x="148" y="148" width="64" height="14"/>
+          <rect x="146" y="120" width="10" height="40"/><rect x="204" y="120" width="10" height="40"/>
+          <circle cx="151" cy="116" r="6"/><circle cx="209" cy="116" r="6"/>
+          <rect x="166" y="190" width="12" height="44" fill="rgba(255,182,39,0.28)"/>
+          <rect x="182" y="190" width="12" height="44" fill="rgba(255,182,39,0.28)"/>
+          <path d="M170,148 L180,134 L190,148 Z"/>
+        </g>
+        <g fill="#142640"><rect x="60" y="170" width="42" height="64"/><rect x="108" y="194" width="34" height="40"/><rect x="226" y="184" width="36" height="50"/><rect x="268" y="160" width="46" height="74"/></g>
+        <g fill="rgba(255,182,39,0.7)"><rect x="66" y="180" width="6" height="6"/><rect x="78" y="180" width="6" height="6"/><rect x="90" y="180" width="6" height="6"/><rect x="66" y="194" width="6" height="6"/><rect x="78" y="194" width="6" height="6"/><rect x="90" y="194" width="6" height="6"/><rect x="66" y="208" width="6" height="6"/><rect x="78" y="208" width="6" height="6"/><rect x="90" y="208" width="6" height="6"/><rect x="274" y="170" width="6" height="6"/><rect x="286" y="170" width="6" height="6"/><rect x="298" y="170" width="6" height="6"/><rect x="274" y="184" width="6" height="6"/><rect x="286" y="184" width="6" height="6"/><rect x="298" y="184" width="6" height="6"/><rect x="274" y="198" width="6" height="6"/><rect x="286" y="198" width="6" height="6"/><rect x="298" y="198" width="6" height="6"/></g>
+        <rect x="20" y="234" width="320" height="6" fill="rgba(255,182,39,0.5)"/>
+        <rect x="20" y="240" width="320" height="20" fill="#0E2138" opacity="0.9"/>
+        <g><path d="M180,266 C180,266 168,278 168,290 C168,300 174,304 180,304 C186,304 192,300 192,290 C192,278 180,266 180,266 Z" fill="url(#sg)"/><circle cx="180" cy="290" r="4" fill="#FAFAF7"/></g>
+        <text x="180" y="328" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#FAFAF7" text-anchor="middle">Ameerpet, Hyderabad</text>`
+    }
+  };
+  function renderHeroScene() {
+    const svg = document.getElementById('heroSvg');
+    if (!svg) return;
+    const scene = SCENES[state.heroScene] || SCENES.classroom;
+    svg.innerHTML = scene.svg;
+  }
+
+  function applyTweaks() {
+    const root = document.documentElement;
+    root.style.setProperty('--nav-blur', state.blur);
+    root.style.setProperty('--nav-saturation', state.saturation + '%');
+    root.style.setProperty('--nav-tint', state.tint);
+    root.style.setProperty('--nav-curve', state.curve);
+    root.style.setProperty('--nav-inset', state.inset);
+    root.style.setProperty('--nav-top', state.topGap);
+    root.style.setProperty('--nav-glow', state.brandGlow ? 1 : 0);
+    nav.classList.toggle('glass', state.headerStyle === 'glass');
+    renderHeroScene();
+  }
+  applyTweaks();
+
+  function setTweak(patch) {
+    Object.assign(state, patch);
+    applyTweaks();
+    renderPanel();
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: patch }, '*');
+  }
+
+  /* ── Tweaks panel UI ── */
+  const panelStyles = `
+    .tw-panel{position:fixed;right:20px;bottom:20px;z-index:9999;width:300px;
+      background:rgba(20,28,42,0.92);backdrop-filter:blur(16px);color:#fff;
+      border-radius:16px;border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 20px 60px rgba(0,0,0,0.4);
+      font-family:var(--font-body);font-size:13px;
+      display:none;flex-direction:column;overflow:hidden;}
+    .tw-panel.open{display:flex;}
+    .tw-head{display:flex;align-items:center;justify-content:space-between;
+      padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.08);
+      cursor:move;user-select:none;}
+    .tw-title{font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:0.02em;}
+    .tw-close{background:rgba(255,255,255,0.08);border:0;color:#fff;width:24px;height:24px;
+      border-radius:6px;cursor:pointer;font-size:14px;line-height:1;}
+    .tw-close:hover{background:rgba(255,255,255,0.16);}
+    .tw-body{padding:14px 16px;display:flex;flex-direction:column;gap:14px;
+      max-height:70vh;overflow-y:auto;}
+    .tw-row{display:flex;flex-direction:column;gap:6px;}
+    .tw-label{display:flex;justify-content:space-between;font-size:12px;
+      color:rgba(255,255,255,0.7);font-weight:500;}
+    .tw-label .v{color:var(--color-secondary);font-family:var(--font-mono);font-size:11px;}
+    .tw-slider{width:100%;-webkit-appearance:none;appearance:none;height:4px;
+      background:rgba(255,255,255,0.12);border-radius:2px;outline:none;}
+    .tw-slider::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;
+      border-radius:50%;background:var(--color-primary);cursor:pointer;
+      box-shadow:0 2px 6px rgba(255,107,26,0.5);}
+    .tw-slider::-moz-range-thumb{width:14px;height:14px;border-radius:50%;
+      background:var(--color-primary);cursor:pointer;border:0;}
+    .tw-radio{display:flex;gap:4px;background:rgba(255,255,255,0.06);padding:3px;border-radius:8px;}
+    .tw-radio button{flex:1;background:transparent;border:0;color:rgba(255,255,255,0.7);
+      padding:7px 10px;border-radius:6px;font-size:12px;font-weight:500;cursor:pointer;
+      transition:all 150ms;font-family:inherit;}
+    .tw-radio button.on{background:var(--gradient-brand);color:#fff;
+      box-shadow:0 2px 8px rgba(255,107,26,0.4);}
+    .tw-toggle{display:flex;align-items:center;justify-content:space-between;}
+    .tw-toggle .sw{width:36px;height:20px;background:rgba(255,255,255,0.16);
+      border-radius:10px;border:0;position:relative;cursor:pointer;transition:background 150ms;}
+    .tw-toggle .sw::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;
+      border-radius:50%;background:#fff;transition:transform 150ms;}
+    .tw-toggle .sw.on{background:var(--color-primary);}
+    .tw-toggle .sw.on::after{transform:translateX(16px);}
+    .tw-section-label{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
+      color:rgba(255,255,255,0.4);padding-top:6px;border-top:1px solid rgba(255,255,255,0.06);}
+    .tw-section-label:first-child{border-top:0;padding-top:0;}
+  `;
+  const styleEl = document.createElement('style');
+  styleEl.textContent = panelStyles;
+  document.head.appendChild(styleEl);
+
+  const panel = document.createElement('div');
+  panel.className = 'tw-panel';
+  panel.setAttribute('role', 'dialog');
+  panel.setAttribute('aria-label', 'Tweaks');
+  document.body.appendChild(panel);
+
+  function renderPanel() {
+    panel.innerHTML = `
+      <div class="tw-head" id="twHead">
+        <div class="tw-title">Tweaks · Header Glass</div>
+        <button class="tw-close" id="twClose" aria-label="Close">×</button>
+      </div>
+      <div class="tw-body">
+        <div class="tw-section-label">Hero Scene</div>
+        <div class="tw-row">
+          <div class="tw-radio" data-key="heroScene">
+            <button data-val="classroom" class="${state.heroScene==='classroom'?'on':''}">Classroom</button>
+            <button data-val="code" class="${state.heroScene==='code'?'on':''}">Code</button>
+          </div>
+          <div class="tw-radio" data-key="heroScene" style="margin-top:6px">
+            <button data-val="switch" class="${state.heroScene==='switch'?'on':''}">Switch</button>
+            <button data-val="skyline" class="${state.heroScene==='skyline'?'on':''}">Skyline</button>
+          </div>
+        </div>
+
+        <div class="tw-section-label">Header Style</div>
+        <div class="tw-row">
+          <div class="tw-radio" data-key="headerStyle">
+            <button data-val="glass" class="${state.headerStyle==='glass'?'on':''}">Liquid Glass</button>
+            <button data-val="solid" class="${state.headerStyle==='solid'?'on':''}">Original</button>
+          </div>
+        </div>
+
+        <div class="tw-section-label">Glass Material</div>
+        ${slider('blur', 'Blur', 0, 40, 1, 'px')}
+        ${slider('saturation', 'Saturation', 100, 250, 5, '%')}
+        ${slider('tint', 'White Tint', 0, 40, 1, '%')}
+
+        <div class="tw-section-label">Shape</div>
+        ${slider('curve', 'Corner Curve', 0, 40, 1, 'px')}
+        ${slider('inset', 'Side Inset', 0, 40, 1, 'px')}
+        ${slider('topGap', 'Top Gap', 0, 30, 1, 'px')}
+
+        <div class="tw-section-label">Effects</div>
+        <div class="tw-row tw-toggle">
+          <span>Brand Glow</span>
+          <button class="sw ${state.brandGlow?'on':''}" data-toggle="brandGlow" aria-label="Toggle brand glow"></button>
+        </div>
+      </div>
+    `;
+    wireUp();
+  }
+  function slider(key, label, min, max, step, unit) {
+    return `<div class="tw-row">
+      <div class="tw-label"><span>${label}</span><span class="v">${state[key]}${unit}</span></div>
+      <input type="range" class="tw-slider" data-slider="${key}" min="${min}" max="${max}" step="${step}" value="${state[key]}">
+    </div>`;
+  }
+  function wireUp() {
+    panel.querySelector('#twClose').addEventListener('click', closePanel);
+    panel.querySelectorAll('[data-slider]').forEach(s => {
+      s.addEventListener('input', e => {
+        const k = e.target.dataset.slider;
+        const v = parseFloat(e.target.value);
+        state[k] = v;
+        applyTweaks();
+        const v_el = e.target.previousElementSibling.querySelector('.v');
+        const unit = v_el.textContent.replace(/[\d.\-]/g,'');
+        v_el.textContent = v + unit;
+      });
+      s.addEventListener('change', e => {
+        const k = e.target.dataset.slider;
+        window.parent.postMessage({type:'__edit_mode_set_keys', edits:{[k]:state[k]}}, '*');
+      });
+    });
+    panel.querySelectorAll('.tw-radio').forEach(r => {
+      const key = r.dataset.key;
+      r.querySelectorAll('button').forEach(b => {
+        b.addEventListener('click', () => setTweak({[key]: b.dataset.val}));
+      });
+    });
+    panel.querySelectorAll('[data-toggle]').forEach(b => {
+      b.addEventListener('click', () => {
+        const k = b.dataset.toggle;
+        setTweak({[k]: !state[k]});
+      });
+    });
+    // Drag
+    const head = panel.querySelector('#twHead');
+    let dx=0, dy=0, dragging=false;
+    head.addEventListener('mousedown', e => {
+      dragging = true;
+      const r = panel.getBoundingClientRect();
+      dx = e.clientX - r.left; dy = e.clientY - r.top;
+      e.preventDefault();
+    });
+    window.addEventListener('mousemove', e => {
+      if (!dragging) return;
+      panel.style.left = (e.clientX - dx) + 'px';
+      panel.style.top = (e.clientY - dy) + 'px';
+      panel.style.right = 'auto'; panel.style.bottom = 'auto';
+    });
+    window.addEventListener('mouseup', () => dragging = false);
+  }
+
+  function openPanel() { panel.classList.add('open'); renderPanel(); }
+  function closePanel() {
+    panel.classList.remove('open');
+    window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*');
+  }
+
+  // Host protocol — listener FIRST, then announce
+  window.addEventListener('message', e => {
+    const t = e.data && e.data.type;
+    if (t === '__activate_edit_mode') openPanel();
+    else if (t === '__deactivate_edit_mode') panel.classList.remove('open');
+  });
+  window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+
+</script>
+
+<script>
+  const slides = document.querySelectorAll('#heroCarousel .hero-slide');
+  let ci = 0;
+  setInterval(() => {
+    slides[ci].classList.remove('active');
+    ci = (ci + 1) % slides.length;
+    slides[ci].classList.add('active');
+  }, 2000);
+</script>
+
+</body>
+</html>

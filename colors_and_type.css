@@ -1,0 +1,178 @@
+/* Sunadh Technologies — Design Tokens
+ * Colors + Type, including semantic vars for direct use.
+ * Import once: <link rel="stylesheet" href="colors_and_type.css">
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* === Brand colors === */
+  --color-primary:        #FF6B1A;   /* Sunrise Orange */
+  --color-primary-hover:  #E55A0E;
+  --color-primary-press:  #C94B07;
+  --color-secondary:      #FFB627;   /* Golden Yellow */
+  --color-secondary-hover:#E8A11D;
+
+  /* === Surfaces === */
+  --color-dark:        #0A1B2E;   /* Deep Navy */
+  --color-charcoal:    #1A2638;
+  --color-bg:          #FAFAF7;   /* Off-white page */
+  --color-surface:     #FFFFFF;
+  --color-surface-tint:#FFF6EE;   /* Soft warm tint for cards */
+
+  /* === Text === */
+  --color-text:        #111827;
+  --color-text-muted:  #4B5563;
+  --color-text-on-dark:#FAFAF7;
+  --color-text-faint:  #9CA3AF;
+  --color-link:        var(--color-primary);
+
+  /* === Borders === */
+  --color-border:      #E5E7EB;
+  --color-border-strong:#D1D5DB;
+  --color-border-dark: #1F2A3D;
+
+  /* === Status === */
+  --color-success: #10B981;
+  --color-warn:    #F59E0B;
+  --color-error:   #EF4444;
+  --color-info:    #3B82F6;
+
+  /* === Semantic foreground (fg) tokens === */
+  --fg1: var(--color-text);
+  --fg2: var(--color-text-muted);
+  --fg3: var(--color-text-faint);
+  --fg-on-dark: var(--color-text-on-dark);
+  --fg-accent: var(--color-primary);
+
+  /* === Gradients === */
+  --gradient-brand:       linear-gradient(135deg, #FF6B1A 0%, #FFB627 100%);
+  --gradient-brand-soft:  linear-gradient(135deg, rgba(255,107,26,0.12) 0%, rgba(255,182,39,0.12) 100%);
+  --gradient-dark-warm:   linear-gradient(135deg, #0A1B2E 0%, #1A2638 60%, #2A1810 100%);
+  --gradient-sunrise-bg:  radial-gradient(80% 60% at 70% 30%, rgba(255,182,39,0.18), transparent 60%),
+                          linear-gradient(135deg, #0A1B2E 0%, #0E2138 100%);
+
+  /* === Shadows === */
+  --shadow-xs:  0 1px 1px rgba(10, 27, 46, 0.04);
+  --shadow-sm:  0 1px 2px rgba(10, 27, 46, 0.06), 0 1px 3px rgba(10,27,46,0.04);
+  --shadow-md:  0 4px 12px rgba(10, 27, 46, 0.08);
+  --shadow-lg:  0 12px 32px rgba(10, 27, 46, 0.12);
+  --shadow-xl:  0 24px 48px rgba(10, 27, 46, 0.16);
+  --shadow-cta: 0 8px 24px rgba(255, 107, 26, 0.32);
+  --shadow-inner: inset 0 1px 0 rgba(255,255,255,0.6);
+  --ring-focus: 0 0 0 3px rgba(255, 107, 26, 0.35);
+
+  /* === Radii === */
+  --radius-xs:   4px;
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   20px;
+  --radius-2xl:  28px;
+  --radius-pill: 9999px;
+
+  /* === Spacing === */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* === Layout === */
+  --container-max: 1200px;
+  --container-pad: clamp(16px, 4vw, 32px);
+
+  /* === Type families === */
+  --font-display: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body:    'Inter',   system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  /* === Type scale (fluid) === */
+  --fs-hero:    clamp(2.5rem, 5vw, 4.5rem);   /* 40 - 72 */
+  --fs-h1:      clamp(2rem, 4vw, 3rem);       /* 32 - 48 */
+  --fs-h2:      clamp(1.75rem, 3vw, 2.5rem);  /* 28 - 40 */
+  --fs-h3:      1.5rem;
+  --fs-h4:      1.25rem;
+  --fs-body-lg: 1.125rem;
+  --fs-body:    1.0625rem;
+  --fs-small:   0.875rem;
+  --fs-caption: 0.75rem;
+
+  /* === Line heights === */
+  --lh-tight:  1.15;
+  --lh-snug:   1.35;
+  --lh-normal: 1.6;
+  --lh-loose:  1.8;
+
+  /* === Motion === */
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-emphasis: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 360ms;
+}
+
+/* === Defaults === */
+html { font-family: var(--font-body); font-size: 16px; -webkit-font-smoothing: antialiased; }
+body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--fg1);
+  background: var(--color-bg);
+  margin: 0;
+}
+
+/* === Semantic typography classes === */
+h1, h2, h3, h4, h5, h6,
+.h-display, .h-section, .h-card {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  line-height: var(--lh-tight);
+  color: var(--color-dark);
+  margin: 0 0 var(--space-4);
+}
+
+.h-display      { font-size: var(--fs-hero); font-weight: 800; letter-spacing: -0.02em; }
+h1, .h-section-major { font-size: var(--fs-h1); font-weight: 800; }
+h2, .h-section  { font-size: var(--fs-h2); font-weight: 700; }
+h3, .h-card     { font-size: var(--fs-h3); font-weight: 600; }
+h4              { font-size: var(--fs-h4); font-weight: 600; }
+
+p, .p {
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--fg1);
+  margin: 0 0 var(--space-4);
+}
+
+.lede {
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-loose);
+  color: var(--fg2);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-3);
+  display: inline-block;
+}
+
+.small   { font-size: var(--fs-small); }
+.caption { font-size: var(--fs-caption); color: var(--fg2); }
+
+code, .mono { font-family: var(--font-mono); font-size: 0.92em; }
+
+a { color: var(--color-link); text-decoration: none; }
+a:hover { color: var(--color-primary-hover); text-decoration: underline; text-underline-offset: 3px; }
+
+::selection { background: rgba(255,107,26,0.25); color: var(--color-dark); }

@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Sunadh Technologies</title>
+<meta name="description" content="Built in Ameerpet, trusted across Hyderabad. For two decades, Sunadh Technologies has helped working professionals and fresh graduates break into tech with real-time training and committed placement support.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="styles/components.css">
+
+<style>
+  /* ============ Global Dark Base ============ */
+  body { background: #121412; color: #e2e3e0; }
+
+  /* ============ Utility Classes ============ */
+  .glass-surface {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+  .sunrise-glow {
+    position: relative;
+  }
+  .sunrise-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255,107,26,0.12) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ============ Page Hero ============ */
+  .page-hero {
+    background:
+      radial-gradient(60% 80% at 85% 30%, rgba(255,107,26,0.22), transparent 60%),
+      radial-gradient(50% 70% at 80% 40%, rgba(255,182,39,0.14), transparent 65%),
+      linear-gradient(135deg, rgba(10,27,46,0.30) 0%, rgba(14,33,56,0.30) 100%),
+      url('assets/about-hero-bg.png') center / cover no-repeat;
+    color: #fff;
+    padding: 152px 0 0;
+    text-align: left;
+  }
+  .page-hero .eyebrow-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .page-hero .eyebrow-bar::before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #FF6B1A, #FFB627);
+    flex-shrink: 0;
+  }
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 800; line-height: 1.06; letter-spacing: -0.03em;
+    color: #fff; margin: 18px 0 20px;
+    max-width: 760px;
+  }
+  .page-hero p {
+    font-size: 18px; line-height: 1.65;
+    color: rgba(250,250,247,0.78);
+    max-width: 600px; margin: 0;
+  }
+  .hero-content { padding-bottom: 56px; }
+  @media (min-width: 1024px) {
+    .page-hero { padding: 176px 0 0; }
+    .hero-content { padding-bottom: 64px; }
+  }
+
+  /* Stat Strip */
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .stat-item {
+    padding: 28px 24px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: clamp(20px, 2.4vw, 28px);
+    font-weight: 800;
+    color: #FF6B1A;
+    letter-spacing: -0.02em;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  @media (max-width: 768px) {
+    .stat-strip { grid-template-columns: repeat(2, 1fr); }
+    .stat-item:nth-child(2) { border-right: none; }
+  }
+  @media (max-width: 480px) {
+    .stat-strip { grid-template-columns: 1fr 1fr; }
+    .stat-item { padding: 20px 16px; }
+  }
+
+  /* ============ Section Shared ============ */
+  .section-dark {
+    background: #121412;
+    padding: 96px 0;
+    position: relative;
+  }
+  .section-head {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .section-head .eyebrow {
+    color: #FFB627 !important;
+  }
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.4vw, 42px);
+    font-weight: 700;
+    color: #e2e3e0;
+    margin: 12px 0 14px;
+    letter-spacing: -0.02em;
+  }
+  .section-head p {
+    color: #9ca3af;
+    font-size: 17px;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  /* ============ Our Story ============ */
+  .story { background: #121412; padding: 96px 0; }
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    .story-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .story .eyebrow { color: #FFB627 !important; }
+  .story h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.4vw, 42px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: #e2e3e0;
+    margin: 12px 0 24px;
+  }
+  .story p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #9ca3af;
+    margin: 0 0 18px;
+    max-width: 540px;
+  }
+  .story-image {
+    aspect-ratio: 4 / 5;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.03);
+  }
+  .story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .story-image::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(255,107,26,0.25), transparent);
+    pointer-events: none;
+  }
+  .story-image-tag {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background: rgba(18,20,18,0.8);
+    backdrop-filter: blur(8px);
+    color: #e2e3e0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255,107,26,0.3);
+    z-index: 2;
+  }
+
+  /* ============ Director Message ============ */
+  .director-section {
+    background: #121412;
+    padding: 96px 0;
+    position: relative;
+  }
+  .director-card {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 24px;
+    padding: 56px;
+    max-width: 880px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .director-card::before {
+    content: "\201C";
+    position: absolute;
+    top: -10px;
+    left: 40px;
+    font-family: 'Poppins', serif;
+    font-size: 240px;
+    line-height: 1;
+    color: #FF6B1A;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+  .director-head {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 28px;
+    position: relative;
+  }
+  .director-avatar {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF6B1A, #FFB627);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 30px;
+    font-weight: 700;
+    box-shadow: 0 0 32px rgba(255,107,26,0.25);
+  }
+  .director-meta .name {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: #e2e3e0;
+    margin: 0;
+    line-height: 1.2;
+  }
+  .director-meta .title {
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 4px;
+    letter-spacing: 0.04em;
+  }
+  .director-quote {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-style: italic;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.6;
+    color: #e2e3e0;
+    margin: 0 0 28px;
+    position: relative;
+  }
+  .director-sig {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    font-size: 14px;
+    color: #6b7280;
+  }
+  .director-sig .sig-script {
+    font-family: 'Poppins', cursive;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 500;
+    color: #FFB627;
+  }
+  @media (max-width: 600px) {
+    .director-card { padding: 36px 24px; }
+    .director-head { flex-direction: column; align-items: flex-start; gap: 14px; }
+  }
+
+  /* ============ Journey Timeline ============ */
+  .journey {
+    background: #121412;
+    padding: 96px 0;
+    position: relative;
+  }
+  .journey-head {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .journey-head .eyebrow { color: #FFB627 !important; }
+  .journey-head h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.4vw, 42px);
+    font-weight: 700;
+    color: #e2e3e0;
+    margin: 12px 0 14px;
+    letter-spacing: -0.02em;
+  }
+  .journey-head p {
+    color: #9ca3af;
+    font-size: 17px;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 0 0 48px;
+    list-style: none;
+  }
+  .timeline li { list-style: none; }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(255,107,26,0) 0%, #FF6B1A 10%, #FFB627 90%, rgba(255,182,39,0) 100%);
+    border-radius: 2px;
+  }
+
+  .milestone {
+    position: relative;
+    padding: 0 0 48px 0;
+  }
+  .milestone:last-child { padding-bottom: 0; }
+
+  .milestone-dot {
+    position: absolute;
+    top: 24px;
+    left: -39px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #FF6B1A;
+    box-shadow: 0 0 0 4px #121412, 0 0 16px rgba(255,107,26,0.5);
+    z-index: 2;
+  }
+
+  .milestone-card {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 28px 32px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .milestone-card:hover {
+    border-color: rgba(255,107,26,0.3);
+    box-shadow: 0 0 30px rgba(255,107,26,0.08);
+    transform: translateY(-2px);
+  }
+  .year-pill {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    background: #FF6B1A;
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 9999px;
+    margin-bottom: 14px;
+  }
+  .milestone-card h3 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: #e2e3e0;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+  .milestone-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #9ca3af;
+    margin: 0;
+  }
+
+  /* ============ Faculty Grid ============ */
+  .faculty {
+    background: #121412;
+    padding: 96px 0;
+    position: relative;
+  }
+  .faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 1024px) { .faculty-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px)  { .faculty-grid { grid-template-columns: 1fr; } }
+
+  .trainer {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .trainer:hover {
+    border-color: rgba(255,107,26,0.4);
+    box-shadow: 0 0 36px rgba(255,107,26,0.1);
+    transform: translateY(-4px);
+  }
+  .trainer-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF6B1A, #FFB627);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .trainer h3 {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+    color: #e2e3e0;
+    margin: 0;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+  .trainer .qual {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin: 0;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  }
+  .trainer .subject {
+    font-size: 14px;
+    color: #9ca3af;
+    margin: 0;
+    line-height: 1.45;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    width: 100%;
+  }
+  .trainer .subject strong {
+    color: #FF6B1A;
+    font-weight: 600;
+  }
+  .trainer-linkedin {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #9ca3af;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    margin-top: auto;
+    text-decoration: none;
+  }
+  .trainer-linkedin:hover {
+    background: linear-gradient(135deg, #FF6B1A, #FFB627);
+    color: #fff;
+    border-color: transparent;
+  }
+
+  /* ============ Campus Gallery ============ */
+  .campus {
+    background: #121412;
+    padding: 96px 0;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 1024px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .gallery { grid-template-columns: 1fr; } }
+
+  .gallery-item {
+    aspect-ratio: 4 / 3;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.03);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gallery-item:hover {
+    border-color: rgba(255,107,26,0.4);
+    box-shadow: 0 0 30px rgba(255,107,26,0.1);
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+  .gallery-item .caption {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    background: rgba(18,20,18,0.82);
+    backdrop-filter: blur(8px);
+    color: #e2e3e0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255,107,26,0.25);
+    z-index: 2;
+  }
+
+  /* ============ Affiliations ============ */
+  .affiliations {
+    background: #121412;
+    padding: 64px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .aff-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    align-items: center;
+  }
+  @media (max-width: 900px) { .aff-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 540px) { .aff-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .aff-tile {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 22px 16px;
+    text-align: center;
+    min-height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    transition: border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  .aff-tile:hover {
+    border-color: rgba(255,107,26,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255,107,26,0.06);
+  }
+  .aff-tile .aff-mark {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 800;
+    color: #e2e3e0;
+    letter-spacing: 0.06em;
+    line-height: 1.15;
+    text-transform: uppercase;
+  }
+  .aff-tile .aff-sub {
+    font-size: 10px;
+    color: #6b7280;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ============ CTA Banner ============ */
+  .cta-section {
+    padding: 96px 0;
+    background: #121412;
+  }
+  .cta {
+    background: linear-gradient(135deg, #FF6B1A, #FFB627);
+    border-radius: 28px;
+    padding: 60px 44px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 30px 80px rgba(255,107,26,0.3);
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(60% 80% at 0% 100%, rgba(255,255,255,0.18), transparent 60%);
+    pointer-events: none;
+  }
+  .cta h2 {
+    color: #fff;
+    margin: 0 0 12px;
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3.4vw, 38px);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    position: relative;
+  }
+  .cta p {
+    margin: 0 auto 28px;
+    font-size: 17px;
+    opacity: 0.95;
+    max-width: 580px;
+    line-height: 1.55;
+    position: relative;
+    color: #fff;
+  }
+  .cta .btn { position: relative; }
+
+  /* ============ Footer Dark ============ */
+  footer {
+    background: #0d0f0d !important;
+    color: rgba(250,250,247,0.7);
+  }
+  footer h4 { color: #fff !important; }
+  footer a { color: rgba(250,250,247,0.5) !important; }
+  footer a:hover { color: #FFB627 !important; }
+  .foot-bottom {
+    border-color: rgba(255,255,255,0.08) !important;
+    color: rgba(250,250,247,0.4);
+  }
+  .foot-about { color: rgba(250,250,247,0.6) !important; }
+  .foot-contact-line, .foot-contact-line a { color: rgba(250,250,247,0.5) !important; }
+  .foot-social a {
+    background: rgba(255,255,255,0.05) !important;
+    color: #fff !important;
+    border-color: rgba(255,255,255,0.1) !important;
+  }
+
+  /* ============ Misc Overrides ============ */
+  h1, h2, h3, h4 { color: #e2e3e0; }
+  .eyebrow { color: #FFB627 !important; }
+  .wa-float { box-shadow: 0 4px 20px rgba(37,211,102,0.3); }
+  hr { border-color: rgba(255,255,255,0.08); }
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav glass" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Sunadh Technologies — home">
+      <img src="assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img">
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html" class="active" aria-current="page">About</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="placements.html">Placements</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="index.html#enquiry" class="btn btn-primary nav-cta">Book Free Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="about.html" class="active" aria-current="page">About</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="placements.html">Placements</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</header>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="page-hero">
+  <div class="container hero-content">
+    <div class="eyebrow-bar">
+      <span class="eyebrow" style="color: #FFB627">About Us</span>
+    </div>
+    <h1>Built in Ameerpet. Trusted Across Hyderabad.</h1>
+    <p>For two decades, we've helped working professionals and fresh graduates break into tech with real-time training and committed placement support.</p>
+  </div>
+  <div class="stat-strip">
+    <div class="stat-item">
+      <div class="stat-value">Est. 2005</div>
+      <div class="stat-label">Founded</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">10,000+</div>
+      <div class="stat-label">Students Trained</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">500+</div>
+      <div class="stat-label">Hiring Partners</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">2</div>
+      <div class="stat-label">Campuses</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OUR STORY ================= -->
+<section class="story sunrise-glow">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="story-grid">
+      <div>
+        <span class="eyebrow">Our Story</span>
+        <h2>Why Sunadh Exists</h2>
+        <p>Sunadh Technologies started in 2005 in a small classroom on SAP Street, Ameerpet — a single trainer, a borrowed projector, and a stubborn belief that anyone willing to put in the hours could earn a place in tech, regardless of their college tier or background.</p>
+        <p>Twenty years on, that belief still drives us. We were built to bridge a specific gap: the one between a non-IT graduate's degree and the practical, project-tested skills hiring managers in Hyderabad's tech corridor actually look for. We don't sell theory. We coach for the interview, the codebase, and the first 90 days on the job.</p>
+        <p>Today, more than 10,000 students have walked through our doors. Most arrived unsure if a career switch was even possible. They left with a Tableau dashboard, a deployed cloud pipeline, or a working ML model — and a job offer to match.</p>
+      </div>
+      <div class="story-image" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800" alt="Classroom training session" loading="lazy">
+        <div class="story-image-tag">Classroom · Ameerpet HQ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DIRECTOR MESSAGE ================= -->
+<section class="director-section">
+  <div class="container">
+    <div class="director-card">
+      <div class="director-head">
+        <div class="director-avatar" aria-hidden="true">RS</div>
+        <div class="director-meta">
+          <p class="name">Director's Name</p>
+          <p class="title">Founder &amp; Director</p>
+        </div>
+      </div>
+      <p class="director-quote">When I started Sunadh in a one-room space in Ameerpet, I had one rule: every batch must end with offer letters, not certificates. That hasn't changed. We measure ourselves by how many students walk out with a job — not by how many walk in. If you're willing to put in the work, we'll match it with everything we've got.</p>
+      <div class="director-sig">
+        <span class="sig-script">Director's Name</span>
+        <span>Founder &amp; Director, Sunadh Technologies</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY TIMELINE ================= -->
+<section class="journey sunrise-glow">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="journey-head">
+      <span class="eyebrow">Our Journey</span>
+      <h2>Twenty Years, Ten Thousand Careers</h2>
+      <p>From a single room in Ameerpet to one of Hyderabad's most trusted IT training names.</p>
+    </div>
+
+    <ol class="timeline">
+      <li class="milestone">
+        <span class="milestone-dot" aria-hidden="true"></span>
+        <div class="milestone-card">
+          <span class="year-pill">2005</span>
+          <h3>Founded in Ameerpet</h3>
+          <p>Started with a single classroom on SAP Street and our first batch of 12 IT trainees.</p>
+        </div>
+      </li>
+      <li class="milestone">
+        <span class="milestone-dot" aria-hidden="true"></span>
+        <div class="milestone-card">
+          <span class="year-pill">2010</span>
+          <h3>1,000 Students Placed</h3>
+          <p>Crossed our first major placement milestone, with alumni at Infosys, TCS, and Wipro.</p>
+        </div>
+      </li>
+      <li class="milestone">
+        <span class="milestone-dot" aria-hidden="true"></span>
+        <div class="milestone-card">
+          <span class="year-pill">2015</span>
+          <h3>Second Branch &amp; Cloud Track</h3>
+          <p>Expanded to a second campus and added AWS &amp; Azure certification programs.</p>
+        </div>
+      </li>
+      <li class="milestone">
+        <span class="milestone-dot" aria-hidden="true"></span>
+        <div class="milestone-card">
+          <span class="year-pill">2020</span>
+          <h3>Online + Hybrid Delivery</h3>
+          <p>Launched live online and hybrid batches during the pandemic — without compromising hands-on labs.</p>
+        </div>
+      </li>
+      <li class="milestone">
+        <span class="milestone-dot" aria-hidden="true"></span>
+        <div class="milestone-card">
+          <span class="year-pill">2026</span>
+          <h3>10,000+ Trained · 500+ Hiring Partners</h3>
+          <p>Today, our alumni network spans data, cloud, AI and security teams across India's top tech firms.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= FACULTY ================= -->
+<section class="faculty">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Meet Our Faculty</span>
+      <h2>Trainers Who've Built What They Teach</h2>
+      <p>Industry practitioners with 8+ years of real project experience — not just academic credentials.</p>
+    </div>
+
+    <div class="faculty-grid">
+      <article class="trainer">
+        <div class="trainer-avatar">RK</div>
+        <h3>Trainer Name 1</h3>
+        <p class="qual">M.Tech · 12 yrs</p>
+        <p class="subject">Teaches <strong>Tableau &amp; Power BI</strong></p>
+        <a class="trainer-linkedin" href="#" aria-label="LinkedIn profile">in</a>
+      </article>
+      <article class="trainer">
+        <div class="trainer-avatar">PS</div>
+        <h3>Trainer Name 2</h3>
+        <p class="qual">M.Sc · 10 yrs</p>
+        <p class="subject">Teaches <strong>Data Science &amp; ML</strong></p>
+        <a class="trainer-linkedin" href="#" aria-label="LinkedIn profile">in</a>
+      </article>
+      <article class="trainer">
+        <div class="trainer-avatar">AV</div>
+        <h3>Trainer Name 3</h3>
+        <p class="qual">B.Tech · 14 yrs</p>
+        <p class="subject">Teaches <strong>Azure &amp; Databricks</strong></p>
+        <a class="trainer-linkedin" href="#" aria-label="LinkedIn profile">in</a>
+      </article>
+      <article class="trainer">
+        <div class="trainer-avatar">NM</div>
+        <h3>Trainer Name 4</h3>
+        <p class="qual">CISSP · 9 yrs</p>
+        <p class="subject">Teaches <strong>Cybersecurity</strong></p>
+        <a class="trainer-linkedin" href="#" aria-label="LinkedIn profile">in</a>
+      </article>
+      <article class="trainer">
+        <div class="trainer-avatar">SG</div>
+        <h3>Trainer Name 5</h3>
+        <p class="qual">M.Tech · 11 yrs</p>
+        <p class="subject">Teaches <strong>Python &amp; Django</strong></p>
+        <a class="trainer-linkedin" href="#" aria-label="LinkedIn profile">in</a>
+      </article>
+      <article class="trainer">
+        <div class="trainer-avatar">VR</div>
+        <h3>Trainer Name 6</h3>
+        <p class="qual">PhD · 8 yrs</p>
+        <p class="subject">Teaches <strong>Gen AI &amp; LLMs</strong></p>
+        <a class="trainer-linkedin" href="#" aria-label="LinkedIn profile">in</a>
+      </article>
+      <article class="trainer">
+        <div class="trainer-avatar">KT</div>
+        <h3>Trainer Name 7</h3>
+        <p class="qual">B.Tech · 13 yrs</p>
+        <p class="subject">Teaches <strong>SQL &amp; Data Eng.</strong></p>
+        <a class="trainer-linkedin" href="#" aria-label="LinkedIn profile">in</a>
+      </article>
+      <article class="trainer">
+        <div class="trainer-avatar">DJ</div>
+        <h3>Trainer Name 8</h3>
+        <p class="qual">M.Tech · 10 yrs</p>
+        <p class="subject">Teaches <strong>AWS &amp; DevOps</strong></p>
+        <a class="trainer-linkedin" href="#" aria-label="LinkedIn profile">in</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAMPUS GALLERY ================= -->
+<section class="campus sunrise-glow">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="section-head">
+      <span class="eyebrow">Campus &amp; Classrooms</span>
+      <h2>Where the Work Happens</h2>
+      <p>Modern classrooms, dedicated lab benches, and a placement cell — all under one roof in the heart of Ameerpet.</p>
+    </div>
+
+    <div class="gallery">
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600" alt="Main Classroom" loading="lazy">
+        <figcaption class="caption">Main Classroom</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600" alt="Hands-on Lab" loading="lazy">
+        <figcaption class="caption">Lab · Hands-on</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600" alt="Placement Cell" loading="lazy">
+        <figcaption class="caption">Placement Cell</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" alt="Mentor Sessions" loading="lazy">
+        <figcaption class="caption">Mentor Sessions</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600" alt="Project Wall" loading="lazy">
+        <figcaption class="caption">Project Wall</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600" alt="Front Entrance" loading="lazy">
+        <figcaption class="caption">Front Entrance</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AFFILIATIONS ================= -->
+<section class="affiliations">
+  <div class="container">
+    <div class="section-head" style="margin-bottom: 28px">
+      <span class="eyebrow">Affiliations &amp; Recognition</span>
+    </div>
+    <div class="aff-grid">
+      <div class="aff-tile"><div class="aff-mark">ISO</div><div class="aff-sub">9001:2015</div></div>
+      <div class="aff-tile"><div class="aff-mark">MSME</div><div class="aff-sub">Registered</div></div>
+      <div class="aff-tile"><div class="aff-mark">NSDC</div><div class="aff-sub">Aligned</div></div>
+      <div class="aff-tile"><div class="aff-mark">Startup<br>India</div><div class="aff-sub">Recognized</div></div>
+      <div class="aff-tile"><div class="aff-mark">FICCI</div><div class="aff-sub">Member</div></div>
+      <div class="aff-tile"><div class="aff-mark">NASSCOM</div><div class="aff-sub">Partner</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA BANNER ================= -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta">
+      <h2>Ready to be part of the journey?</h2>
+      <p>Talk to our team about which course fits you best.</p>
+      <a href="index.html#enquiry" class="btn btn-on-gradient">Book Free Demo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img"></div>
+        <p class="foot-about">Real-time training. Real placements. Hyderabad's trusted name in IT training, in the heart of Ameerpet.</p>
+        <a class="foot-wa" href="https://wa.me/919848131318"><img src="assets/icon-whatsapp.svg" alt="">Chat on WhatsApp</a>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#enquiry">Admissions</a></li>
+          <li><a href="placements.html">Placements</a></li>
+          <li><a href="index.html#news">News</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="courses/tableau.html">Tableau</a></li>
+          <li><a href="courses/cybersecurity.html">Cybersecurity</a></li>
+          <li><a href="courses/azure-data-engineer.html">Azure Data Engineer</a></li>
+          <li><a href="courses/data-science.html">Data Science</a></li>
+          <li><a href="courses/gen-ai.html">Gen AI / Agentic AI</a></li>
+          <li><a href="courses/python.html">Python</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <div class="foot-contact-line">Aditi Arcade, Mytrivanam, SAP Street,<br>Ameerpet, Hyderabad – 500016</div>
+        <div class="foot-contact-line" style="margin-top:10px"><a href="tel:+919848131318">+91 98481 31318</a></div>
+        <div class="foot-contact-line"><a href="mailto:hello@sunadhtechnologies.in">hello@sunadhtechnologies.in</a></div>
+        <div class="foot-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Sunadh Technologies. All rights reserved.</div>
+      <div style="display:flex;gap:18px"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919848131318" target="_blank" rel="noopener" aria-label="Chat with Sunadh on WhatsApp">
+  <img src="assets/icon-whatsapp.svg" alt="">
+</a>
+
+<script src="js/nav.js"></script>
+
+</body>
+</html>

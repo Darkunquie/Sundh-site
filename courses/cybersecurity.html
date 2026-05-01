@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cybersecurity Course — Sunadh Technologies</title>
+<meta name="description" content="Master Cybersecurity in 12 weeks. SOC Analyst, Penetration Tester, Security Engineer roles. Sunadh Technologies, Ameerpet, Hyderabad.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../styles/components.css">
+<link rel="stylesheet" href="../styles/course-detail.css">
+<style>
+/* ============ Dark Theme Overrides ============ */
+body { background: #121412 !important; color: #e2e3e0; }
+section, main, .trainer-section, .tools-section, .careers-section,
+.faq-section, .curriculum-section, .stat-row-section {
+  background: #121412 !important; color: #e2e3e0;
+}
+.section-header { background: transparent !important; border: none !important; backdrop-filter: none !important; }
+.stat-card {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3) !important;
+  backdrop-filter: blur(16px);
+}
+.stat-label { color: #6b7280 !important; }
+.stat-value { color: #e2e3e0 !important; }
+.acc {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+}
+.acc.open { border-color: rgba(255,107,26,0.4) !important; box-shadow: 0 8px 30px rgba(255,107,26,0.08) !important; }
+.acc-head { background: transparent !important; }
+.acc-head .ttl { color: #e2e3e0 !important; }
+.acc-head .desc { color: #6b7280 !important; }
+.acc-head .num { color: #FF6B1A !important; }
+.acc-body-inner { border-color: rgba(255,255,255,0.06) !important; }
+.lesson-list li { color: #b4bcc6 !important; }
+.lesson-list li::before { box-shadow: inset 0 0 0 2.5px #121412 !important; }
+.tool-tile {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  color: #6b7280 !important; filter: none !important;
+}
+.tool-tile:hover { color: #e2e3e0 !important; border-color: rgba(255,107,26,0.4) !important; }
+.trainer {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+}
+.trainer-info h3 { color: #e2e3e0 !important; }
+.trainer-info p { color: #9ca3af !important; }
+.career-card {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+}
+.career-card:hover { box-shadow: 0 12px 40px rgba(255,107,26,0.08) !important; border-color: rgba(255,107,26,0.3) !important; }
+.career-card h3 { color: #e2e3e0 !important; }
+.career-card .desc { color: #9ca3af !important; }
+h1, h2, h3, h4 { color: #e2e3e0 !important; }
+p, li, td { color: #b4bcc6; }
+.section-head p { color: #9ca3af !important; }
+.crumb { color: #8b929c; }
+.crumb a { color: #8b929c !important; }
+.crumb a:hover { color: #FF6B1A !important; }
+input, select, textarea {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  color: #e2e3e0 !important;
+}
+input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.3) !important; }
+label { color: #b4bcc6 !important; }
+footer { background: #0d0f0d !important; color: rgba(250,250,247,0.7); }
+footer h4 { color: #fff !important; }
+footer a { color: rgba(250,250,247,0.5) !important; }
+footer a:hover { color: #FFB627 !important; }
+.foot-bottom { border-color: rgba(255,255,255,0.08) !important; color: rgba(250,250,247,0.4); }
+.foot-about { color: rgba(250,250,247,0.6) !important; }
+.foot-contact-line, .foot-contact-line a { color: rgba(250,250,247,0.5) !important; }
+.foot-social a { background: rgba(255,255,255,0.05) !important; color: #fff !important; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="nav glass" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img"></a>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../courses.html" class="active" aria-current="page">Courses</a>
+      <a href="../about.html">About</a>
+      <a href="../admissions.html">Admissions</a>
+      <a href="../placements.html">Placements</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="#enquiry" class="btn btn-primary nav-cta">Book Free Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="../courses.html" class="active">Courses</a>
+    <a href="../about.html">About</a>
+    <a href="../admissions.html">Admissions</a>
+    <a href="../placements.html">Placements</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</header>
+
+<!-- COURSE HERO -->
+<section class="course-hero">
+  <div class="container">
+    <div class="crumb">
+      <a href="../index.html">Home</a><span class="sep">›</span>
+      <a href="../courses.html">Courses</a><span class="sep">›</span>
+      <span class="here">Cybersecurity</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--color-secondary)">Security</span>
+        <h1>Cybersecurity — Defend Networks. Land High-Paying SOC Roles.</h1>
+        <p class="lede">Industry-aligned curriculum. Real attack-and-defend labs. Job-ready in 12 weeks — taught by analysts who've shipped SOC playbooks in production.</p>
+        <div class="hero-pills">
+          <span class="hero-pill">12 weeks</span>
+          <span class="hero-pill">Online + Offline</span>
+          <span class="hero-pill">Beginner-friendly</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#enquiry" class="btn btn-primary">Book Free Demo →</a>
+          <a href="#" class="btn btn-outline-light">Download Brochure</a>
+        </div>
+      </div>
+      <div class="hero-illo-wrap">
+        <div class="hero-illo" style="padding:0; overflow:hidden;">
+          <img src="../assets/course-cybersecurity-hero.png" alt="Cybersecurity shield and network visualization" style="width:100%; height:100%; object-fit:cover; border-radius:24px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT ROW -->
+<section class="stat-row-section" style="padding:0 0 32px">
+  <div class="container">
+    <div class="stat-card">
+      <div class="stat-item"><div class="stat-label">Avg Salary</div><div class="stat-value">₹5–9 LPA</div></div>
+      <div class="stat-item"><div class="stat-label">Demand in India</div><div class="stat-value">+28% YoY</div></div>
+      <div class="stat-item"><div class="stat-label">Hiring</div><div class="stat-value">Deloitte · IBM · TCS · Wipro · Capgemini</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM ACCORDION -->
+<section style="background:var(--color-bg)">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Curriculum</span>
+      <h2>What You'll Learn</h2>
+      <p class="sub">Eight modules, twelve weeks — every concept reinforced with a hands-on lab on real attacker tooling.</p>
+    </div>
+    <div class="acc-list" id="curriculum">
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 01</span><span class="ttl">Network Security Fundamentals</span><div class="desc">TCP/IP, firewalls, and the foundations every defender must own.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>OSI model and TCP/IP packet flow</li><li>Firewalls, IDS, IPS — what they do and where they sit</li><li>VPNs, VLANs and network segmentation</li><li>Hands-on packet capture with Wireshark</li><li>Reading a packet trace like an attacker would</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 02</span><span class="ttl">Threat Landscape & Attack Vectors</span><div class="desc">Map the modern attacker — phishing to ransomware to supply-chain.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Top OWASP risks explained with real CVEs</li><li>Phishing, social engineering and credential theft</li><li>Ransomware kill chain, walked end-to-end</li><li>Supply-chain and insider-threat case studies</li><li>MITRE ATT&CK framework — the analyst's map</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 03</span><span class="ttl">Cryptography Basics</span><div class="desc">How encryption actually works — and where it gets broken.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Symmetric vs asymmetric cryptography</li><li>Hashing, digital signatures and PKI</li><li>TLS handshake, decoded step by step</li><li>Common crypto failures in production code</li><li>Key management and HSM fundamentals</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 04</span><span class="ttl">SOC Operations & SIEM Tools (Splunk)</span><div class="desc">A day in the life of a SOC analyst — alerts, triage, escalation.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>SOC tiers and the analyst workflow</li><li>Splunk: searches, dashboards, alerts</li><li>Writing SPL queries that surface real threats</li><li>Triage and incident escalation playbooks</li><li>Threat hunting with Splunk Enterprise Security</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 05</span><span class="ttl">Vulnerability Assessment & Penetration Testing</span><div class="desc">Scan, exploit, report — the offensive side, taught defensively.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Reconnaissance with Nmap and OSINT tooling</li><li>Vulnerability scanning with Nessus</li><li>Exploitation with Metasploit framework</li><li>Web app testing with Burp Suite</li><li>Writing a clear, executive-grade pentest report</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 06</span><span class="ttl">Incident Response</span><div class="desc">When alarms fire — the playbook that contains, eradicates, recovers.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>NIST IR lifecycle: prepare → recover → review</li><li>Forensic evidence collection and chain-of-custody</li><li>Containment vs eradication trade-offs</li><li>Post-incident reports and lessons learned</li><li>Tabletop exercise: live ransomware simulation</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 07</span><span class="ttl">Cloud Security (AWS/Azure)</span><div class="desc">Defend cloud workloads — IAM, posture management, native tooling.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Shared responsibility model — who owns what</li><li>IAM in AWS and Azure, the right way</li><li>CSPM, CWPP and the cloud security stack</li><li>Native tools: GuardDuty, Defender for Cloud</li><li>Securing CI/CD and infrastructure-as-code</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 08</span><span class="ttl">Certification Prep (CEH / CompTIA Security+)</span><div class="desc">Drill, mock, pass — both certifications mapped to the syllabus.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>CEH v12 domain-by-domain coverage</li><li>CompTIA Security+ exam objectives walkthrough</li><li>Mock exams with timed simulations</li><li>Resume polish and LinkedIn rebuild</li><li>Mock interview rounds with hiring panelists</li></ul></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEET YOUR TRAINER -->
+<section class="trainer-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">Meet Your Trainer</span><h2>Taught by someone who ships, not just speaks.</h2></div>
+    <div class="trainer">
+      <div class="trainer-ava">AM</div>
+      <div class="trainer-info">
+        <h3>Arjun M.</h3>
+        <div class="role">Senior Security Analyst · 8+ Years</div>
+        <p>Eight years on SOC floors and red teams across Hyderabad and Pune. Built incident-response playbooks for two BFSI majors and runs threat-hunting workshops for the local OWASP chapter. Trained 400+ analysts now placed at SOC roles across India.</p>
+        <a href="#" class="li-link" aria-label="Arjun's LinkedIn">in&nbsp;·&nbsp;View on LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">Tools &amp; Technologies</span><h2>The full security toolkit, hands on.</h2><p class="sub">Logos shown as text-style placeholders pending official permissions.</p></div>
+    <div class="tools-grid">
+      <div class="tool-tile">Wireshark</div>
+      <div class="tool-tile">Splunk</div>
+      <div class="tool-tile">Metasploit</div>
+      <div class="tool-tile">Nmap</div>
+      <div class="tool-tile">Burp Suite</div>
+      <div class="tool-tile">Kali Linux</div>
+      <div class="tool-tile">Nessus</div>
+      <div class="tool-tile">CrowdStrike</div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER OUTCOMES -->
+<section class="careers-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">Where You'll Land</span><h2>Roles our Cybersecurity alumni step into.</h2></div>
+    <div class="careers-grid">
+      <div class="career-card"><h3>SOC Analyst</h3><div class="salary">₹5–8 LPA</div><p class="desc">Front-line defender — triage alerts, hunt threats, escalate incidents on a 24×7 SOC floor.</p></div>
+      <div class="career-card"><h3>Security Engineer</h3><div class="salary">₹7–12 LPA</div><p class="desc">Build and harden security tooling — SIEM rules, EDR policies, secure cloud baselines.</p></div>
+      <div class="career-card"><h3>Penetration Tester</h3><div class="salary">₹8–14 LPA</div><p class="desc">Break things on purpose — find vulnerabilities before attackers do, write exec-grade reports.</p></div>
+      <div class="career-card"><h3>Cybersecurity Consultant</h3><div class="salary">₹9–16 LPA</div><p class="desc">Advise enterprise clients on security posture, audits and compliance roadmaps.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">FAQ</span><h2>Quick answers, no fluff.</h2></div>
+    <div class="acc-list" id="faq">
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Do I need a coding background?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">No. We start from networking fundamentals. Light scripting (Python/Bash) is taught in week six only when needed for tooling and automation.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Will I get a certificate?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes — a Sunadh completion certificate after the capstone, plus we prep you for two industry certifications: CEH v12 and CompTIA Security+.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Is placement guaranteed?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">We offer 100% placement assistance — interview prep, resume reviews, and intros to 500+ hiring partners. We don't promise a job, but we set you up to land one.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">What's the fee structure? Are EMIs available?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Course starts from ₹34,999. No-cost EMIs available across major banks. Talk to a counselor for the latest plan and any active discounts.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Can I switch between online and offline?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes. Every Cybersecurity batch runs hybrid — attend in classroom one week, online the next. Switch as your schedule needs, no extra fee.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">What if I miss a class?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Every session is recorded and shared the same evening. You can also sit in any other ongoing batch to recover that topic in person.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Will I work on real projects?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes — capture-the-flag labs, a live SOC simulation, and a capstone pentest report by week twelve. Everything goes on your resume.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">What's the next batch start date?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">New weekday and weekend Cybersecurity batches start every two weeks at both Ameerpet branches. Book a free demo and we'll share the next start date.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="enquiry">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="../assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img"></div>
+        <p class="foot-about">Real-time training. Real placements. Hyderabad's trusted name in IT training, in the heart of Ameerpet.</p>
+        <a class="foot-wa" href="https://wa.me/919848131318"><img src="../assets/icon-whatsapp.svg" alt="">Chat on WhatsApp</a>
+      </div>
+      <div class="foot-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="../courses.html">Courses</a></li><li><a href="../index.html#about">About</a></li><li><a href="../index.html#enquiry">Admissions</a></li><li><a href="../index.html#placements">Placements</a></li><li><a href="../index.html#contact">Contact</a></li></ul></div>
+      <div class="foot-col"><h4>Courses</h4><ul><li><a href="tableau.html">Tableau</a></li><li><a href="cybersecurity.html">Cybersecurity</a></li><li><a href="azure-data-engineer.html">Azure Data Engineer</a></li><li><a href="data-science.html">Data Science</a></li><li><a href="gen-ai.html">Gen AI / Agentic AI</a></li><li><a href="python.html">Python</a></li></ul></div>
+      <div class="foot-col"><h4>Contact</h4><div class="foot-contact-line">Aditi Arcade, Mytrivanam, SAP Street,<br>Ameerpet, Hyderabad – 500016</div><div class="foot-contact-line" style="margin-top:10px"><a href="tel:+919848131318">+91 98481 31318</a></div><div class="foot-contact-line"><a href="mailto:hello@sunadhtechnologies.in">hello@sunadhtechnologies.in</a></div><div class="foot-social"><a href="#">in</a><a href="#">f</a><a href="#">ig</a><a href="#">yt</a></div></div>
+    </div>
+    <div class="foot-bottom"><div>© 2026 Sunadh Technologies. All rights reserved.</div><div style="display:flex;gap:18px"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<!-- STICKY BOTTOM CTA BAR -->
+<div class="bottom-cta" id="bottomCTA" aria-hidden="true">
+  <div class="container bottom-cta-inner">
+    <div class="bottom-cta-text">
+      <div class="top">Cybersecurity Course · From ₹34,999</div>
+      <div class="bot">Next batch starts soon · Both Ameerpet branches</div>
+    </div>
+    <a href="#enquiry" class="btn btn-primary btn-sm">Book Free Demo</a>
+  </div>
+</div>
+
+<a class="wa-float" href="https://wa.me/919848131318" target="_blank" rel="noopener" aria-label="Chat with Sunadh on WhatsApp"><img src="../assets/icon-whatsapp.svg" alt=""></a>
+
+<script src="../js/nav.js"></script>
+<script src="../js/accordion.js"></script>
+<script>
+  // Sticky bottom CTA — show after scrolling past hero
+  const bar=document.getElementById('bottomCTA');
+  const showAt=560;
+  const updateBar=()=>{
+    const show=window.scrollY>showAt;
+    bar.classList.toggle('show',show);
+    bar.setAttribute('aria-hidden',show?'false':'true');
+  };
+  window.addEventListener('scroll',updateBar,{passive:true});updateBar();
+</script>
+
+</body>
+</html>

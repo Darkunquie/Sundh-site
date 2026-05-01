@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admissions — Sunadh Technologies</title>
+<meta name="description" content="Get started at Sunadh Technologies in 4 simple steps. Free demo class, flexible EMI options, and committed placement support — no hidden fees.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="styles/components.css">
+
+<style>
+  /* ============ Page Hero ============ */
+  .page-hero {
+    background:
+      radial-gradient(60% 80% at 85% 30%, rgba(255,107,26,0.22), transparent 60%),
+      radial-gradient(50% 70% at 80% 40%, rgba(255,182,39,0.14), transparent 65%),
+      linear-gradient(135deg, #0A1B2E 0%, #0E2138 100%);
+    color: #fff;
+    padding: 132px 0 56px; text-align: left;
+  }
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
+    color: #fff; margin: 14px 0 16px; max-width: 720px;
+  }
+  .page-hero p {
+    font-size: 17px; line-height: 1.6;
+    color: rgba(250,250,247,0.85);
+    max-width: 620px; margin: 0;
+  }
+  @media (min-width: 1024px) { .page-hero { padding: 152px 0 64px; } }
+
+  /* ============ Section heads ============ */
+  .section-head { text-align: center; margin-bottom: 48px; }
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.4vw, 40px); font-weight: 700;
+    color: var(--color-dark); margin: 8px 0 12px;
+  }
+  .section-head p {
+    color: var(--fg2); font-size: 17px; max-width: 600px;
+    margin: 0 auto; line-height: 1.6;
+  }
+
+  /* ============ How to Apply (4-step process) ============ */
+  .process { background: var(--color-bg); }
+  .steps {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    position: relative;
+  }
+  .steps::before {
+    content: ""; position: absolute;
+    left: 8%; right: 8%; top: 36px; height: 3px;
+    background: linear-gradient(90deg, rgba(255,107,26,0.0) 0%, var(--color-primary) 12%, var(--color-secondary) 88%, rgba(255,182,39,0.0) 100%);
+    z-index: 0; border-radius: 2px;
+  }
+  .step {
+    background: #fff; border-radius: var(--radius-lg);
+    padding: 28px 24px; text-align: center;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    transition: transform var(--dur-base) var(--ease-standard),
+                box-shadow var(--dur-base) var(--ease-standard);
+  }
+  .step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(255,107,26,0.16), 0 4px 12px rgba(10,27,46,0.06);
+  }
+  .step-num {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--gradient-brand); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 22px; font-weight: 800;
+    box-shadow: 0 0 0 5px #fff, 0 8px 16px rgba(255,107,26,0.32);
+    margin-bottom: 4px;
+  }
+  .step-icon {
+    width: 40px; height: 40px;
+    color: var(--color-primary);
+  }
+  .step h3 {
+    font-family: var(--font-display); font-size: 17px; font-weight: 700;
+    color: var(--color-dark); margin: 0; letter-spacing: -0.01em;
+  }
+  .step p {
+    font-size: 14px; line-height: 1.5; color: var(--fg2); margin: 0;
+  }
+  @media (max-width: 900px) {
+    .steps { grid-template-columns: 1fr; gap: 16px; }
+    .steps::before { display: none; }
+    .step { text-align: left; flex-direction: row; align-items: flex-start; padding: 20px; }
+    .step-num { flex-shrink: 0; width: 48px; height: 48px; font-size: 18px; }
+    .step-body { flex: 1; }
+    .step-icon { display: none; }
+  }
+
+  /* ============ Fee Table ============ */
+  .fees { background: linear-gradient(180deg, var(--color-bg) 0%, #FFF6EE 100%); }
+  .fee-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    background: #fff;
+    -webkit-overflow-scrolling: touch;
+  }
+  .fee-table {
+    width: 100%; border-collapse: collapse;
+    min-width: 720px;
+    font-size: 15px;
+  }
+  .fee-table thead th {
+    background: var(--color-dark); color: #fff;
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
+    text-align: left; padding: 16px 20px;
+  }
+  .fee-table thead th:last-child,
+  .fee-table tbody td:last-child { text-align: center; }
+  .fee-table tbody td {
+    padding: 18px 20px; border-bottom: 1px solid var(--color-border);
+    color: var(--fg1);
+  }
+  .fee-table tbody tr:last-child td { border-bottom: 0; }
+  .fee-table tbody tr:hover { background: rgba(255,107,26,0.04); }
+  .fee-table .course-name { font-weight: 700; color: var(--color-dark); font-family: var(--font-display); font-size: 16px; }
+  .fee-table .fee-amt {
+    font-family: var(--font-display); font-weight: 700; color: var(--color-dark); font-size: 16px;
+  }
+  .fee-table .check {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: rgba(16,185,129,0.14); color: var(--color-success);
+    font-weight: 700;
+  }
+  .fee-table tbody tr:nth-child(even) { background: rgba(250,250,247,0.5); }
+  .fee-note {
+    font-size: 14px; color: var(--fg2); margin: 18px 0 0;
+    line-height: 1.55; text-align: center;
+  }
+  .fee-note strong { color: var(--color-primary); font-weight: 700; }
+
+  /* ============ Eligibility cards ============ */
+  .eligibility { background: var(--color-bg); }
+  .elig-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  @media (max-width: 900px) { .elig-grid { grid-template-columns: 1fr; } }
+
+  .elig-card {
+    background: #fff; border-radius: var(--radius-lg);
+    padding: 32px 28px; box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    transition: transform var(--dur-base) var(--ease-standard),
+                box-shadow var(--dur-base) var(--ease-standard);
+  }
+  .elig-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(255,107,26,0.16), 0 4px 12px rgba(10,27,46,0.06);
+  }
+  .elig-icon-wrap {
+    width: 64px; height: 64px; border-radius: 16px;
+    background: linear-gradient(135deg, rgba(255,107,26,0.16), rgba(255,182,39,0.12));
+    border: 1px solid rgba(255,107,26,0.18);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+  }
+  .elig-icon-wrap svg { width: 32px; height: 32px; color: var(--color-primary); }
+  .elig-card h3 {
+    font-family: var(--font-display); font-size: 20px; font-weight: 700;
+    color: var(--color-dark); margin: 0 0 14px; letter-spacing: -0.01em; line-height: 1.2;
+  }
+  .elig-list {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .elig-list li {
+    position: relative; padding-left: 24px;
+    font-size: 15px; line-height: 1.5; color: var(--fg1);
+  }
+  .elig-list li::before {
+    content: ""; position: absolute; left: 0; top: 7px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--gradient-brand);
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+
+  /* ============ Enquiry Form ============ */
+  .enquiry { background: linear-gradient(180deg, #FFF6EE 0%, var(--color-bg) 100%); }
+  .form-card {
+    background: #fff; border-radius: var(--radius-2xl);
+    padding: 48px; max-width: 880px; margin: 0 auto;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-border);
+  }
+  .form-card h2 {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3vw, 34px); font-weight: 700;
+    color: var(--color-dark); margin: 0 0 8px; line-height: 1.15;
+  }
+  .form-card .form-sub {
+    color: var(--fg2); font-size: 16px; margin: 0 0 28px;
+  }
+  .form-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+  }
+  .form-grid .full { grid-column: 1 / -1; }
+  @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label {
+    font-size: 13px; font-weight: 600; color: var(--color-dark);
+    letter-spacing: 0.02em;
+  }
+  .field label .req { color: var(--color-error); margin-left: 2px; }
+  .field input, .field select, .field textarea {
+    font-family: var(--font-body); font-size: 15px;
+    padding: 12px 14px; min-height: 48px;
+    border: 1.5px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    background: #fff; color: var(--fg1);
+    transition: border-color var(--dur-fast), box-shadow var(--dur-fast);
+    width: 100%;
+  }
+  .field textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: 0; border-color: var(--color-primary);
+    box-shadow: var(--ring-focus);
+  }
+  .field input:user-invalid, .field select:user-invalid {
+    border-color: var(--color-error);
+  }
+  .field input:user-invalid:focus, .field select:user-invalid:focus {
+    box-shadow: 0 0 0 3px rgba(239,68,68,0.25);
+  }
+  .field-hint { font-size: 12px; color: var(--fg3); }
+
+  .phone-wrap {
+    display: flex; align-items: stretch;
+    border: 1.5px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    background: #fff; transition: border-color var(--dur-fast), box-shadow var(--dur-fast);
+  }
+  .phone-wrap:focus-within { border-color: var(--color-primary); box-shadow: var(--ring-focus); }
+  .phone-wrap.invalid { border-color: var(--color-error); }
+  .phone-prefix {
+    background: rgba(10,27,46,0.04); padding: 0 14px;
+    display: flex; align-items: center;
+    font-family: var(--font-display); font-weight: 600;
+    color: var(--color-dark); font-size: 15px;
+    border-right: 1px solid var(--color-border);
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+  }
+  .phone-wrap input {
+    border: 0 !important; border-radius: 0 !important;
+    box-shadow: none !important; flex: 1; min-width: 0;
+  }
+
+  .radio-row {
+    display: flex; gap: 10px; flex-wrap: wrap;
+  }
+  .radio-tile {
+    flex: 1; min-width: 110px;
+    position: relative;
+  }
+  .radio-tile input { position: absolute; opacity: 0; pointer-events: none; }
+  .radio-tile span {
+    display: flex; align-items: center; justify-content: center;
+    padding: 12px 14px; min-height: 48px;
+    border: 1.5px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    background: #fff;
+    font-size: 14px; font-weight: 600; color: var(--color-dark);
+    cursor: pointer;
+    transition: all var(--dur-fast);
+  }
+  .radio-tile input:checked + span {
+    border-color: var(--color-primary);
+    background: rgba(255,107,26,0.08);
+    color: var(--color-primary);
+    box-shadow: inset 0 0 0 1px var(--color-primary);
+  }
+  .radio-tile input:focus-visible + span { box-shadow: var(--ring-focus); }
+
+  .form-submit-row { margin-top: 24px; display: flex; justify-content: flex-end; }
+  .form-submit-row .btn { min-width: 200px; }
+  @media (max-width: 600px) {
+    .form-card { padding: 32px 24px; }
+    .form-submit-row .btn { width: 100%; }
+  }
+
+  .form-success {
+    background: rgba(16,185,129,0.12);
+    border: 1px solid rgba(16,185,129,0.4);
+    border-radius: var(--radius-md);
+    padding: 16px 20px; margin-top: 18px;
+    color: #065F46; font-size: 15px; font-weight: 600;
+    display: none;
+  }
+  .form-success.show { display: block; }
+
+  /* ============ Brochure CTA ============ */
+  .brochure-section { padding: 0 0 96px; background: var(--color-bg); }
+  .brochure {
+    background: var(--gradient-brand); border-radius: 28px;
+    padding: 56px 40px; color: #fff; text-align: center;
+    box-shadow: 0 30px 80px rgba(255,107,26,0.32);
+    max-width: 960px; margin: 0 auto;
+    position: relative; overflow: hidden;
+  }
+  .brochure::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(60% 80% at 0% 100%, rgba(255,255,255,0.18), transparent 60%);
+    pointer-events: none;
+  }
+  .brochure h2 {
+    color: #fff; margin: 0 0 12px;
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3.4vw, 38px); font-weight: 800;
+    letter-spacing: -0.01em; line-height: 1.15;
+    position: relative;
+  }
+  .brochure p {
+    margin: 0 auto 28px; font-size: 17px; opacity: 0.95;
+    max-width: 580px; line-height: 1.55;
+    position: relative;
+  }
+  .brochure .btn { position: relative; }
+
+  /* ============ FAQ Accordion ============ */
+  .faq { background: var(--color-bg); padding-top: 0; }
+  .faq-list { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    background: #fff; border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    transition: box-shadow var(--dur-base) var(--ease-standard);
+  }
+  .faq-item[open] { box-shadow: var(--shadow-md); border-color: rgba(255,107,26,0.3); }
+  .faq-summary {
+    list-style: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 20px 24px; min-height: 64px;
+    font-family: var(--font-display);
+    font-size: 17px; font-weight: 600;
+    color: var(--color-dark);
+  }
+  .faq-summary::-webkit-details-marker { display: none; }
+  .faq-summary::marker { content: ""; }
+  .faq-toggle {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(255,107,26,0.1);
+    color: var(--color-primary);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-body); font-size: 20px; font-weight: 700;
+    flex-shrink: 0;
+    transition: transform var(--dur-base) var(--ease-standard),
+                background var(--dur-fast);
+  }
+  .faq-item[open] .faq-toggle {
+    background: var(--gradient-brand); color: #fff;
+    transform: rotate(45deg);
+  }
+  .faq-body {
+    padding: 0 24px 22px;
+    color: var(--fg2); font-size: 15px; line-height: 1.65;
+  }
+
+  /* ============ Dark Theme Overrides ============ */
+  body { background: #121412; color: #e2e3e0; }
+
+  /* All sections */
+  section, .process, .fees, .eligibility, .enquiry, .faq,
+  .brochure-section, [class*="section"] {
+    background: #121412 !important;
+    color: #e2e3e0;
+  }
+
+  /* Steps */
+  .step {
+    background: rgba(255,255,255,0.03) !important;
+    border: 1px solid rgba(255,255,255,0.06) !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(16px);
+  }
+  .step:hover {
+    box-shadow: 0 12px 40px rgba(255,107,26,0.08) !important;
+    border-color: rgba(255,107,26,0.3) !important;
+  }
+  .step h3 { color: #e2e3e0 !important; }
+  .step p { color: #9ca3af !important; }
+  .step-num { box-shadow: 0 0 0 5px #121412, 0 8px 16px rgba(255,107,26,0.32) !important; }
+  .steps::before { opacity: 0.6; }
+
+  /* Fee table */
+  .fee-table-wrap {
+    background: rgba(255,255,255,0.03) !important;
+    border: 1px solid rgba(255,255,255,0.06) !important;
+    box-shadow: none !important;
+  }
+  .fee-table thead th { background: rgba(255,107,26,0.12) !important; color: #e2e3e0 !important; }
+  .fee-table tbody td { border-color: rgba(255,255,255,0.06) !important; color: #b4bcc6 !important; }
+  .fee-table .course-name { color: #e2e3e0 !important; }
+  .fee-table .fee-amt { color: #e2e3e0 !important; }
+  .fee-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.02) !important; }
+  .fee-table tbody tr:hover { background: rgba(255,107,26,0.05) !important; }
+  .fee-note { color: #6b7280 !important; }
+  .fee-note strong { color: #FF6B1A !important; }
+
+  /* Eligibility cards */
+  .elig-card {
+    background: rgba(255,255,255,0.03) !important;
+    border: 1px solid rgba(255,255,255,0.06) !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(16px);
+  }
+  .elig-card:hover {
+    box-shadow: 0 12px 40px rgba(255,107,26,0.08) !important;
+    border-color: rgba(255,107,26,0.3) !important;
+  }
+  .elig-card h3 { color: #e2e3e0 !important; }
+  .elig-list li { color: #b4bcc6 !important; }
+  .elig-list li::before { box-shadow: inset 0 0 0 3px #121412 !important; }
+  .elig-icon-wrap { background: rgba(255,107,26,0.1) !important; border-color: rgba(255,107,26,0.2) !important; }
+
+  /* Form card */
+  .form-card {
+    background: rgba(255,255,255,0.03) !important;
+    border: 1px solid rgba(255,255,255,0.06) !important;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3) !important;
+    backdrop-filter: blur(16px);
+  }
+  .form-card h2 { color: #e2e3e0 !important; }
+  .form-card .form-sub { color: #9ca3af !important; }
+
+  /* Form inputs */
+  .field input, .field select, .field textarea {
+    background: rgba(255,255,255,0.05) !important;
+    border: 1.5px solid rgba(255,255,255,0.12) !important;
+    color: #e2e3e0 !important;
+  }
+  .field input::placeholder, .field textarea::placeholder { color: rgba(255,255,255,0.3) !important; }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    border-color: #FF6B1A !important;
+    box-shadow: 0 0 0 3px rgba(255,107,26,0.15) !important;
+  }
+  .field label { color: #b4bcc6 !important; }
+  .field-hint { color: #6b7280 !important; }
+
+  /* Phone wrap */
+  .phone-wrap {
+    border-color: rgba(255,255,255,0.12) !important;
+    background: rgba(255,255,255,0.05) !important;
+  }
+  .phone-prefix {
+    background: rgba(255,255,255,0.05) !important;
+    color: #e2e3e0 !important;
+    border-color: rgba(255,255,255,0.1) !important;
+  }
+
+  /* Radio tiles */
+  .radio-tile span {
+    border-color: rgba(255,255,255,0.12) !important;
+    background: rgba(255,255,255,0.03) !important;
+    color: #e2e3e0 !important;
+  }
+  .radio-tile input:checked + span {
+    border-color: #FF6B1A !important;
+    background: rgba(255,107,26,0.1) !important;
+    color: #FF6B1A !important;
+  }
+
+  /* Form success */
+  .form-success { background: rgba(16,185,129,0.1) !important; border-color: rgba(16,185,129,0.3) !important; color: #6EE7B7 !important; }
+
+  /* FAQ */
+  .faq-item {
+    background: rgba(255,255,255,0.03) !important;
+    border: 1px solid rgba(255,255,255,0.06) !important;
+  }
+  .faq-item[open] { border-color: rgba(255,107,26,0.4) !important; box-shadow: 0 8px 30px rgba(255,107,26,0.08) !important; }
+  .faq-summary { color: #e2e3e0 !important; }
+  .faq-body { color: #9ca3af !important; }
+
+  /* Brochure CTA */
+  .brochure { border: 1px solid rgba(255,255,255,0.15) !important; }
+
+  /* Headings & text */
+  h1, h2, h3, h4 { color: #e2e3e0 !important; }
+  p, li { color: #b4bcc6; }
+  .section-head p { color: #9ca3af !important; }
+
+  /* Footer */
+  footer { background: #0d0f0d !important; color: rgba(250,250,247,0.7); }
+  footer h4 { color: #fff !important; }
+  footer a { color: rgba(250,250,247,0.5) !important; }
+  footer a:hover { color: #FFB627 !important; }
+  .foot-bottom { border-color: rgba(255,255,255,0.08) !important; color: rgba(250,250,247,0.4); }
+  .foot-about { color: rgba(250,250,247,0.6) !important; }
+  .foot-contact-line, .foot-contact-line a { color: rgba(250,250,247,0.5) !important; }
+  .foot-social a { background: rgba(255,255,255,0.05) !important; color: #fff !important; border-color: rgba(255,255,255,0.1) !important; }
+
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav glass" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Sunadh Technologies — home">
+      <img src="assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img">
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="admissions.html" class="active" aria-current="page">Admissions</a>
+      <a href="placements.html">Placements</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="#enquiry-form" class="btn btn-primary nav-cta">Book Free Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="about.html">About</a>
+    <a href="admissions.html" class="active" aria-current="page">Admissions</a>
+    <a href="placements.html">Placements</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</header>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow" style="color: var(--color-secondary)">Admissions</span>
+    <h1>Get Started in 4 Simple Steps</h1>
+    <p>From first enquiry to your first class — straightforward, no hidden fees, no pressure.</p>
+  </div>
+</section>
+
+<!-- ================= HOW TO APPLY ================= -->
+<section class="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How to Apply</span>
+      <h2>Your Path to Enrollment</h2>
+      <p>A clear 4-step process — from your first enquiry to walking into your first session.</p>
+    </div>
+
+    <div class="steps">
+      <article class="step">
+        <div class="step-num">1</div>
+        <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92V19a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <div class="step-body">
+          <h3>Enquire</h3>
+          <p>Fill the form or call us. Get a callback from a counselor within 24 hours.</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-num">2</div>
+        <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="23 7 16 12 23 17 23 7"/>
+          <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+        </svg>
+        <div class="step-body">
+          <h3>Free Demo</h3>
+          <p>Attend a live demo class, meet the trainer, and walk through the full curriculum.</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-num">3</div>
+        <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        <div class="step-body">
+          <h3>Choose Your Batch</h3>
+          <p>Pick online, offline, or hybrid. Choose weekday or weekend timings that fit you.</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-num">4</div>
+        <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 11l3 3L22 4"/>
+          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+        </svg>
+        <div class="step-body">
+          <h3>Pay &amp; Start</h3>
+          <p>Flexible EMI options available. Pay your first instalment and start day one.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEE STRUCTURE ================= -->
+<section class="fees">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Fee Structure</span>
+      <h2>Transparent Pricing, Flexible Plans</h2>
+      <p>All fees include lab access, mock interviews, and lifetime placement support — no surprise add-ons.</p>
+    </div>
+
+    <div class="fee-table-wrap">
+      <table class="fee-table" aria-label="Course fee structure">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Duration</th>
+            <th>Mode</th>
+            <th>Total Fee</th>
+            <th>EMI Available</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="course-name">Tableau</td>
+            <td>8 weeks</td>
+            <td>Online + Offline</td>
+            <td class="fee-amt">From ₹14,999</td>
+            <td><span class="check" aria-label="Yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="course-name">Cybersecurity</td>
+            <td>12 weeks</td>
+            <td>Online + Offline</td>
+            <td class="fee-amt">From ₹29,999</td>
+            <td><span class="check" aria-label="Yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="course-name">Azure Data Engineer</td>
+            <td>10 weeks</td>
+            <td>Online + Offline</td>
+            <td class="fee-amt">From ₹24,999</td>
+            <td><span class="check" aria-label="Yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="course-name">Data Science</td>
+            <td>16 weeks</td>
+            <td>Online + Offline</td>
+            <td class="fee-amt">From ₹34,999</td>
+            <td><span class="check" aria-label="Yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="course-name">Gen AI / Agentic AI</td>
+            <td>10 weeks</td>
+            <td>Online + Offline</td>
+            <td class="fee-amt">From ₹39,999</td>
+            <td><span class="check" aria-label="Yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="course-name">Python</td>
+            <td>8 weeks</td>
+            <td>Online + Offline</td>
+            <td class="fee-amt">From ₹12,999</td>
+            <td><span class="check" aria-label="Yes">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fee-note"><strong>EMI starts at ₹2,500/month.</strong> Talk to our admissions team for current offers.</p>
+  </div>
+</section>
+
+<!-- ================= ELIGIBILITY ================= -->
+<section class="eligibility">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Eligibility</span>
+      <h2>Who These Courses Are For</h2>
+      <p>Whatever your background, if you're committed to the work, we have a track for you.</p>
+    </div>
+
+    <div class="elig-grid">
+      <article class="elig-card">
+        <div class="elig-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+        </div>
+        <h3>Working Professionals</h3>
+        <ul class="elig-list">
+          <li>Any non-IT background — finance, sales, ops, support</li>
+          <li>Looking to switch into a higher-paying tech role</li>
+          <li>Need flexible timings (weekend / late-evening batches)</li>
+        </ul>
+      </article>
+
+      <article class="elig-card">
+        <div class="elig-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <h3>Fresh Graduates</h3>
+        <ul class="elig-list">
+          <li>Any degree — B.Tech, B.Sc, B.Com, BBA, B.A.</li>
+          <li>Willing to commit 2–4 hours daily for hands-on work</li>
+          <li>Need a portfolio + interview prep before campus drives</li>
+        </ul>
+      </article>
+
+      <article class="elig-card">
+        <div class="elig-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 3-6.7"/>
+            <polyline points="3 4 3 10 9 10"/>
+          </svg>
+        </div>
+        <h3>Career Restarters</h3>
+        <ul class="elig-list">
+          <li>Coming back to work after a maternity / family break</li>
+          <li>Wanting to refresh skills with current industry tools</li>
+          <li>Looking for placement support tailored to gap-year resumes</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENQUIRY FORM ================= -->
+<section class="enquiry" id="enquiry-form">
+  <div class="container">
+    <div class="form-card">
+      <h2>Enquire Now</h2>
+      <p class="form-sub">We'll call you back within one business day.</p>
+
+      <form id="enqForm" action="#" method="post" novalidate>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="fullName">Full Name <span class="req">*</span></label>
+            <input id="fullName" name="fullName" type="text" required autocomplete="name" placeholder="As on your ID">
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone <span class="req">*</span></label>
+            <div class="phone-wrap" id="phoneWrap">
+              <span class="phone-prefix">+91</span>
+              <input id="phone" name="phone" type="tel" required pattern="[0-9]{10}" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="10-digit mobile">
+            </div>
+            <span class="field-hint">10-digit Indian mobile, no spaces</span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+          </div>
+
+          <div class="field">
+            <label for="course">Course Interested In <span class="req">*</span></label>
+            <select id="course" name="course" required>
+              <option value="">Select a course</option>
+              <option value="tableau">Tableau</option>
+              <option value="cybersecurity">Cybersecurity</option>
+              <option value="azure">Azure Data Engineer</option>
+              <option value="data-science">Data Science</option>
+              <option value="gen-ai">Gen AI / Agentic AI</option>
+              <option value="python">Python</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Preferred Mode</label>
+            <div class="radio-row" role="radiogroup" aria-label="Preferred mode">
+              <label class="radio-tile"><input type="radio" name="mode" value="online" checked><span>Online</span></label>
+              <label class="radio-tile"><input type="radio" name="mode" value="offline"><span>Offline</span></label>
+              <label class="radio-tile"><input type="radio" name="mode" value="hybrid"><span>Hybrid</span></label>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label for="message">Message <span style="color:var(--fg3); font-weight:400">(optional)</span></label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your background and what you'd like to know"></textarea>
+          </div>
+        </div>
+
+        <div class="form-submit-row">
+          <button type="submit" class="btn btn-primary">Submit Enquiry →</button>
+        </div>
+
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+          ✓ Thanks! We've received your enquiry — a counselor will call you within one business day.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BROCHURE CTA ================= -->
+<section class="brochure-section">
+  <div class="container">
+    <div class="brochure">
+      <h2>Want the full course catalog?</h2>
+      <p>Get our latest brochure with detailed syllabi, fee structure, and batch dates.</p>
+      <a href="#" class="btn btn-on-gradient">Download Brochure (PDF) ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Frequently Asked</span>
+      <h2>Admissions FAQ</h2>
+      <p>Quick answers to the questions we hear most often.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>What documents do I need to enroll?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-body">
+          A photo ID (Aadhaar / PAN / Passport), one passport-size photograph, and your highest-degree certificate. For working professionals, no employer letter is needed — we accept enrollments directly.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>Is there a refund policy?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-body">
+          Yes — we offer a full refund within the first 7 days of class start, no questions asked. After that, partial refunds are evaluated case-by-case. The free demo class always remains free.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>How big are the batches?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-body">
+          We cap classroom batches at 24 students and online cohorts at 40 to keep trainer attention high. Every student gets a 1-on-1 mentor session at least once per week.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>What if I miss a class?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-body">
+          Every session is recorded and uploaded to your student dashboard within 4 hours. You can also join a parallel batch's session live, or book a 1-on-1 catch-up with the trainer at no extra cost.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>Do you provide a certificate?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-body">
+          Yes — a Sunadh Technologies course-completion certificate, awarded after you submit your capstone project. For tracks like Azure and Cybersecurity, we also coach you through the official vendor exam (DP-203, CEH, etc.) — that certification is issued by the vendor.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img"></div>
+        <p class="foot-about">Real-time training. Real placements. Hyderabad's trusted name in IT training, in the heart of Ameerpet.</p>
+        <a class="foot-wa" href="https://wa.me/919848131318"><img src="assets/icon-whatsapp.svg" alt="">Chat on WhatsApp</a>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="placements.html">Placements</a></li>
+          <li><a href="index.html#news">News</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="courses/tableau.html">Tableau</a></li>
+          <li><a href="courses/cybersecurity.html">Cybersecurity</a></li>
+          <li><a href="courses/azure-data-engineer.html">Azure Data Engineer</a></li>
+          <li><a href="courses/data-science.html">Data Science</a></li>
+          <li><a href="courses/gen-ai.html">Gen AI / Agentic AI</a></li>
+          <li><a href="courses/python.html">Python</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <div class="foot-contact-line">Aditi Arcade, Mytrivanam, SAP Street,<br>Ameerpet, Hyderabad – 500016</div>
+        <div class="foot-contact-line" style="margin-top:10px"><a href="tel:+919848131318">+91 98481 31318</a></div>
+        <div class="foot-contact-line"><a href="mailto:hello@sunadhtechnologies.in">hello@sunadhtechnologies.in</a></div>
+        <div class="foot-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Sunadh Technologies. All rights reserved.</div>
+      <div style="display:flex;gap:18px"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919848131318" target="_blank" rel="noopener" aria-label="Chat with Sunadh on WhatsApp">
+  <img src="assets/icon-whatsapp.svg" alt="">
+</a>
+
+<script src="js/nav.js"></script>
+<script>
+  // Enquiry form: HTML5 + custom phone wrap invalid-state, no real backend
+  const form = document.getElementById('enqForm');
+  const phoneInput = document.getElementById('phone');
+  const phoneWrap = document.getElementById('phoneWrap');
+  const success = document.getElementById('formSuccess');
+
+  function syncPhoneInvalid() {
+    phoneWrap.classList.toggle('invalid', phoneInput.value !== '' && !phoneInput.checkValidity());
+  }
+  phoneInput.addEventListener('input', syncPhoneInvalid);
+  phoneInput.addEventListener('blur', syncPhoneInvalid);
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      // Trigger native validation UI
+      form.reportValidity();
+      syncPhoneInvalid();
+      return;
+    }
+    success.classList.add('show');
+    success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    form.reset();
+    phoneWrap.classList.remove('invalid');
+  });
+</script>
+
+</body>
+</html>

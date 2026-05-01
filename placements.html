@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Placements — Sunadh Technologies</title>
+<meta name="description" content="10,000+ careers shaped. 500+ hiring partners. Real outcomes from real students at Sunadh Technologies — Hyderabad's trusted IT training name in Ameerpet.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="styles/components.css">
+
+<style>
+  /* ============ Dark Base ============ */
+  body { background: #121412; color: #e2e3e0; }
+
+  .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.05); }
+  .sunrise-glow { position: absolute; pointer-events: none; border-radius: 50%; filter: blur(100px); }
+
+  /* ============ Page Hero ============ */
+  .page-hero {
+    background:
+      radial-gradient(60% 80% at 85% 30%, rgba(255,107,26,0.22), transparent 60%),
+      radial-gradient(50% 70% at 80% 40%, rgba(255,182,39,0.14), transparent 65%),
+      linear-gradient(135deg, #0A1B2E 0%, #0E2138 100%);
+    color: #fff; padding: 140px 0 48px; position: relative; overflow: hidden;
+  }
+  .page-hero .hero-bg {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200') center/cover no-repeat;
+    opacity: 0.06;
+  }
+  .page-hero .container { position: relative; z-index: 2; }
+  .eyebrow-bar { display: flex; align-items: center; gap: 12px; }
+  .eyebrow-bar::before { content: ''; width: 48px; height: 3px; background: var(--gradient-brand); border-radius: 4px; }
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 800; line-height: 1.08; letter-spacing: -0.02em;
+    color: #fff; margin: 16px 0 16px; max-width: 700px;
+  }
+  .page-hero h1 .accent {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .page-hero p { font-size: 17px; line-height: 1.6; color: rgba(250,250,247,0.8); max-width: 560px; }
+
+  /* Hero stat strip */
+  .hero-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    margin-top: 40px; background: rgba(255,255,255,0.06); border-radius: 20px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .hero-stat {
+    padding: 24px; text-align: center;
+    background: rgba(255,255,255,0.03); backdrop-filter: blur(12px);
+  }
+  .hero-stat .num {
+    font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; line-height: 1;
+    background: var(--gradient-brand); -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero-stat .lbl {
+    font-size: 12px; font-weight: 600; color: rgba(250,250,247,0.5);
+    letter-spacing: 0.08em; text-transform: uppercase; margin-top: 8px;
+  }
+  @media (max-width: 768px) {
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .page-hero { padding: 120px 0 40px; }
+  }
+  @media (max-width: 480px) { .hero-stats { grid-template-columns: 1fr; } }
+
+  /* ============ Sections ============ */
+  section { padding: 96px 0; position: relative; }
+  .section-head { text-align: center; margin-bottom: 48px; }
+  .section-head .eyebrow-bar { justify-content: center; }
+  .section-head h2 {
+    font-family: var(--font-display); font-size: clamp(28px, 3.4vw, 40px);
+    font-weight: 700; color: #e2e3e0; margin: 12px 0 12px;
+  }
+  .section-head p { color: #9ca3af; font-size: 17px; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+  /* ============ Hiring Partners ============ */
+  .partners { background: #121412; border-top: 1px solid rgba(255,255,255,0.06); }
+  .marquee-wrap {
+    position: relative; overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .marquee-track { display: flex; gap: 16px; width: max-content; animation: sunadh-marquee 40s linear infinite; }
+  .marquee-track:hover { animation-play-state: paused; }
+  .partner-tile {
+    flex-shrink: 0; min-width: 180px; height: 72px;
+    display: flex; align-items: center; justify-content: center; padding: 0 28px;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px;
+    font-family: var(--font-display); font-weight: 700; font-size: 18px;
+    color: #6b7280; backdrop-filter: blur(8px);
+    transition: color 200ms, border-color 200ms, box-shadow 200ms;
+  }
+  .partner-tile:hover { color: #e2e3e0; border-color: rgba(255,107,26,0.4); box-shadow: 0 0 20px rgba(255,107,26,0.08); }
+  @keyframes sunadh-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .partners-disclaimer { font-size: 12px; color: #6b7280; text-align: center; margin: 20px 0 0; letter-spacing: 0.04em; }
+
+  /* ============ Story Filters ============ */
+  .stories { background: #121412; }
+  .filter-row { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 36px; }
+  .chip {
+    display: inline-flex; align-items: center;
+    font-family: var(--font-body); font-weight: 600; font-size: 14px;
+    padding: 10px 18px; min-height: 44px; border-radius: 9999px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    color: #e2e3e0; cursor: pointer;
+    transition: all 150ms;
+  }
+  .chip:hover { border-color: rgba(255,107,26,0.4); color: #FF6B1A; }
+  .chip.active {
+    background: var(--gradient-brand); border-color: transparent; color: #fff;
+    box-shadow: 0 4px 16px rgba(255,107,26,0.3);
+  }
+
+  /* ============ Story Cards ============ */
+  .story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 900px) { .story-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .story-grid { grid-template-columns: 1fr; } }
+
+  .story-card {
+    background: rgba(255,255,255,0.03); backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.06); border-radius: 20px;
+    padding: 28px; display: flex; flex-direction: column; gap: 14px;
+    position: relative; overflow: hidden;
+    transition: transform 200ms, box-shadow 200ms, border-color 200ms;
+  }
+  .story-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,107,26,0.35);
+    box-shadow: 0 12px 40px rgba(255,107,26,0.1);
+  }
+  .story-card[hidden] { display: none; }
+  .story-card::before {
+    content: "\201C"; position: absolute; top: -8px; right: 16px;
+    font-size: 120px; font-family: var(--font-display); line-height: 1;
+    color: #FF6B1A; opacity: 0.06; pointer-events: none;
+  }
+
+  .story-head { display: flex; gap: 14px; align-items: center; }
+  .avatar {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--gradient-brand); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 18px; font-weight: 700; flex-shrink: 0;
+    box-shadow: 0 0 0 2px #121412, 0 0 12px rgba(255,107,26,0.25);
+  }
+  .who .name { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: #e2e3e0; margin: 0; }
+  .who .course-taken { font-size: 12px; color: #6b7280; margin-top: 2px; letter-spacing: 0.04em; }
+
+  .role-transition {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .role-badge {
+    font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+    padding: 4px 10px; border-radius: 999px;
+  }
+  .role-badge.from { background: rgba(255,255,255,0.06); color: #9ca3af; }
+  .role-badge.to { background: rgba(255,107,26,0.12); color: #FF6B1A; }
+  .role-arrow { color: #FFB627; font-size: 14px; }
+
+  .role { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: #e2e3e0; margin: 0; }
+  .company { font-size: 14px; color: #6b7280; margin: 0; }
+  .package {
+    display: inline-flex; align-items: center; align-self: flex-start;
+    background: rgba(16,185,129,0.1); color: #34D399;
+    font-family: ui-monospace, Consolas, monospace; font-weight: 700; font-size: 13px;
+    padding: 5px 12px; border-radius: 999px; letter-spacing: 0.02em;
+  }
+  .quote {
+    font-size: 14px; line-height: 1.6; color: #b4bcc6; margin: 0;
+    padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06);
+    font-style: italic; position: relative;
+  }
+
+  /* ============ Salary Bands ============ */
+  .salary { background: #121412; }
+  .salary-card {
+    background: rgba(255,255,255,0.03); backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.06); border-radius: 24px;
+    padding: 40px 32px; max-width: 920px; margin: 0 auto;
+  }
+  .salary-axis {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    font-size: 11px; color: #6b7280; letter-spacing: 0.06em; text-transform: uppercase;
+    font-weight: 600; padding: 0 0 8px 188px;
+  }
+  .salary-axis span:last-child { text-align: right; }
+  @media (max-width: 720px) {
+    .salary-axis { padding-left: 0; grid-template-columns: 1fr 1fr; }
+    .salary-axis span:nth-child(2), .salary-axis span:nth-child(3) { display: none; }
+  }
+  .salary-row {
+    display: grid; grid-template-columns: 180px 1fr 80px; gap: 16px; align-items: center;
+    padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .salary-row:first-of-type { border-top: 0; }
+  .salary-row .name { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: #e2e3e0; }
+  .salary-row .range {
+    font-family: ui-monospace, Consolas, monospace; font-size: 14px;
+    font-weight: 700; color: #FF6B1A; text-align: right;
+  }
+  .bar-track { height: 14px; border-radius: 999px; background: rgba(255,255,255,0.06); position: relative; overflow: hidden; }
+  .bar-fill {
+    position: absolute; top: 0; bottom: 0; left: var(--start, 0%);
+    width: 0; max-width: calc(var(--end, 100%) - var(--start, 0%));
+    background: var(--gradient-brand); border-radius: 999px;
+    transition: width 1100ms var(--ease-emphasis);
+  }
+  .salary.in-view .bar-fill { width: calc(var(--end, 100%) - var(--start, 0%)); }
+  @media (max-width: 720px) {
+    .salary-row { grid-template-columns: 1fr 90px; gap: 6px 12px; }
+    .salary-row .bar-track { grid-column: 1 / -1; }
+  }
+
+  /* ============ Featured Carousel ============ */
+  .feat {
+    background: #0d1117; color: #fff; position: relative; overflow: hidden;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .feat::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(60% 70% at 80% 20%, rgba(255,107,26,0.12), transparent 60%);
+    pointer-events: none;
+  }
+  .feat .section-head h2 { color: #fff; }
+  .feat .section-head p { color: rgba(250,250,247,0.6); }
+  .carousel { position: relative; max-width: 880px; margin: 0 auto; }
+  .carousel-viewport { overflow: hidden; border-radius: 24px; touch-action: pan-y; }
+  .carousel-track { display: flex; transition: transform 600ms var(--ease-emphasis); }
+  .carousel-slide {
+    flex: 0 0 100%; padding: 40px 48px; box-sizing: border-box;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px; backdrop-filter: blur(12px);
+  }
+  .carousel-slide blockquote {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(17px, 2vw, 21px); line-height: 1.55; color: #e2e3e0;
+    margin: 0 0 28px; padding-left: 32px; position: relative;
+  }
+  .carousel-slide blockquote::before {
+    content: "\201C"; position: absolute; left: 0; top: -12px;
+    font-size: 60px; color: #FFB627; line-height: 1; opacity: 0.6;
+  }
+  .feat-meta { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .feat-meta .who-name { font-family: var(--font-display); font-size: 17px; font-weight: 700; margin: 0; color: #fff; }
+  .feat-meta .who-sub { font-size: 13px; color: rgba(250,250,247,0.5); margin-top: 2px; }
+  .feat-meta .package { background: rgba(255,182,39,0.12); color: #FFB627; margin-left: auto; }
+  .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 28px; }
+  .car-btn {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: #fff;
+    display: inline-flex; align-items: center; justify-content: center; font-size: 20px;
+    cursor: pointer; transition: all 200ms;
+  }
+  .car-btn:hover { background: var(--gradient-brand); border-color: transparent; }
+  .dots { display: flex; gap: 8px; }
+  .dot {
+    width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2);
+    border: 0; padding: 0; cursor: pointer; transition: all 200ms;
+  }
+  .dot.active { background: #FF6B1A; transform: scale(1.3); box-shadow: 0 0 8px rgba(255,107,26,0.4); }
+  @media (max-width: 600px) { .carousel-slide { padding: 28px 20px; } }
+
+  /* ============ CTA ============ */
+  .cta-section { padding: 96px 0; background: #121412; }
+  .cta {
+    background: var(--gradient-brand); border-radius: 28px; padding: 56px 40px;
+    color: #fff; text-align: center;
+    box-shadow: 0 30px 80px rgba(255,107,26,0.25);
+    border: 1px solid rgba(255,255,255,0.15);
+    max-width: 960px; margin: 0 auto; position: relative; overflow: hidden;
+  }
+  .cta::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(60% 80% at 0% 100%, rgba(255,255,255,0.18), transparent 60%);
+    pointer-events: none;
+  }
+  .cta h2 {
+    color: #fff; margin: 0 0 12px; font-family: var(--font-display);
+    font-size: clamp(26px, 3.4vw, 38px); font-weight: 800; position: relative;
+  }
+  .cta p { margin: 0 auto 28px; font-size: 17px; opacity: 0.95; max-width: 580px; position: relative; }
+  .cta .btn { position: relative; }
+
+  /* ============ Footer Dark ============ */
+  footer { background: #0d0f0d !important; color: rgba(250,250,247,0.7); }
+  footer h4 { color: #fff !important; }
+  footer a { color: rgba(250,250,247,0.5) !important; }
+  footer a:hover { color: #FFB627 !important; }
+  .foot-bottom { border-color: rgba(255,255,255,0.08) !important; color: rgba(250,250,247,0.4); }
+  .foot-about { color: rgba(250,250,247,0.6) !important; }
+  .foot-contact-line, .foot-contact-line a { color: rgba(250,250,247,0.5) !important; }
+  .foot-social a {
+    background: rgba(255,255,255,0.05) !important; color: #fff !important;
+    border-color: rgba(255,255,255,0.1) !important;
+  }
+  .foot-social a:hover { background: rgba(255,107,26,0.15) !important; }
+
+  /* ============ Reduced motion ============ */
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none !important; } }
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav glass" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Sunadh Technologies — home">
+      <img src="assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img">
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="placements.html" class="active" aria-current="page">Placements</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="admissions.html#enquiry-form" class="btn btn-primary nav-cta">Book Free Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="about.html">About</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="placements.html" class="active" aria-current="page">Placements</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</header>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="page-hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="eyebrow-bar"><span style="color: var(--color-secondary); font-size:13px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase;">Placements</span></div>
+    <h1>Where Our Students <span class="accent">Land.</span></h1>
+    <p>10,000+ careers shaped. 500+ hiring partners. Real outcomes, not just promises.</p>
+
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">10,000+</div><div class="lbl">Placed</div></div>
+      <div class="hero-stat"><div class="num">500+</div><div class="lbl">Hiring Partners</div></div>
+      <div class="hero-stat"><div class="num">6 LPA</div><div class="lbl">Avg. Package</div></div>
+      <div class="hero-stat"><div class="num">95%</div><div class="lbl">Satisfaction</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HIRING PARTNERS MARQUEE ================= -->
+<section class="partners">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow-bar"><span style="color:#FFB627;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;">Our Hiring Partners</span></div>
+      <h2>Companies That Hire Our Alumni</h2>
+      <p>A snapshot of the 500+ employers that have onboarded Sunadh-trained talent.</p>
+    </div>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="partner-tile">TCS</div><div class="partner-tile">Infosys</div><div class="partner-tile">Wipro</div>
+      <div class="partner-tile">Accenture</div><div class="partner-tile">Deloitte</div><div class="partner-tile">Cognizant</div>
+      <div class="partner-tile">HCL</div><div class="partner-tile">Capgemini</div><div class="partner-tile">IBM</div>
+      <div class="partner-tile">Tech Mahindra</div>
+      <div class="partner-tile">TCS</div><div class="partner-tile">Infosys</div><div class="partner-tile">Wipro</div>
+      <div class="partner-tile">Accenture</div><div class="partner-tile">Deloitte</div><div class="partner-tile">Cognizant</div>
+      <div class="partner-tile">HCL</div><div class="partner-tile">Capgemini</div><div class="partner-tile">IBM</div>
+      <div class="partner-tile">Tech Mahindra</div>
+    </div>
+  </div>
+  <div class="container">
+    <p class="partners-disclaimer">Logo placeholders shown — real partner logos displayed with permission.</p>
+  </div>
+</section>
+
+<!-- ================= SUCCESS STORIES ================= -->
+<section class="stories">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow-bar"><span style="color:#FFB627;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;">Success Stories</span></div>
+      <h2>Filter by Course Track</h2>
+      <p>Real names, real roles, real packages. Every story is from a verified Sunadh alum.</p>
+    </div>
+
+    <div class="filter-row" role="tablist" aria-label="Filter stories by course">
+      <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="chip" data-filter="tableau" role="tab" aria-selected="false">Tableau</button>
+      <button class="chip" data-filter="cybersecurity" role="tab" aria-selected="false">Cybersecurity</button>
+      <button class="chip" data-filter="azure" role="tab" aria-selected="false">Azure</button>
+      <button class="chip" data-filter="data-science" role="tab" aria-selected="false">Data Science</button>
+      <button class="chip" data-filter="gen-ai" role="tab" aria-selected="false">Gen AI</button>
+      <button class="chip" data-filter="python" role="tab" aria-selected="false">Python</button>
+    </div>
+
+    <div class="story-grid" id="storyGrid">
+      <article class="story-card" data-course="tableau">
+        <div class="story-head"><div class="avatar">AR</div><div class="who"><p class="name">Aarav R.</p><div class="course-taken">Tableau · Cohort 47</div></div></div>
+        <div><p class="role">Tableau Developer</p><p class="company">at TCS</p></div>
+        <span class="package">5.5 LPA</span>
+        <p class="quote">Came in from a non-IT background. The dashboard capstone got me through the final interview round.</p>
+      </article>
+
+      <article class="story-card" data-course="cybersecurity">
+        <div class="story-head"><div class="avatar">PK</div><div class="who"><p class="name">Priya K.</p><div class="course-taken">Cybersecurity · Cohort 51</div></div></div>
+        <div><p class="role">SOC Analyst</p><p class="company">at Infosys</p></div>
+        <span class="package">7.2 LPA</span>
+        <p class="quote">The hands-on threat-hunting labs were exactly what the panel asked about. No surprises in the interview.</p>
+      </article>
+
+      <article class="story-card" data-course="azure">
+        <div class="story-head"><div class="avatar">VS</div><div class="who"><p class="name">Vikas S.</p><div class="course-taken">Azure Data Engineer · Cohort 49</div></div></div>
+        <div><p class="role">Data Engineer</p><p class="company">at Wipro</p></div>
+        <span class="package">8.4 LPA</span>
+        <p class="quote">Cleared DP-203 two weeks after the course. The Synapse + Databricks projects mapped to my first sprint.</p>
+      </article>
+
+      <article class="story-card" data-course="data-science">
+        <div class="story-head"><div class="avatar">SM</div><div class="who"><p class="name">Sneha M.</p><div class="course-taken">Data Science · Cohort 50</div></div></div>
+        <div><p class="role">Data Scientist</p><p class="company">at Accenture</p></div>
+        <span class="package">9.1 LPA</span>
+        <p class="quote">Coming from a B.Com background, the math refresher modules were a lifesaver. ML hands-on built my portfolio.</p>
+      </article>
+
+      <article class="story-card" data-course="gen-ai">
+        <div class="story-head"><div class="avatar">KR</div><div class="who"><p class="name">Kiran R.</p><div class="course-taken">Gen AI / Agentic AI · Cohort 53</div></div></div>
+        <div><p class="role">AI Engineer</p><p class="company">at Deloitte</p></div>
+        <span class="package">12.5 LPA</span>
+        <p class="quote">My RAG pipeline capstone became a talking point. Started building agents on day one of the new role.</p>
+      </article>
+
+      <article class="story-card" data-course="python">
+        <div class="story-head"><div class="avatar">RJ</div><div class="who"><p class="name">Rohit J.</p><div class="course-taken">Python · Cohort 48</div></div></div>
+        <div><p class="role">Backend Developer</p><p class="company">at Cognizant</p></div>
+        <span class="package">4.8 LPA</span>
+        <p class="quote">First job after a 2-year career gap. The Flask mini-project gave me real code to walk through.</p>
+      </article>
+
+      <article class="story-card" data-course="data-science">
+        <div class="story-head"><div class="avatar">AN</div><div class="who"><p class="name">Anjali N.</p><div class="course-taken">Data Science · Cohort 52</div></div></div>
+        <div><p class="role">Junior Data Scientist</p><p class="company">at HCL</p></div>
+        <span class="package">7.6 LPA</span>
+        <p class="quote">The mock interview rotations were brutal in the best way. Cracked HCL on my third attempt.</p>
+      </article>
+
+      <article class="story-card" data-course="cybersecurity">
+        <div class="story-head"><div class="avatar">MT</div><div class="who"><p class="name">Manoj T.</p><div class="course-taken">Cybersecurity · Cohort 50</div></div></div>
+        <div><p class="role">Security Engineer</p><p class="company">at Capgemini</p></div>
+        <span class="package">8.0 LPA</span>
+        <p class="quote">Vulnerability assessment report from the capstone went straight into my portfolio — closed the offer fast.</p>
+      </article>
+
+      <article class="story-card" data-course="azure">
+        <div class="story-head"><div class="avatar">DV</div><div class="who"><p class="name">Divya V.</p><div class="course-taken">Azure Data Engineer · Cohort 48</div></div></div>
+        <div><p class="role">Cloud Data Engineer</p><p class="company">at IBM</p></div>
+        <span class="package">10.2 LPA</span>
+        <p class="quote">Restarted my career after a maternity break. The cohort treated me like a peer, not a returner.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SALARY BANDS ================= -->
+<section class="salary" id="salarySection">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow-bar"><span style="color:#FFB627;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;">Salary Bands</span></div>
+      <h2>Where Your Career Can Go</h2>
+      <p>Indicative entry-to-mid-level packages reported by alumni from the last four cohorts.</p>
+    </div>
+
+    <div class="salary-card">
+      <div class="salary-axis"><span>₹0</span><span>₹5 LPA</span><span>₹10 LPA</span><span>₹15 LPA+</span></div>
+      <div class="salary-row"><div class="name">Python</div><div class="bar-track"><div class="bar-fill" style="--start: 23.3%; --end: 46.7%;"></div></div><div class="range">₹3.5–7</div></div>
+      <div class="salary-row"><div class="name">Tableau</div><div class="bar-track"><div class="bar-fill" style="--start: 30%; --end: 46.7%;"></div></div><div class="range">₹4.5–7</div></div>
+      <div class="salary-row"><div class="name">Cybersecurity</div><div class="bar-track"><div class="bar-fill" style="--start: 33.3%; --end: 60%;"></div></div><div class="range">₹5–9</div></div>
+      <div class="salary-row"><div class="name">Data Science</div><div class="bar-track"><div class="bar-fill" style="--start: 33.3%; --end: 66.7%;"></div></div><div class="range">₹5–10</div></div>
+      <div class="salary-row"><div class="name">Azure Data Engineer</div><div class="bar-track"><div class="bar-fill" style="--start: 40%; --end: 73.3%;"></div></div><div class="range">₹6–11</div></div>
+      <div class="salary-row"><div class="name">Gen AI / Agentic AI</div><div class="bar-track"><div class="bar-fill" style="--start: 53.3%; --end: 100%;"></div></div><div class="range">₹8–15</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURED TESTIMONIALS ================= -->
+<section class="feat">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow-bar"><span style="color:#FFB627;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;">Featured Stories</span></div>
+      <h2>In Their Own Words</h2>
+      <p>Three alumni share what the switch actually looked like — start to first paycheck.</p>
+    </div>
+
+    <div class="carousel" id="carousel">
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <blockquote>I was working in tele-support when I joined the Data Science track. Six months later I'm writing models that decide loan approvals at a Big-4. The mentor sessions made the difference — they coached me through three rejections before I cracked Accenture.</blockquote>
+            <div class="feat-meta">
+              <div class="avatar">SM</div>
+              <div><p class="who-name">Sneha M.</p><div class="who-sub">Data Scientist · Accenture</div></div>
+              <span class="package">9.1 LPA</span>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <blockquote>Sunadh was my second attempt at IT training. The first one taught me theory; this one made me build. I shipped a working RAG pipeline in week four. Walked into the Deloitte interview with a portfolio and walked out with an offer letter.</blockquote>
+            <div class="feat-meta">
+              <div class="avatar">KR</div>
+              <div><p class="who-name">Kiran R.</p><div class="who-sub">AI Engineer · Deloitte</div></div>
+              <span class="package">12.5 LPA</span>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <blockquote>Two-year career break. Two kids. I almost didn't sign up. The cohort and the placement cell treated me like any other student — no awkwardness, just real prep. Cleared IBM on the second interview round.</blockquote>
+            <div class="feat-meta">
+              <div class="avatar">DV</div>
+              <div><p class="who-name">Divya V.</p><div class="who-sub">Cloud Data Engineer · IBM</div></div>
+              <span class="package">10.2 LPA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="car-btn" id="prevBtn" aria-label="Previous story">‹</button>
+        <div class="dots" id="dots" role="tablist" aria-label="Story slides">
+          <button class="dot active" data-i="0" aria-label="Slide 1"></button>
+          <button class="dot" data-i="1" aria-label="Slide 2"></button>
+          <button class="dot" data-i="2" aria-label="Slide 3"></button>
+        </div>
+        <button class="car-btn" id="nextBtn" aria-label="Next story">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta">
+      <h2>Your placement story starts here.</h2>
+      <p>Pick a course, attend a free demo, and start your switch.</p>
+      <a href="courses.html" class="btn btn-on-gradient">Browse Courses →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img"></div>
+        <p class="foot-about">Real-time training. Real placements. Hyderabad's trusted name in IT training, in the heart of Ameerpet.</p>
+        <a class="foot-wa" href="https://wa.me/919848131318"><img src="assets/icon-whatsapp.svg" alt="">Chat on WhatsApp</a>
+      </div>
+      <div class="foot-col"><h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About</a></li><li><a href="admissions.html">Admissions</a></li>
+          <li><a href="placements.html">Placements</a></li><li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col"><h4>Courses</h4>
+        <ul>
+          <li><a href="courses/tableau.html">Tableau</a></li><li><a href="courses/cybersecurity.html">Cybersecurity</a></li>
+          <li><a href="courses/azure-data-engineer.html">Azure Data Engineer</a></li><li><a href="courses/data-science.html">Data Science</a></li>
+          <li><a href="courses/gen-ai.html">Gen AI / Agentic AI</a></li><li><a href="courses/python.html">Python</a></li>
+        </ul>
+      </div>
+      <div class="foot-col"><h4>Contact</h4>
+        <div class="foot-contact-line">Aditi Arcade, Mytrivanam, SAP Street,<br>Ameerpet, Hyderabad – 500016</div>
+        <div class="foot-contact-line" style="margin-top:10px"><a href="tel:+919848131318">+91 98481 31318</a></div>
+        <div class="foot-contact-line"><a href="mailto:hello@sunadhtechnologies.in">hello@sunadhtechnologies.in</a></div>
+        <div class="foot-social">
+          <a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Sunadh Technologies. All rights reserved.</div>
+      <div style="display:flex;gap:18px"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919848131318" target="_blank" rel="noopener" aria-label="Chat with Sunadh on WhatsApp">
+  <img src="assets/icon-whatsapp.svg" alt="">
+</a>
+
+<script src="js/nav.js"></script>
+<script>
+  // ============ Story filter ============
+  const chips = document.querySelectorAll('.chip[data-filter]');
+  const cards = document.querySelectorAll('.story-card[data-course]');
+  function applyFilter(cat) {
+    cards.forEach(c => {
+      const match = cat === 'all' || c.dataset.course === cat;
+      c.hidden = !match;
+    });
+  }
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => { c.classList.remove('active'); c.setAttribute('aria-selected', 'false'); });
+      chip.classList.add('active'); chip.setAttribute('aria-selected', 'true');
+      applyFilter(chip.dataset.filter);
+    });
+  });
+
+  // ============ Salary bars: animate on scroll ============
+  const salary = document.getElementById('salarySection');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { salary.classList.add('in-view'); io.disconnect(); }
+      });
+    }, { threshold: 0.25 });
+    io.observe(salary);
+  } else {
+    salary.classList.add('in-view');
+  }
+
+  // ============ Carousel ============
+  const track = document.getElementById('carouselTrack');
+  const slides = track.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('#dots .dot');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const carousel = document.getElementById('carousel');
+  let idx = 0;
+  let timer = null;
+  const total = slides.length;
+
+  function go(i) {
+    idx = (i + total) % total;
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    dots.forEach((d, n) => d.classList.toggle('active', n === idx));
+  }
+  function next() { go(idx + 1); }
+  function prev() { go(idx - 1); }
+
+  function startAuto() { stopAuto(); timer = setInterval(next, 6000); }
+  function stopAuto()  { if (timer) { clearInterval(timer); timer = null; } }
+
+  prevBtn.addEventListener('click', () => { prev(); startAuto(); });
+  nextBtn.addEventListener('click', () => { next(); startAuto(); });
+  dots.forEach(d => d.addEventListener('click', () => { go(parseInt(d.dataset.i, 10)); startAuto(); }));
+  carousel.addEventListener('mouseenter', stopAuto);
+  carousel.addEventListener('mouseleave', startAuto);
+
+  // Touch swipe
+  let touchX = null;
+  carousel.addEventListener('touchstart', e => { touchX = e.changedTouches[0].clientX; stopAuto(); }, { passive: true });
+  carousel.addEventListener('touchend', e => {
+    if (touchX == null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
+    touchX = null; startAuto();
+  }, { passive: true });
+
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) startAuto();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Science Course — Sunadh Technologies</title>
+<meta name="description" content="Master Data Science in 16 weeks. Python, ML, statistics taught project-first. Sunadh Technologies, Ameerpet, Hyderabad.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../styles/components.css">
+<link rel="stylesheet" href="../styles/course-detail.css">
+<style>
+/* ============ Dark Theme Overrides ============ */
+body { background: #121412 !important; color: #e2e3e0; }
+section, main, .trainer-section, .tools-section, .careers-section,
+.faq-section, .curriculum-section, .stat-row-section {
+  background: #121412 !important; color: #e2e3e0;
+}
+.section-header { background: transparent !important; border: none !important; backdrop-filter: none !important; }
+.stat-card { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.06) !important; box-shadow: 0 12px 40px rgba(0,0,0,0.3) !important; backdrop-filter: blur(16px); }
+.stat-label { color: #6b7280 !important; }
+.stat-value { color: #e2e3e0 !important; }
+.acc { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
+.acc.open { border-color: rgba(255,107,26,0.4) !important; box-shadow: 0 8px 30px rgba(255,107,26,0.08) !important; }
+.acc-head { background: transparent !important; }
+.acc-head .ttl { color: #e2e3e0 !important; }
+.acc-head .desc { color: #6b7280 !important; }
+.acc-head .num { color: #FF6B1A !important; }
+.acc-body-inner { border-color: rgba(255,255,255,0.06) !important; }
+.lesson-list li { color: #b4bcc6 !important; }
+.lesson-list li::before { box-shadow: inset 0 0 0 2.5px #121412 !important; }
+.tool-tile { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.08) !important; color: #6b7280 !important; filter: none !important; }
+.tool-tile:hover { color: #e2e3e0 !important; border-color: rgba(255,107,26,0.4) !important; }
+.trainer { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
+.trainer-info h3 { color: #e2e3e0 !important; }
+.trainer-info p { color: #9ca3af !important; }
+.career-card { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
+.career-card:hover { box-shadow: 0 12px 40px rgba(255,107,26,0.08) !important; border-color: rgba(255,107,26,0.3) !important; }
+.career-card h3 { color: #e2e3e0 !important; }
+.career-card .desc { color: #9ca3af !important; }
+
+h1, h2, h3, h4 { color: #e2e3e0 !important; }
+p, li, td { color: #b4bcc6; }
+.section-head p { color: #9ca3af !important; }
+.crumb { color: #8b929c; }
+.crumb a { color: #8b929c !important; }
+.crumb a:hover { color: #FF6B1A !important; }
+
+/* Forms */
+input, select, textarea {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  color: #e2e3e0 !important;
+}
+input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.3) !important; }
+label { color: #b4bcc6 !important; }
+
+/* Footer */
+footer { background: #0d0f0d !important; color: rgba(250,250,247,0.7); }
+footer h4 { color: #fff !important; }
+footer a { color: rgba(250,250,247,0.5) !important; }
+footer a:hover { color: #FFB627 !important; }
+.foot-bottom { border-color: rgba(255,255,255,0.08) !important; color: rgba(250,250,247,0.4); }
+.foot-about { color: rgba(250,250,247,0.6) !important; }
+.foot-contact-line, .foot-contact-line a { color: rgba(250,250,247,0.5) !important; }
+.foot-social a { background: rgba(255,255,255,0.05) !important; color: #fff !important; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="nav glass" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img"></a>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../courses.html" class="active" aria-current="page">Courses</a>
+      <a href="../about.html">About</a>
+      <a href="../admissions.html">Admissions</a>
+      <a href="../placements.html">Placements</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="#enquiry" class="btn btn-primary nav-cta">Book Free Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="../courses.html" class="active">Courses</a>
+    <a href="../about.html">About</a>
+    <a href="../admissions.html">Admissions</a>
+    <a href="../placements.html">Placements</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</header>
+
+<!-- COURSE HERO -->
+<section class="course-hero">
+  <div class="container">
+    <div class="crumb">
+      <a href="../index.html">Home</a><span class="sep">›</span>
+      <a href="../courses.html">Courses</a><span class="sep">›</span>
+      <span class="here">Data Science</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--color-secondary)">Data & AI</span>
+        <h1>Data Science — Python, ML & Statistics, Taught Project-First.</h1>
+        <p class="lede">Industry-aligned curriculum. Three real projects. Job-ready in 16 weeks — taught by data scientists who ship models, not just slides.</p>
+        <div class="hero-pills">
+          <span class="hero-pill">16 weeks</span>
+          <span class="hero-pill">Online + Offline</span>
+          <span class="hero-pill">Beginner-friendly</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#enquiry" class="btn btn-primary">Book Free Demo →</a>
+          <a href="#" class="btn btn-outline-light">Download Brochure</a>
+        </div>
+      </div>
+      <div class="hero-illo-wrap">
+        <div class="hero-illo" style="padding:0; overflow:hidden;">
+          <img src="../assets/course-datascience-hero.png" alt="Data science neural network visualization" style="width:100%; height:100%; object-fit:cover; border-radius:24px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT ROW -->
+<section class="stat-row-section" style="padding:0 0 32px">
+  <div class="container">
+    <div class="stat-card">
+      <div class="stat-item"><div class="stat-label">Avg Salary</div><div class="stat-value">₹5–10 LPA</div></div>
+      <div class="stat-item"><div class="stat-label">Demand in India</div><div class="stat-value">+33% YoY</div></div>
+      <div class="stat-item"><div class="stat-label">Hiring</div><div class="stat-value">Infosys · TCS · Wipro · Mu Sigma · Tiger Analytics</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM ACCORDION -->
+<section style="background:var(--color-bg)">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Curriculum</span>
+      <h2>What You'll Learn</h2>
+      <p class="sub">Eight modules, sixteen weeks — every concept reinforced by working code on a real dataset.</p>
+    </div>
+    <div class="acc-list" id="curriculum">
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 01</span><span class="ttl">Python for Data Science</span><div class="desc">From zero to confident — the language, the way data folks use it.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Setup: Jupyter, VS Code, virtualenvs</li><li>Syntax, control flow and functions</li><li>OOP basics — classes data scientists actually write</li><li>List/dict comprehensions for data transforms</li><li>Error handling and clean code patterns</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 02</span><span class="ttl">Statistics & Probability</span><div class="desc">The math behind every model — distributions, tests, intervals.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Descriptive vs inferential statistics</li><li>Probability distributions: normal, binomial, Poisson</li><li>Hypothesis testing and p-values, demystified</li><li>Confidence intervals and effect size</li><li>A/B test design from the ground up</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 03</span><span class="ttl">Data Wrangling (Pandas / NumPy)</span><div class="desc">Clean, reshape, aggregate — the day-to-day muscle.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>NumPy arrays, broadcasting and vectorization</li><li>Pandas Series and DataFrames in depth</li><li>Joins, group-bys and pivot tables</li><li>Handling missing values and outliers</li><li>Time-series basics and resampling</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 04</span><span class="ttl">Visualization (Matplotlib / Seaborn)</span><div class="desc">Make charts that change minds — the grammar of good plots.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Matplotlib essentials and figure anatomy</li><li>Seaborn for statistical visualizations</li><li>Plotly for interactive dashboards</li><li>Choosing the right chart for the question</li><li>Publication-grade figure polish</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 05</span><span class="ttl">Machine Learning (Scikit-learn)</span><div class="desc">Classification, regression, clustering — the core toolkit.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Supervised vs unsupervised learning</li><li>Linear, logistic, tree-based models</li><li>Cross-validation and hyperparameter tuning</li><li>Feature engineering — the real edge</li><li>Model evaluation: ROC, PR, calibration</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 06</span><span class="ttl">Deep Learning Intro (TensorFlow)</span><div class="desc">Neural networks, demystified — Keras, CNNs, your first model.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Perceptrons and backpropagation, intuitively</li><li>Building feed-forward nets in Keras</li><li>CNNs for image classification</li><li>Transfer learning with pretrained models</li><li>Training, regularization and overfitting</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 07</span><span class="ttl">NLP Basics</span><div class="desc">Text as data — embeddings, sentiment, classification.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Tokenization, stemming, lemmatization</li><li>TF-IDF and word embeddings</li><li>Sentiment classification end-to-end</li><li>Named-entity recognition with spaCy</li><li>Intro to transformer-based models</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 08</span><span class="ttl">3 Capstone Projects + Interview Prep</span><div class="desc">Three portfolio-grade projects — the work that gets you hired.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Project 1: predictive analytics for a retail dataset</li><li>Project 2: customer-churn classifier with explainability</li><li>Project 3: NLP sentiment app, deployed</li><li>Resume rebuild and GitHub portfolio polish</li><li>Mock interviews with hiring panelists</li></ul></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEET YOUR TRAINER -->
+<section class="trainer-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">Meet Your Trainer</span><h2>Taught by someone who ships, not just speaks.</h2></div>
+    <div class="trainer">
+      <div class="trainer-ava">VS</div>
+      <div class="trainer-info">
+        <h3>Vikram S.</h3>
+        <div class="role">Lead Data Scientist · 9+ Years</div>
+        <p>Nine years shipping ML across e-commerce, fintech, and ad-tech. Has built recommendation systems for two unicorn startups and forecasting models for a Fortune 100 retailer. Trained 500+ data scientists now placed at TCS, Tiger Analytics, Mu Sigma and product companies.</p>
+        <a href="#" class="li-link" aria-label="Vikram's LinkedIn">in&nbsp;·&nbsp;View on LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">Tools &amp; Technologies</span><h2>The full data science toolkit, hands on.</h2><p class="sub">Logos shown as text-style placeholders pending official permissions.</p></div>
+    <div class="tools-grid">
+      <div class="tool-tile">Python</div>
+      <div class="tool-tile">Jupyter</div>
+      <div class="tool-tile">Pandas</div>
+      <div class="tool-tile">NumPy</div>
+      <div class="tool-tile">Scikit-learn</div>
+      <div class="tool-tile">TensorFlow</div>
+      <div class="tool-tile">SQL</div>
+      <div class="tool-tile">Tableau</div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER OUTCOMES -->
+<section class="careers-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">Where You'll Land</span><h2>Roles our Data Science alumni step into.</h2></div>
+    <div class="careers-grid">
+      <div class="career-card"><h3>Data Scientist</h3><div class="salary">₹6–12 LPA</div><p class="desc">Build models that solve business problems — ideation to production, end to end.</p></div>
+      <div class="career-card"><h3>ML Engineer</h3><div class="salary">₹8–15 LPA</div><p class="desc">Productionise models — pipelines, deployment, monitoring, and the boring bits that keep ML alive.</p></div>
+      <div class="career-card"><h3>Data Analyst</h3><div class="salary">₹4–7 LPA</div><p class="desc">Surface insights from data, build dashboards, drive decisions across the business.</p></div>
+      <div class="career-card"><h3>Research Analyst</h3><div class="salary">₹5–9 LPA</div><p class="desc">Run experiments, analyse outcomes, write the reports leadership reads on Monday.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">FAQ</span><h2>Quick answers, no fluff.</h2></div>
+    <div class="acc-list" id="faq">
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Do I need a coding background?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">No. We start from absolute Python basics in week one. By week three you'll be writing your own analysis scripts. Statistics is taught from first principles, no math degree assumed.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Will I get a certificate?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes — a Sunadh completion certificate after the three capstones, plus we prep you for the official Microsoft DP-100 (Azure Data Scientist Associate) certification.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Is placement guaranteed?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">We offer 100% placement assistance — interview prep, resume reviews, and intros to 500+ hiring partners. We don't promise a job, but we set you up to land one.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">What's the fee structure? Are EMIs available?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Course starts from ₹39,999. No-cost EMIs available across major banks. Talk to a counselor for the latest plan and any active discounts.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Can I switch between online and offline?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes. Every Data Science batch runs hybrid — attend in classroom one week, online the next. Switch as your schedule needs, no extra fee.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">What if I miss a class?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Every session is recorded and shared the same evening. You can also sit in any other ongoing batch to recover that topic in person.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Will I work on real projects?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes — three full portfolio projects by week sixteen, deployed and on GitHub, with code reviews from your trainer.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">What's the next batch start date?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">New weekday and weekend Data Science batches start every two weeks at both Ameerpet branches. Book a free demo and we'll share the next start date.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="enquiry">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="../assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img"></div>
+        <p class="foot-about">Real-time training. Real placements. Hyderabad's trusted name in IT training, in the heart of Ameerpet.</p>
+        <a class="foot-wa" href="https://wa.me/919848131318"><img src="../assets/icon-whatsapp.svg" alt="">Chat on WhatsApp</a>
+      </div>
+      <div class="foot-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="../courses.html">Courses</a></li><li><a href="../index.html#about">About</a></li><li><a href="../index.html#enquiry">Admissions</a></li><li><a href="../index.html#placements">Placements</a></li><li><a href="../index.html#contact">Contact</a></li></ul></div>
+      <div class="foot-col"><h4>Courses</h4><ul><li><a href="tableau.html">Tableau</a></li><li><a href="cybersecurity.html">Cybersecurity</a></li><li><a href="azure-data-engineer.html">Azure Data Engineer</a></li><li><a href="data-science.html">Data Science</a></li><li><a href="gen-ai.html">Gen AI / Agentic AI</a></li><li><a href="python.html">Python</a></li></ul></div>
+      <div class="foot-col"><h4>Contact</h4><div class="foot-contact-line">Aditi Arcade, Mytrivanam, SAP Street,<br>Ameerpet, Hyderabad – 500016</div><div class="foot-contact-line" style="margin-top:10px"><a href="tel:+919848131318">+91 98481 31318</a></div><div class="foot-contact-line"><a href="mailto:hello@sunadhtechnologies.in">hello@sunadhtechnologies.in</a></div><div class="foot-social"><a href="#">in</a><a href="#">f</a><a href="#">ig</a><a href="#">yt</a></div></div>
+    </div>
+    <div class="foot-bottom"><div>© 2026 Sunadh Technologies. All rights reserved.</div><div style="display:flex;gap:18px"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<!-- STICKY BOTTOM CTA BAR -->
+<div class="bottom-cta" id="bottomCTA" aria-hidden="true">
+  <div class="container bottom-cta-inner">
+    <div class="bottom-cta-text">
+      <div class="top">Data Science Course · From ₹39,999</div>
+      <div class="bot">Next batch starts soon · Both Ameerpet branches</div>
+    </div>
+    <a href="#enquiry" class="btn btn-primary btn-sm">Book Free Demo</a>
+  </div>
+</div>
+
+<a class="wa-float" href="https://wa.me/919848131318" target="_blank" rel="noopener" aria-label="Chat with Sunadh on WhatsApp"><img src="../assets/icon-whatsapp.svg" alt=""></a>
+
+<script src="../js/nav.js"></script>
+<script src="../js/accordion.js"></script>
+<script>
+  // Sticky bottom CTA — show after scrolling past hero
+  const bar=document.getElementById('bottomCTA');
+  const showAt=560;
+  const updateBar=()=>{
+    const show=window.scrollY>showAt;
+    bar.classList.toggle('show',show);
+    bar.setAttribute('aria-hidden',show?'false':'true');
+  };
+  window.addEventListener('scroll',updateBar,{passive:true});updateBar();
+</script>
+
+</body>
+</html>

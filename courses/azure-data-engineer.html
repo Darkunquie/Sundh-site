@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Azure Data Engineer Course — Sunadh Technologies</title>
+<meta name="description" content="Master Azure Data Engineering in 10 weeks. ADF, Synapse, Databricks, DP-203 prep. Sunadh Technologies, Ameerpet, Hyderabad.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../styles/components.css">
+<link rel="stylesheet" href="../styles/course-detail.css">
+<style>
+/* ============ Dark Theme Overrides ============ */
+body { background: #121412 !important; color: #e2e3e0; }
+section, main, .trainer-section, .tools-section, .careers-section,
+.faq-section, .curriculum-section, .stat-row-section {
+  background: #121412 !important; color: #e2e3e0;
+}
+.section-header { background: transparent !important; border: none !important; backdrop-filter: none !important; }
+.stat-card { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.06) !important; box-shadow: 0 12px 40px rgba(0,0,0,0.3) !important; backdrop-filter: blur(16px); }
+.stat-label { color: #6b7280 !important; }
+.stat-value { color: #e2e3e0 !important; }
+.acc { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
+.acc.open { border-color: rgba(255,107,26,0.4) !important; box-shadow: 0 8px 30px rgba(255,107,26,0.08) !important; }
+.acc-head { background: transparent !important; }
+.acc-head .ttl { color: #e2e3e0 !important; }
+.acc-head .desc { color: #6b7280 !important; }
+.acc-head .num { color: #FF6B1A !important; }
+.acc-body-inner { border-color: rgba(255,255,255,0.06) !important; }
+.lesson-list li { color: #b4bcc6 !important; }
+.lesson-list li::before { box-shadow: inset 0 0 0 2.5px #121412 !important; }
+.tool-tile { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.08) !important; color: #6b7280 !important; filter: none !important; }
+.tool-tile:hover { color: #e2e3e0 !important; border-color: rgba(255,107,26,0.4) !important; }
+.trainer { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
+.trainer-info h3 { color: #e2e3e0 !important; }
+.trainer-info p { color: #9ca3af !important; }
+.career-card { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
+.career-card:hover { box-shadow: 0 12px 40px rgba(255,107,26,0.08) !important; border-color: rgba(255,107,26,0.3) !important; }
+.career-card h3 { color: #e2e3e0 !important; }
+.career-card .desc { color: #9ca3af !important; }
+h1, h2, h3, h4 { color: #e2e3e0 !important; }
+p, li, td { color: #b4bcc6; }
+.section-head p, .sub { color: #9ca3af !important; }
+.crumb { color: #8b929c; }
+.crumb a { color: #8b929c !important; }
+.crumb a:hover { color: #FF6B1A !important; }
+input, select, textarea { background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.15) !important; color: #e2e3e0 !important; }
+input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.3) !important; }
+label { color: #b4bcc6 !important; }
+footer { background: #0d0f0d !important; color: rgba(250,250,247,0.7); }
+footer h4 { color: #fff !important; }
+footer a { color: rgba(250,250,247,0.5) !important; }
+footer a:hover { color: #FFB627 !important; }
+.foot-bottom { border-color: rgba(255,255,255,0.08) !important; color: rgba(250,250,247,0.4); }
+.foot-about { color: rgba(250,250,247,0.6) !important; }
+.foot-contact-line, .foot-contact-line a { color: rgba(250,250,247,0.5) !important; }
+.foot-social a { background: rgba(255,255,255,0.05) !important; color: #fff !important; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="nav glass" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img"></a>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../courses.html" class="active" aria-current="page">Courses</a>
+      <a href="../about.html">About</a>
+      <a href="../admissions.html">Admissions</a>
+      <a href="../placements.html">Placements</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="#enquiry" class="btn btn-primary nav-cta">Book Free Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="../courses.html" class="active">Courses</a>
+    <a href="../about.html">About</a>
+    <a href="../admissions.html">Admissions</a>
+    <a href="../placements.html">Placements</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</header>
+
+<!-- COURSE HERO -->
+<section class="course-hero">
+  <div class="container">
+    <div class="crumb">
+      <a href="../index.html">Home</a><span class="sep">›</span>
+      <a href="../courses.html">Courses</a><span class="sep">›</span>
+      <span class="here">Azure Data Engineer</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--color-secondary)">Cloud</span>
+        <h1>Azure Data Engineer — Build Pipelines on Microsoft's Cloud.</h1>
+        <p class="lede">Industry-aligned curriculum. Real ETL pipelines. DP-203 certification ready in 10 weeks — taught by engineers who run Azure data platforms in production.</p>
+        <div class="hero-pills">
+          <span class="hero-pill">10 weeks</span>
+          <span class="hero-pill">Online + Offline</span>
+          <span class="hero-pill">Some SQL recommended</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#enquiry" class="btn btn-primary">Book Free Demo →</a>
+          <a href="#" class="btn btn-outline-light">Download Brochure</a>
+        </div>
+      </div>
+      <div class="hero-illo-wrap">
+        <div class="hero-illo" style="padding:0; overflow:hidden;">
+          <img src="../assets/course-azure-hero.png" alt="Azure cloud data engineering visualization" style="width:100%; height:100%; object-fit:cover; border-radius:24px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT ROW -->
+<section class="stat-row-section" style="padding:0 0 32px">
+  <div class="container">
+    <div class="stat-card">
+      <div class="stat-item"><div class="stat-label">Avg Salary</div><div class="stat-value">₹6–11 LPA</div></div>
+      <div class="stat-item"><div class="stat-label">Demand in India</div><div class="stat-value">+42% YoY</div></div>
+      <div class="stat-item"><div class="stat-label">Hiring</div><div class="stat-value">Accenture · Cognizant · HCL · Microsoft Partners · Capgemini</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM ACCORDION -->
+<section style="background:var(--color-bg)">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Curriculum</span>
+      <h2>What You'll Learn</h2>
+      <p class="sub">Eight modules, ten weeks — every topic taught against a live Azure subscription with real datasets.</p>
+    </div>
+    <div class="acc-list" id="curriculum">
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 01</span><span class="ttl">Azure Fundamentals</span><div class="desc">Subscriptions, resource groups, regions — the platform under the platform.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Azure portal, CLI and PowerShell tour</li><li>Subscriptions, resource groups, RBAC</li><li>Regions, availability zones and pricing tiers</li><li>Azure Active Directory and identity</li><li>AZ-900 concepts mapped to data work</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 02</span><span class="ttl">Azure Storage & Data Lake</span><div class="desc">Where the data lives — Blob, ADLS Gen2, partitioning and access tiers.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Blob, File, Queue and Table storage</li><li>ADLS Gen2: hierarchical namespace and ACLs</li><li>Hot, cool, archive — choosing the right tier</li><li>Partitioning strategies for Parquet at scale</li><li>Lifecycle policies and cost optimization</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 03</span><span class="ttl">Azure Data Factory (ADF)</span><div class="desc">Orchestrate pipelines, triggers, and copy activities — the workhorse.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Linked services, datasets and pipelines</li><li>Copy activity, mapping data flows</li><li>Triggers: schedule, tumbling window, event</li><li>Parameterization and pipeline reuse</li><li>CI/CD with ADF and Azure DevOps</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 04</span><span class="ttl">Azure Synapse Analytics</span><div class="desc">Dedicated and serverless SQL — the data warehouse, modernised.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Synapse workspace, pools and pipelines</li><li>Dedicated SQL pool: distributions and indexes</li><li>Serverless SQL over data lake files</li><li>Synapse Notebooks with Spark</li><li>Query tuning and performance patterns</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 05</span><span class="ttl">Azure Databricks + PySpark</span><div class="desc">Big data done right — Delta Lake, PySpark, MLflow.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Databricks workspace and clusters</li><li>PySpark essentials: DataFrames, joins, UDFs</li><li>Delta Lake: ACID on data lakes</li><li>Notebook orchestration with workflows</li><li>MLflow tracking for data science workloads</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 06</span><span class="ttl">Stream Analytics & Event Hubs</span><div class="desc">Real-time pipelines — events, streams, windowed aggregates.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Event Hubs vs Service Bus vs IoT Hub</li><li>Stream Analytics queries and windows</li><li>Hot path vs cold path architectures</li><li>Output sinks: Power BI, ADLS, SQL</li><li>Building a real-time KPI dashboard</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 07</span><span class="ttl">Security & Governance</span><div class="desc">Lock it down — Purview, managed identities, private endpoints.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Managed identities and Key Vault</li><li>Private endpoints and VNet integration</li><li>Azure Purview: catalog, lineage, classification</li><li>Row-level and column-level security</li><li>Cost monitoring and budget alerts</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 08</span><span class="ttl">DP-203 Certification Prep + Capstone</span><div class="desc">Drill the exam, ship the capstone — both done by week ten.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>DP-203 domain-by-domain breakdown</li><li>Mock exams with timed simulations</li><li>Capstone: end-to-end ETL pipeline (raw → curated → BI)</li><li>Code reviews and trainer feedback</li><li>Resume rebuild and mock interviews</li></ul></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEET YOUR TRAINER -->
+<section class="trainer-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">Meet Your Trainer</span><h2>Taught by someone who ships, not just speaks.</h2></div>
+    <div class="trainer">
+      <div class="trainer-ava">SP</div>
+      <div class="trainer-info">
+        <h3>Sneha P.</h3>
+        <div class="role">Azure Data Engineer · 7+ Years</div>
+        <p>Seven years building Azure data platforms for retail and BFSI clients across Hyderabad and Bengaluru. Holds DP-203 and DP-300 certifications. Has shipped six data lakes into production and trained over 300 engineers now placed across Microsoft partners and product companies.</p>
+        <a href="#" class="li-link" aria-label="Sneha's LinkedIn">in&nbsp;·&nbsp;View on LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">Tools &amp; Technologies</span><h2>The full cloud data toolkit, hands on.</h2><p class="sub">Logos shown as text-style placeholders pending official permissions.</p></div>
+    <div class="tools-grid">
+      <div class="tool-tile">Azure Portal</div>
+      <div class="tool-tile">ADF</div>
+      <div class="tool-tile">Synapse</div>
+      <div class="tool-tile">Databricks</div>
+      <div class="tool-tile">Power BI</div>
+      <div class="tool-tile">SQL Server</div>
+      <div class="tool-tile">PySpark</div>
+      <div class="tool-tile">Purview</div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER OUTCOMES -->
+<section class="careers-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">Where You'll Land</span><h2>Roles our Azure Data Engineer alumni step into.</h2></div>
+    <div class="careers-grid">
+      <div class="career-card"><h3>Azure Data Engineer</h3><div class="salary">₹6–11 LPA</div><p class="desc">Build and operate ETL pipelines, data lakes, and warehouses on Microsoft's cloud.</p></div>
+      <div class="career-card"><h3>Cloud Data Architect</h3><div class="salary">₹12–20 LPA</div><p class="desc">Design enterprise data platforms — pick the patterns, set the standards, mentor the team.</p></div>
+      <div class="career-card"><h3>Data Pipeline Developer</h3><div class="salary">₹6–10 LPA</div><p class="desc">Own daily ingestion and transformation jobs — reliable, observable, cost-efficient.</p></div>
+      <div class="career-card"><h3>ETL Specialist</h3><div class="salary">₹5–9 LPA</div><p class="desc">Move data between systems with quality, lineage, and SLAs the business actually trusts.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">FAQ</span><h2>Quick answers, no fluff.</h2></div>
+    <div class="acc-list" id="faq">
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Do I need a coding background?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Light SQL helps. We don't expect Python upfront — you'll learn enough PySpark for the role in modules five and six. Total non-coders: pair this with our Python course first.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Will I get a certificate?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes — a Sunadh completion certificate after the capstone, plus dedicated prep for the official Microsoft DP-203 (Azure Data Engineer Associate) certification.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Is placement guaranteed?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">We offer 100% placement assistance — interview prep, resume reviews, and intros to 500+ hiring partners. We don't promise a job, but we set you up to land one.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">What's the fee structure? Are EMIs available?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Course starts from ₹29,999. No-cost EMIs available across major banks. Talk to a counselor for the latest plan and any active discounts.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Can I switch between online and offline?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes. Every Azure batch runs hybrid — attend in classroom one week, online the next. Switch as your schedule needs, no extra fee.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">What if I miss a class?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Every session is recorded and shared the same evening. You can also sit in any other ongoing batch to recover that topic in person.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Will I work on real projects?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes — a full end-to-end pipeline from ADLS through Databricks to Synapse and Power BI by week ten. Goes straight on your resume and GitHub.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">What's the next batch start date?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">New weekday and weekend batches start every two weeks at both Ameerpet branches. Book a free demo and we'll share the next start date.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="enquiry">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="../assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img"></div>
+        <p class="foot-about">Real-time training. Real placements. Hyderabad's trusted name in IT training, in the heart of Ameerpet.</p>
+        <a class="foot-wa" href="https://wa.me/919848131318"><img src="../assets/icon-whatsapp.svg" alt="">Chat on WhatsApp</a>
+      </div>
+      <div class="foot-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="../courses.html">Courses</a></li><li><a href="../index.html#about">About</a></li><li><a href="../index.html#enquiry">Admissions</a></li><li><a href="../index.html#placements">Placements</a></li><li><a href="../index.html#contact">Contact</a></li></ul></div>
+      <div class="foot-col"><h4>Courses</h4><ul><li><a href="tableau.html">Tableau</a></li><li><a href="cybersecurity.html">Cybersecurity</a></li><li><a href="azure-data-engineer.html">Azure Data Engineer</a></li><li><a href="data-science.html">Data Science</a></li><li><a href="gen-ai.html">Gen AI / Agentic AI</a></li><li><a href="python.html">Python</a></li></ul></div>
+      <div class="foot-col"><h4>Contact</h4><div class="foot-contact-line">Aditi Arcade, Mytrivanam, SAP Street,<br>Ameerpet, Hyderabad – 500016</div><div class="foot-contact-line" style="margin-top:10px"><a href="tel:+919848131318">+91 98481 31318</a></div><div class="foot-contact-line"><a href="mailto:hello@sunadhtechnologies.in">hello@sunadhtechnologies.in</a></div><div class="foot-social"><a href="#">in</a><a href="#">f</a><a href="#">ig</a><a href="#">yt</a></div></div>
+    </div>
+    <div class="foot-bottom"><div>© 2026 Sunadh Technologies. All rights reserved.</div><div style="display:flex;gap:18px"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<!-- STICKY BOTTOM CTA BAR -->
+<div class="bottom-cta" id="bottomCTA" aria-hidden="true">
+  <div class="container bottom-cta-inner">
+    <div class="bottom-cta-text">
+      <div class="top">Azure Data Engineer Course · From ₹29,999</div>
+      <div class="bot">Next batch starts soon · Both Ameerpet branches</div>
+    </div>
+    <a href="#enquiry" class="btn btn-primary btn-sm">Book Free Demo</a>
+  </div>
+</div>
+
+<a class="wa-float" href="https://wa.me/919848131318" target="_blank" rel="noopener" aria-label="Chat with Sunadh on WhatsApp"><img src="../assets/icon-whatsapp.svg" alt=""></a>
+
+<script src="../js/nav.js"></script>
+<script src="../js/accordion.js"></script>
+<script>
+  // Sticky bottom CTA — show after scrolling past hero
+  const bar=document.getElementById('bottomCTA');
+  const showAt=560;
+  const updateBar=()=>{
+    const show=window.scrollY>showAt;
+    bar.classList.toggle('show',show);
+    bar.setAttribute('aria-hidden',show?'false':'true');
+  };
+  window.addEventListener('scroll',updateBar,{passive:true});updateBar();
+</script>
+
+</body>
+</html>

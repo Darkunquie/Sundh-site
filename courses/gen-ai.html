@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen AI / Agentic AI Course — Sunadh Technologies</title>
+<meta name="description" content="Master Gen AI and Agentic AI in 10 weeks. LLMs, RAG, LangChain, agents. Sunadh Technologies, Ameerpet, Hyderabad.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../styles/components.css">
+<link rel="stylesheet" href="../styles/course-detail.css">
+<style>
+/* ============ Dark Theme Overrides ============ */
+body { background: #121412 !important; color: #e2e3e0; }
+section, main, .trainer-section, .tools-section, .careers-section,
+.faq-section, .curriculum-section, .stat-row-section {
+  background: #121412 !important; color: #e2e3e0;
+}
+.section-header { background: transparent !important; border: none !important; backdrop-filter: none !important; }
+.stat-card { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.06) !important; box-shadow: 0 12px 40px rgba(0,0,0,0.3) !important; backdrop-filter: blur(16px); }
+.stat-label { color: #6b7280 !important; }
+.stat-value { color: #e2e3e0 !important; }
+.acc { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
+.acc.open { border-color: rgba(255,107,26,0.4) !important; box-shadow: 0 8px 30px rgba(255,107,26,0.08) !important; }
+.acc-head { background: transparent !important; }
+.acc-head .ttl { color: #e2e3e0 !important; }
+.acc-head .desc { color: #6b7280 !important; }
+.acc-head .num { color: #FF6B1A !important; }
+.acc-body-inner { border-color: rgba(255,255,255,0.06) !important; }
+.lesson-list li { color: #b4bcc6 !important; }
+.lesson-list li::before { box-shadow: inset 0 0 0 2.5px #121412 !important; }
+.tool-tile { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.08) !important; color: #6b7280 !important; filter: none !important; }
+.tool-tile:hover { color: #e2e3e0 !important; border-color: rgba(255,107,26,0.4) !important; }
+.trainer { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
+.trainer-info h3 { color: #e2e3e0 !important; }
+.trainer-info p { color: #9ca3af !important; }
+.career-card { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.06) !important; }
+.career-card:hover { box-shadow: 0 12px 40px rgba(255,107,26,0.08) !important; border-color: rgba(255,107,26,0.3) !important; }
+.career-card h3 { color: #e2e3e0 !important; }
+.career-card .desc { color: #9ca3af !important; }
+h1, h2, h3, h4 { color: #e2e3e0 !important; }
+p, li, td { color: #b4bcc6; }
+.section-head p { color: #9ca3af !important; }
+.crumb { color: #8b929c; }
+.crumb a { color: #8b929c !important; }
+.crumb a:hover { color: #FF6B1A !important; }
+input, select, textarea { background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.15) !important; color: #e2e3e0 !important; }
+input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.3) !important; }
+label { color: #b4bcc6 !important; }
+footer { background: #0d0f0d !important; color: rgba(250,250,247,0.7); }
+footer h4 { color: #fff !important; }
+footer a { color: rgba(250,250,247,0.5) !important; }
+footer a:hover { color: #FFB627 !important; }
+.foot-bottom { border-color: rgba(255,255,255,0.08) !important; color: rgba(250,250,247,0.4); }
+.foot-about { color: rgba(250,250,247,0.6) !important; }
+.foot-contact-line, .foot-contact-line a { color: rgba(250,250,247,0.5) !important; }
+.foot-social a { background: rgba(255,255,255,0.05) !important; color: #fff !important; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="nav glass" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img"></a>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../courses.html" class="active" aria-current="page">Courses</a>
+      <a href="../about.html">About</a>
+      <a href="../admissions.html">Admissions</a>
+      <a href="../placements.html">Placements</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="#enquiry" class="btn btn-primary nav-cta">Book Free Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="../courses.html" class="active">Courses</a>
+    <a href="../about.html">About</a>
+    <a href="../admissions.html">Admissions</a>
+    <a href="../placements.html">Placements</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</header>
+
+<!-- COURSE HERO -->
+<section class="course-hero">
+  <div class="container">
+    <div class="crumb">
+      <a href="../index.html">Home</a><span class="sep">›</span>
+      <a href="../courses.html">Courses</a><span class="sep">›</span>
+      <span class="here">Gen AI / Agentic AI</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--color-secondary)">Artificial Intelligence</span>
+        <h1>Gen AI / Agentic AI — Build with LLMs. The Most In-Demand Skill of 2026.</h1>
+        <p class="lede">Industry-aligned curriculum. Real agent applications. Job-ready in 10 weeks — taught by AI engineers who ship LLM apps to paying users.</p>
+        <div class="hero-pills">
+          <span class="hero-pill">10 weeks</span>
+          <span class="hero-pill">Online + Offline</span>
+          <span class="hero-pill">Python required</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#enquiry" class="btn btn-primary">Book Free Demo →</a>
+          <a href="#" class="btn btn-outline-light">Download Brochure</a>
+        </div>
+      </div>
+      <div class="hero-illo-wrap">
+        <div class="hero-illo" style="padding:0; overflow:hidden;">
+          <img src="../assets/course-genai-hero.png" alt="Generative AI neural brain visualization" style="width:100%; height:100%; object-fit:cover; border-radius:24px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT ROW -->
+<section class="stat-row-section" style="padding:0 0 32px">
+  <div class="container">
+    <div class="stat-card">
+      <div class="stat-item"><div class="stat-label">Avg Salary</div><div class="stat-value">₹8–15 LPA</div></div>
+      <div class="stat-item"><div class="stat-label">Demand in India</div><div class="stat-value">+120% YoY</div></div>
+      <div class="stat-item"><div class="stat-label">Hiring</div><div class="stat-value">Google · Microsoft · Accenture AI Labs · Tiger Analytics · NVIDIA Partners</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM ACCORDION -->
+<section style="background:var(--color-bg)">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Curriculum</span>
+      <h2>What You'll Learn</h2>
+      <p class="sub">Eight modules, ten weeks — every concept anchored by code that calls a real LLM API on day one.</p>
+    </div>
+    <div class="acc-list" id="curriculum">
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 01</span><span class="ttl">LLM Fundamentals</span><div class="desc">Tokens, attention, context windows — the mental model behind ChatGPT and Claude.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>What an LLM actually is, demystified</li><li>Tokenization and the cost of every prompt</li><li>Attention and the transformer — the intuition</li><li>Open vs closed models — when each makes sense</li><li>Model providers: OpenAI, Anthropic, Mistral, open-source</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 02</span><span class="ttl">Prompt Engineering</span><div class="desc">The craft of asking — chain-of-thought, few-shot, structured outputs.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Zero-shot, few-shot, and chain-of-thought</li><li>System prompts and persona design</li><li>Structured output: JSON mode, schemas, validation</li><li>Prompt templates and reusable patterns</li><li>Adversarial prompting and prompt injection defence</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 03</span><span class="ttl">Retrieval-Augmented Generation (RAG)</span><div class="desc">Give LLMs your data — chunking, embeddings, retrieval, prompting.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Why RAG beats fine-tuning for most apps</li><li>Chunking strategies and metadata design</li><li>Embedding models and similarity search</li><li>Hybrid retrieval: keyword + vector</li><li>Evaluating RAG quality with golden sets</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 04</span><span class="ttl">Vector Databases (Pinecone, Chroma)</span><div class="desc">Store embeddings, search them fast — the data layer of LLM apps.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Pinecone, Chroma, Weaviate compared</li><li>Indexing strategies and recall vs latency</li><li>Metadata filtering and namespaces</li><li>Self-hosting Chroma for prototypes</li><li>Production patterns and cost control</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 05</span><span class="ttl">LangChain & LlamaIndex</span><div class="desc">The plumbing — chains, agents, retrievers, observability.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>LangChain core: chains, prompts, parsers</li><li>LlamaIndex: query engines and indexes</li><li>Memory, callbacks and streaming</li><li>LangSmith for tracing and evaluation</li><li>When to drop frameworks and call APIs directly</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 06</span><span class="ttl">Building Agents (ReAct, Tool Use)</span><div class="desc">LLMs that act — call tools, reason about results, take next steps.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>ReAct pattern: reason + act loops</li><li>Tool/function calling — OpenAI and Claude</li><li>Designing safe, scoped tools</li><li>Error handling and self-correction</li><li>Hands-on: a research agent with browsing</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 07</span><span class="ttl">Multi-Agent Systems</span><div class="desc">Agents that talk to agents — orchestration, roles, conflict resolution.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>Single-agent vs multi-agent trade-offs</li><li>CrewAI and AutoGen architectures</li><li>Roles, planners and critics</li><li>Inter-agent messaging and termination</li><li>Where multi-agent breaks (and how to recover)</li></ul></div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="num">MODULE 08</span><span class="ttl">Production Deployment + Capstone Agent App</span><div class="desc">Ship it — FastAPI, streaming, evals, monitoring, your portfolio app.</div></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner"><ul class="lesson-list"><li>FastAPI backend for an LLM app</li><li>Streaming responses and websockets</li><li>Evals: regression tests for prompts</li><li>Cost, latency and rate-limit handling</li><li>Capstone: a deployed agent on your domain</li></ul></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEET YOUR TRAINER -->
+<section class="trainer-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">Meet Your Trainer</span><h2>Taught by someone who ships, not just speaks.</h2></div>
+    <div class="trainer">
+      <div class="trainer-ava">KR</div>
+      <div class="trainer-info">
+        <h3>Karthik R.</h3>
+        <div class="role">AI/ML Architect · 6+ Years</div>
+        <p>Six years shipping ML and now LLM applications across SaaS and consulting. Has built two production RAG systems serving thousands of daily queries and runs the Hyderabad LLM-builders meetup. Trained 200+ engineers now working on AI teams across India and abroad.</p>
+        <a href="#" class="li-link" aria-label="Karthik's LinkedIn">in&nbsp;·&nbsp;View on LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">Tools &amp; Technologies</span><h2>The full AI toolkit, hands on.</h2><p class="sub">Logos shown as text-style placeholders pending official permissions.</p></div>
+    <div class="tools-grid">
+      <div class="tool-tile">OpenAI API</div>
+      <div class="tool-tile">Anthropic Claude API</div>
+      <div class="tool-tile">LangChain</div>
+      <div class="tool-tile">LlamaIndex</div>
+      <div class="tool-tile">Pinecone</div>
+      <div class="tool-tile">Hugging Face</div>
+      <div class="tool-tile">Python</div>
+      <div class="tool-tile">FastAPI</div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER OUTCOMES -->
+<section class="careers-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">Where You'll Land</span><h2>Roles our Gen AI alumni step into.</h2></div>
+    <div class="careers-grid">
+      <div class="career-card"><h3>AI Engineer</h3><div class="salary">₹10–18 LPA</div><p class="desc">Build production LLM applications — agents, RAG, evals, end-to-end.</p></div>
+      <div class="career-card"><h3>LLM Developer</h3><div class="salary">₹8–14 LPA</div><p class="desc">Integrate LLMs into existing products — pick models, design prompts, ship features.</p></div>
+      <div class="career-card"><h3>Prompt Engineer</h3><div class="salary">₹7–12 LPA</div><p class="desc">Craft the prompts and pipelines that turn raw LLMs into reliable, business-ready tools.</p></div>
+      <div class="career-card"><h3>AI Solutions Architect</h3><div class="salary">₹14–25 LPA</div><p class="desc">Design enterprise AI architectures — pick patterns, set guardrails, mentor the team.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header"><span class="eyebrow">FAQ</span><h2>Quick answers, no fluff.</h2></div>
+    <div class="acc-list" id="faq">
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Do I need a coding background?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes — comfortable Python is required. If you don't have it yet, start with our Python course (8 weeks) and roll into Gen AI right after — many students do.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Will I get a certificate?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes — a Sunadh completion certificate after the capstone agent app, plus we share verified credential paths from major model providers as they roll out.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Is placement guaranteed?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">We offer 100% placement assistance — interview prep, resume reviews, and intros to 500+ hiring partners. AI roles are the hottest market in 2026 — we're seeing 80%+ placement within 90 days.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">What's the fee structure? Are EMIs available?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Course starts from ₹32,999. No-cost EMIs available across major banks. API credits for OpenAI and Anthropic are included in the fee for the duration of the course.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Can I switch between online and offline?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes. Every Gen AI batch runs hybrid — attend in classroom one week, online the next. Switch as your schedule needs, no extra fee.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">What if I miss a class?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Every session is recorded and shared the same evening. You can also sit in any other ongoing batch to recover that topic in person.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">Will I work on real projects?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">Yes — a deployed agent app on a domain of your choice by week ten, with public demo URL and GitHub repo. This is the work hiring managers actually want to see.</div></div></div>
+      <div class="acc"><button class="acc-head"><div><span class="ttl">What's the next batch start date?</span></div><span class="chev">+</span></button><div class="acc-body"><div class="acc-body-inner" style="border:0;padding-top:0">New batches start every two weeks at both Ameerpet branches. Demand is high — book a free demo soon to lock in the next slot.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="enquiry">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="../assets/logo-new.png" alt="Sunadh Technologies" class="nav-logo-img"></div>
+        <p class="foot-about">Real-time training. Real placements. Hyderabad's trusted name in IT training, in the heart of Ameerpet.</p>
+        <a class="foot-wa" href="https://wa.me/919848131318"><img src="../assets/icon-whatsapp.svg" alt="">Chat on WhatsApp</a>
+      </div>
+      <div class="foot-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="../courses.html">Courses</a></li><li><a href="../index.html#about">About</a></li><li><a href="../index.html#enquiry">Admissions</a></li><li><a href="../index.html#placements">Placements</a></li><li><a href="../index.html#contact">Contact</a></li></ul></div>
+      <div class="foot-col"><h4>Courses</h4><ul><li><a href="tableau.html">Tableau</a></li><li><a href="cybersecurity.html">Cybersecurity</a></li><li><a href="azure-data-engineer.html">Azure Data Engineer</a></li><li><a href="data-science.html">Data Science</a></li><li><a href="gen-ai.html">Gen AI / Agentic AI</a></li><li><a href="python.html">Python</a></li></ul></div>
+      <div class="foot-col"><h4>Contact</h4><div class="foot-contact-line">Aditi Arcade, Mytrivanam, SAP Street,<br>Ameerpet, Hyderabad – 500016</div><div class="foot-contact-line" style="margin-top:10px"><a href="tel:+919848131318">+91 98481 31318</a></div><div class="foot-contact-line"><a href="mailto:hello@sunadhtechnologies.in">hello@sunadhtechnologies.in</a></div><div class="foot-social"><a href="#">in</a><a href="#">f</a><a href="#">ig</a><a href="#">yt</a></div></div>
+    </div>
+    <div class="foot-bottom"><div>© 2026 Sunadh Technologies. All rights reserved.</div><div style="display:flex;gap:18px"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<!-- STICKY BOTTOM CTA BAR -->
+<div class="bottom-cta" id="bottomCTA" aria-hidden="true">
+  <div class="container bottom-cta-inner">
+    <div class="bottom-cta-text">
+      <div class="top">Gen AI / Agentic AI Course · From ₹32,999</div>
+      <div class="bot">Next batch starts soon · Both Ameerpet branches</div>
+    </div>
+    <a href="#enquiry" class="btn btn-primary btn-sm">Book Free Demo</a>
+  </div>
+</div>
+
+<a class="wa-float" href="https://wa.me/919848131318" target="_blank" rel="noopener" aria-label="Chat with Sunadh on WhatsApp"><img src="../assets/icon-whatsapp.svg" alt=""></a>
+
+<script src="../js/nav.js"></script>
+<script src="../js/accordion.js"></script>
+<script>
+  // Sticky bottom CTA — show after scrolling past hero
+  const bar=document.getElementById('bottomCTA');
+  const showAt=560;
+  const updateBar=()=>{
+    const show=window.scrollY>showAt;
+    bar.classList.toggle('show',show);
+    bar.setAttribute('aria-hidden',show?'false':'true');
+  };
+  window.addEventListener('scroll',updateBar,{passive:true});updateBar();
+</script>
+
+</body>
+</html>
